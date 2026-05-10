@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #2563EB;
+  --color-primary-light: #DBEAFE;
+  --color-primary-dark: #1D4ED8;
+  --color-secondary: #F59E0B;
+  --color-secondary-light: #FEF3C7;
+  --color-secondary-dark: #D97706;
+  --color-accent: #059669;
+  --color-accent-light: #D1FAE5;
+  --color-accent-dark: #047857;
+  --color-bg: #F8FAFC;
+  --color-bg-alt: #EFF6FF;
+  --color-text: #1E293B;
+  --color-text-sub: #475569;
+  --color-text-muted: #94A3B8;
+  --color-border: #CBD5E1;
+  --color-danger: #DC2626;
+  --color-warning: #D97706;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .comparison-table th,
+  .comparison-table td {
+    white-space: normal;
+  }
+}
+
+.comparison-table th {
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: var(--color-primary-light);
+}
+
+.comparison-table tr:hover {
+  background: var(--color-bg-alt);
+}
