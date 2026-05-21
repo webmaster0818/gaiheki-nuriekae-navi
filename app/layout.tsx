@@ -9,6 +9,8 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gaiheki-nuriekae-navi-deploy.pages.dev"),
+  alternates: { canonical: "/" },
   title: "外壁ぬりかえナビ｜外壁塗装業者比較ランキング【2026年最新】",
   description:
     "外壁塗装の業者選びで失敗しないための総合情報サイト。塗料の種類・費用相場・助成金・優良業者ランキングをわかりやすく解説。一括見積もりサービス10社を徹底比較。",
