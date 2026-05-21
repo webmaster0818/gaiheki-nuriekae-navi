@@ -43,7 +43,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${notoSansJP.className} antialiased`}>{children}</body>
+      <body className={`${notoSansJP.className} antialiased`}>{children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"外壁ぬりかえナビ\",\"url\":\"https://gaiheki-nuriekae-navi-deploy.pages.dev/\",\"logo\":\"https://gaiheki-nuriekae-navi-deploy.pages.dev/favicon.ico\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"株式会社MediaX\",\"url\":\"https://mediax.biz\"},\"sameAs\":[\"https://gaiheki-nuriekae-navi-deploy.pages.dev/about/\"]}" }}
+        />
+        </body>
     </html>
   );
 }
