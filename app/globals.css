@@ -4,6 +4,15 @@
   --color-primary: #2563EB;
   --color-primary-light: #DBEAFE;
   --color-primary-dark: #1D4ED8;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F4F7FE;
+  --color-border: #DCE5F2;
+  --color-text-primary: #0F1E33;
+  --color-text-secondary: #46566B;
+  --color-text-muted: #8593A6;
+  --color-warning: #F59E0B;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
+
   --color-secondary: #F59E0B;
   --color-secondary-light: #FEF3C7;
   --color-secondary-dark: #D97706;
@@ -63,3 +72,6 @@ html {
 .comparison-table tr:hover {
   background: var(--color-bg-alt);
 }
+
+.label { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
+.mono { font-family: var(--font-mono); font-feature-settings: "tnum" 1; }
