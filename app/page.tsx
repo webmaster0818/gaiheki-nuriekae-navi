@@ -5,6 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/" },
   title: "外壁ぬりかえナビ｜外壁塗装業者比較ランキング【2026年最新】",
   description: "外壁の塗り替えで失敗しないための総合情報サイト。業者ランキング・塗料の種類・費用相場・助成金情報をわかりやすく解説。一括見積もりサービス10社を徹底比較。",
 };

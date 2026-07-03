@@ -5,6 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/cost/subsidy/" },
   title: "外壁塗装の助成金・補助金ガイド【2026年版】申請方法と注意点",
   description: "外壁塗装に使える国・自治体の助成金・補助金を徹底解説。申請条件・金額・申請方法・注意点をわかりやすくまとめました。",
 };

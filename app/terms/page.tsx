@@ -4,6 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terms/" },
   title: "利用規約｜外壁ぬりかえナビ",
   description: "外壁ぬりかえナビの利用規約です。",
 };

@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/cheap/" },
   title: "安い外壁塗装業者ランキング【2026年版】費用を抑えるコツも解説",
   description: "外壁塗装を安く済ませたい方向けのランキング。費用相場・値引き交渉のコツ・注意点を合わせて解説。",
 };

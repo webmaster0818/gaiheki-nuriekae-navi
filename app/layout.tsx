@@ -9,8 +9,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gaiheki-nuriekae-navi-deploy.pages.dev"),
-  alternates: { canonical: "/" },
+  metadataBase: new URL("https://gaiheki-nuriekae-navi.com"),
   twitter: {
     card: "summary_large_image",
   },
@@ -46,7 +45,7 @@ export default function RootLayout({
       <body className={`${notoSansJP.className} antialiased`}>{children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"外壁ぬりかえナビ\",\"url\":\"https://gaiheki-nuriekae-navi-deploy.pages.dev/\",\"logo\":\"https://gaiheki-nuriekae-navi-deploy.pages.dev/favicon.ico\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"株式会社MediaX\",\"url\":\"https://mediax.biz\"},\"sameAs\":[\"https://gaiheki-nuriekae-navi-deploy.pages.dev/about/\"]}" }}
+          dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"外壁ぬりかえナビ\",\"url\":\"https://gaiheki-nuriekae-navi.com/\",\"logo\":\"https://gaiheki-nuriekae-navi.com/favicon.ico\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"株式会社MediaX\",\"url\":\"https://mediax.biz\"},\"sameAs\":[\"https://gaiheki-nuriekae-navi.com/about/\"]}" }}
         />
         </body>
     </html>

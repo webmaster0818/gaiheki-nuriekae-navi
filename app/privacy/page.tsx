@@ -4,6 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy/" },
   title: "プライバシーポリシー｜外壁ぬりかえナビ",
   description: "外壁ぬりかえナビのプライバシーポリシーです。",
 };

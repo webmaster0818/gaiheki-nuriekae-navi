@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${company.name}の評判・口コミ｜外壁塗装業者比較【2026年最新】`,
     description: `${company.name}の特徴・料金・メリット・デメリット・口コミを詳しく解説。外壁塗装の見積もり依頼前に確認しておきたい情報をまとめました。`,
+    alternates: { canonical: `/company/${company.slug}/` },
   };
 }
 

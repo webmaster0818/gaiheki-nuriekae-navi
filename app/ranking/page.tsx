@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/" },
   title: "外壁塗装業者ランキング【2026年最新】10社を徹底比較",
   description: "外壁塗装の一括見積もりサービス10社を料金・対応エリア・保証・口コミで徹底比較。あなたに最適な業者が見つかります。",
 };

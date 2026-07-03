@@ -4,6 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/content-policy/" },
   title: "コンテンツポリシー｜外壁ぬりかえナビ",
   description: "外壁ぬりかえナビのコンテンツ作成方針・編集ポリシーです。",
 };

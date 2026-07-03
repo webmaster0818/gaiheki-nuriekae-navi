@@ -5,6 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/cost/price/" },
   title: "外壁塗装の費用・相場【2026年】塗料別・面積別で徹底解説",
   description: "外壁塗装の費用は塗料や面積によって大きく変わります。塗料別（ウレタン・シリコン・フッ素・セラミック）・面積別の詳細な費用相場と、費用を左右する要素を解説。",
 };
