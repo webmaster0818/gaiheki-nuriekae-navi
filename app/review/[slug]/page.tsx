@@ -249,6 +249,7 @@ export default async function ReviewPage({ params }: Props) {
         <Link href="/review/" className="text-primary hover:underline">他の業者の口コミ・評判を見る</Link>
         <Link href="/ranking/" className="text-primary hover:underline">外壁塗装業者ランキングを見る</Link>
       </div>
+      <p className="text-center text-xs text-gray-500 py-4">本サイトはプロモーション(PR)を含みます。</p>
     </article>
   );
 }

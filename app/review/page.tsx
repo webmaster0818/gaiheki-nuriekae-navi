@@ -35,6 +35,7 @@ export default function ReviewIndex() {
           </Link>
         ))}
       </div>
+      <p className="text-center text-xs text-gray-500 py-4">本サイトはプロモーション(PR)を含みます。</p>
     </div>
   );
 }
