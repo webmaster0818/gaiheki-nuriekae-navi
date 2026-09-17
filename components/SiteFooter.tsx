@@ -5,7 +5,7 @@ export default function SiteFooter() {
   return (
     <footer className="bg-[var(--color-text)] text-white mt-16">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
@@ -34,6 +34,29 @@ export default function SiteFooter() {
                 { href: "/cost/price/", label: "費用・相場" },
                 { href: "/cost/subsidy/", label: "助成金・補助金" },
                 { href: "/paint/comparison/", label: "塗料を比較する" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Area & Guide */}
+          <div>
+            <h3 className="font-semibold text-sm mb-3 text-gray-300">エリア・ガイド</h3>
+            <ul className="space-y-2">
+              {[
+                { href: "/area/tokyo/", label: "東京の業者比較" },
+                { href: "/area/osaka/", label: "大阪の業者比較" },
+                { href: "/area/nagoya/", label: "名古屋の業者比較" },
+                { href: "/area/yokohama/", label: "横浜の業者比較" },
+                { href: "/area/fukuoka/", label: "福岡の業者比較" },
+                { href: "/guide/scaffold/", label: "足場は必要か" },
+                { href: "/guide/door-to-door/", label: "訪問営業への対処" },
+                { href: "/guide/construction-flow/", label: "工事の流れ" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
