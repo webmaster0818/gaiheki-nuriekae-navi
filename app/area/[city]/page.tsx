@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_DEFAULT } from "@/lib/og";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
@@ -78,7 +79,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: area.description,
       url,
       type: "article",
+      images: [OG_DEFAULT],
     },
+    twitter: { card: "summary_large_image", images: [OG_DEFAULT] },
   };
 }
 
@@ -202,7 +205,7 @@ export default async function AreaPage({ params }: Props) {
             </table>
           </div>
           <p className="mt-2 text-xs text-[var(--color-text-muted)]">
-            ※出典：各社公式サイトの公表情報（各サービスの口コミ・評判ページに出典を記載しています）。当サイトが掲載しているサービスのうち「外壁塗装の案内所」は、2026年6月時点で公式サイトの稼働を確認できず提供状況が不明なため、本ページの比較対象には含めていません。
+            ※出典：各社公式サイトの公表情報（各サービスの口コミ・評判ページに出典を記載しています）。当サイトが掲載しているサービスのうち「<Link href="/review/annaijo/" className="text-[var(--color-primary)] hover:underline">外壁塗装の案内所</Link>」は、2026年6月時点で公式サイトの稼働を確認できず提供状況が不明なため、本ページの比較対象には含めていません。
           </p>
         </section>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_DEFAULT } from "@/lib/og";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -18,7 +19,9 @@ export const metadata: Metadata = {
     description: "訪問営業を受けたときに確認すべきことと、契約後に取れる手段を解説します。",
     url: PAGE_URL,
     type: "article",
+    images: [OG_DEFAULT],
   },
+  twitter: { card: "summary_large_image", images: [OG_DEFAULT] },
 };
 
 const lawRules = [

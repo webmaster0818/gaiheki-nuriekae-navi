@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_DEFAULT } from "@/lib/og";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -18,7 +19,9 @@ export const metadata: Metadata = {
     description: "外壁塗装の工程と、工事中の生活で気をつけたいことをまとめました。",
     url: PAGE_URL,
     type: "article",
+    images: [OG_DEFAULT],
   },
+  twitter: { card: "summary_large_image", images: [OG_DEFAULT] },
 };
 
 const steps = [

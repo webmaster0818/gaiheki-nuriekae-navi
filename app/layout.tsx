@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_DEFAULT } from "@/lib/og";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://gaiheki-nuriekae-navi.com"),
   twitter: {
     card: "summary_large_image",
+    images: [OG_DEFAULT],
   },
   title: "外壁ぬりかえナビ｜外壁塗装業者比較ランキング【2026年最新】",
   description:
@@ -32,6 +34,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ja_JP",
     siteName: "外壁ぬりかえナビ",
+    images: [OG_DEFAULT],
   },
 };
 

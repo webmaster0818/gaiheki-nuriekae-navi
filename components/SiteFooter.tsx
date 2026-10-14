@@ -75,6 +75,7 @@ export default function SiteFooter() {
                 { href: "/terms/", label: "利用規約" },
                 { href: "/privacy/", label: "プライバシーポリシー" },
                 { href: "/content-policy/", label: "コンテンツポリシー" },
+                { href: "/about/", label: "運営者情報" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
