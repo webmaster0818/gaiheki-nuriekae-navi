@@ -5,6 +5,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
+import reviews from "@/data/reviews.json";
 import { getVerifiedRating } from "@/lib/verifiedRating";
 
 type Props = {
@@ -20,8 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const company = companies.find((c) => c.slug === slug);
   if (!company) return {};
   return {
-    title: `${company.name}の評判・口コミ｜外壁塗装業者比較【2026年最新】`,
-    description: `${company.name}の特徴・料金・メリット・デメリット・口コミを詳しく解説。外壁塗装の見積もり依頼前に確認しておきたい情報をまとめました。`,
+    title: `${company.name}の特徴・メリット・デメリット｜外壁塗装業者比較【2026年最新】`,
+    description: `${company.name}の特徴・対応エリア・メリット・デメリットを解説。評判・口コミは公式の利用者の声と公開情報をもとに検証した別ページにまとめています。`,
     alternates: { canonical: `/company/${company.slug}/` },
   };
 }
@@ -33,6 +34,7 @@ export default async function CompanyPage({ params }: Props) {
 
   const rankLabel = company.rank === 1 ? "第1位" : company.rank === 2 ? "第2位" : company.rank === 3 ? "第3位" : `第${company.rank}位`;
   const rb = getVerifiedRating(company.slug);
+  const hasReview = reviews.some((r) => r.slug === company.slug);
 
   return (
     <>
@@ -108,6 +110,15 @@ export default async function CompanyPage({ params }: Props) {
             ※当サイトはアフィリエイト広告を掲載しています（PR）
           </p>
         </div>
+        {hasReview && (
+          <Link
+            href={`/review/${company.slug}/`}
+            className="mt-4 block rounded-2xl border-2 border-[var(--color-primary)] bg-white p-4 hover:bg-[var(--color-bg)] transition-colors"
+          >
+            <span className="block text-sm font-bold text-[var(--color-primary)]">{company.name}の評判・口コミを詳しく見る →</span>
+            <span className="mt-1 block text-xs text-[var(--color-text-sub)]">公式サイトの利用者の声と公開情報（運営会社・審査・注意点）をもとに検証したページです。</span>
+          </Link>
+        )}
 
         {/* Description */}
         <section className="mt-8">
