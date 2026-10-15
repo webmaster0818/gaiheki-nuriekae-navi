@@ -10,8 +10,6 @@
     "cons": ["紹介業者数が最大6社と他サービスより少ない場合がある", "地方によっては紹介できる業者数が限られることがある"],
     "coverage": "全国",
     "officialUrl": "https://nuri-kae.jp/",
-    "rating": 4.8,
-    "reviewCount": 12500,
     "rank": 1
   },
   {
@@ -25,8 +23,6 @@
     "cons": ["見積もり依頼後に複数社から連絡が来ることがある", "加盟店の質にばらつきがある場合がある"],
     "coverage": "全国",
     "officialUrl": "https://www.gaiheki.com/",
-    "rating": 4.6,
-    "reviewCount": 8900,
     "rank": 2
   },
   {
@@ -40,8 +36,6 @@
     "cons": ["独自塗料のため他社との比較がしにくい", "フランチャイズ店による品質差がある場合がある"],
     "coverage": "全国（249店舗）",
     "officialUrl": "https://www.protimes.jp/",
-    "rating": 4.5,
-    "reviewCount": 6200,
     "rank": 3
   },
   {
@@ -55,8 +49,6 @@
     "cons": ["店舗が全国109店舗のため対応エリアが限られる", "他サービスより見積もりに時間がかかる場合がある"],
     "coverage": "全国（109店舗）",
     "officialUrl": "https://gaiso.co.jp/",
-    "rating": 4.4,
-    "reviewCount": 4800,
     "rank": 4
   },
   {
@@ -70,8 +62,6 @@
     "cons": ["外壁塗装特化サービスと比べると専門性がやや低い", "見積もり依頼後の連絡が多い場合がある"],
     "coverage": "全国",
     "officialUrl": "https://www.rehome-navi.com/",
-    "rating": 4.3,
-    "reviewCount": 7100,
     "rank": 5
   },
   {
@@ -85,8 +75,6 @@
     "cons": ["紹介業者数が他サービスより少ない", "対応エリアによって業者数が限られる", "口コミ情報が少ない"],
     "coverage": "全国（一部エリア除く）",
     "officialUrl": "https://gaiheki-hotline.com/",
-    "rating": 4.1,
-    "reviewCount": 2300,
     "rank": 6
   },
   {
@@ -100,8 +88,6 @@
     "cons": ["業者選びに時間がかかる", "専門的なアドバイスは受けにくい", "外壁塗装専門サービスと比べると業者の専門性が低い場合がある"],
     "coverage": "全国（主要都市中心）",
     "officialUrl": "https://curama.jp/",
-    "rating": 4.2,
-    "reviewCount": 15600,
     "rank": 7
   },
   {
@@ -115,8 +101,6 @@
     "cons": ["外壁塗装の専門業者が少ない地域がある", "業者の専門性に差がある", "チャットでのやり取りが煩雑になることがある"],
     "coverage": "全国",
     "officialUrl": "https://meetsmore.com/",
-    "rating": 4.0,
-    "reviewCount": 11200,
     "rank": 8
   },
   {
@@ -130,8 +114,6 @@
     "cons": ["業者数が多いため質のばらつきが大きい", "価格重視のため施工品質の確認が必要", "サポートが手薄な場合がある"],
     "coverage": "全国",
     "officialUrl": "https://ribiro-paint.com/",
-    "rating": 3.9,
-    "reviewCount": 3400,
     "rank": 9
   },
   {
@@ -145,8 +127,6 @@
     "cons": ["登録業者数が他サービスより少ない", "地方では業者が見つかりにくい場合がある", "サービス自体の知名度が低い"],
     "coverage": "全国（業者密度に差あり）",
     "officialUrl": "https://gaiheki-annaijo.com/",
-    "rating": 4.0,
-    "reviewCount": 1800,
     "rank": 10
   }
 ]

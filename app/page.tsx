@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import companies from "@/data/companies.json";
+import { getVerifiedRating } from "@/lib/verifiedRating";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -174,22 +175,31 @@ export default function HomePage() {
                       </div>
                     </div>
                     <div className="md:ml-auto flex flex-col sm:flex-row gap-2 items-start sm:items-center">
-                      <div className="flex items-center gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <svg
-                            key={i}
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill={i < Math.floor(company.rating) ? "var(--color-secondary)" : "var(--color-border)"}
-                            aria-hidden="true"
-                          >
-                            <path d="M8 0L9.8 5.6H15.6L10.9 9L12.7 14.6L8 11.2L3.3 14.6L5.1 9L0.4 5.6H6.2L8 0Z"/>
-                          </svg>
-                        ))}
-                        <span className="text-sm font-bold text-[var(--color-text)]">{company.rating}</span>
-                        <span className="text-xs text-[var(--color-text-muted)]">({company.reviewCount.toLocaleString()}件)</span>
-                      </div>
+                      {(() => {
+                        const rb = getVerifiedRating(company.slug);
+                        if (!rb) return null;
+                        return (
+                          <div className="flex flex-col">
+                            <div className="flex items-center gap-1">
+                              {[...Array(5)].map((_, i) => (
+                                <svg
+                                  key={i}
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill={i < Math.floor(rb.rating) ? "var(--color-secondary)" : "var(--color-border)"}
+                                  aria-hidden="true"
+                                >
+                                  <path d="M8 0L9.8 5.6H15.6L10.9 9L12.7 14.6L8 11.2L3.3 14.6L5.1 9L0.4 5.6H6.2L8 0Z"/>
+                                </svg>
+                              ))}
+                              <span className="text-sm font-bold text-[var(--color-text)]">{rb.rating}</span>
+                              <span className="text-xs text-[var(--color-text-muted)]">({rb.reviewCount.toLocaleString()}件)</span>
+                            </div>
+                            <span className="text-[11px] text-[var(--color-text-muted)]">出典：{rb.sourceLabel}（{rb.fetchedAt}取得）</span>
+                          </div>
+                        );
+                      })()}
                       <Link
                         href={`/company/${company.slug}/`}
                         className="px-5 py-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-sm font-bold rounded-lg transition-colors"

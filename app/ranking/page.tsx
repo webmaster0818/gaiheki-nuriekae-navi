@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
+import { getVerifiedRating } from "@/lib/verifiedRating";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/" },
@@ -59,18 +60,29 @@ export default function RankingPage() {
                     )}
                   </div>
                   <p className="text-sm text-[var(--color-text-sub)] mb-2">{company.tagline}</p>
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center gap-0.5">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} width="14" height="14" viewBox="0 0 16 16" fill={i < Math.floor(company.rating) ? "var(--color-secondary)" : "var(--color-border)"} aria-hidden="true">
-                          <path d="M8 0L9.8 5.6H15.6L10.9 9L12.7 14.6L8 11.2L3.3 14.6L5.1 9L0.4 5.6H6.2L8 0Z"/>
-                        </svg>
-                      ))}
-                    </div>
-                    <span className="text-sm font-bold text-[var(--color-text)]">{company.rating}</span>
-                    <span className="text-xs text-[var(--color-text-muted)]">({company.reviewCount.toLocaleString()}件)</span>
-                    <span className="text-xs text-[var(--color-text-muted)] ml-2">対応: {company.coverage}</span>
-                  </div>
+                  {(() => {
+                    const rb = getVerifiedRating(company.slug);
+                    return (
+                      <div className="flex items-center gap-2 flex-wrap">
+                        {rb ? (
+                          <>
+                            <div className="flex items-center gap-0.5">
+                              {[...Array(5)].map((_, i) => (
+                                <svg key={i} width="14" height="14" viewBox="0 0 16 16" fill={i < Math.floor(rb.rating) ? "var(--color-secondary)" : "var(--color-border)"} aria-hidden="true">
+                                  <path d="M8 0L9.8 5.6H15.6L10.9 9L12.7 14.6L8 11.2L3.3 14.6L5.1 9L0.4 5.6H6.2L8 0Z"/>
+                                </svg>
+                              ))}
+                            </div>
+                            <span className="text-sm font-bold text-[var(--color-text)]">{rb.rating}</span>
+                            <span className="text-xs text-[var(--color-text-muted)]">({rb.reviewCount.toLocaleString()}件・出典：{rb.sourceLabel}／{rb.fetchedAt}取得)</span>
+                          </>
+                        ) : (
+                          <span className="text-xs text-[var(--color-text-muted)]">Googleマップ評価：未取得</span>
+                        )}
+                        <span className="text-xs text-[var(--color-text-muted)] ml-2">対応: {company.coverage}</span>
+                      </div>
+                    );
+                  })()}
                 </div>
               </div>
 

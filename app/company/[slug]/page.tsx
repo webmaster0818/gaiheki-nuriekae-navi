@@ -5,6 +5,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
+import { getVerifiedRating } from "@/lib/verifiedRating";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -31,6 +32,7 @@ export default async function CompanyPage({ params }: Props) {
   if (!company) return notFound();
 
   const rankLabel = company.rank === 1 ? "第1位" : company.rank === 2 ? "第2位" : company.rank === 3 ? "第3位" : `第${company.rank}位`;
+  const rb = getVerifiedRating(company.slug);
 
   return (
     <>
@@ -59,17 +61,22 @@ export default async function CompanyPage({ params }: Props) {
                 </span>
               </div>
               <p className="text-[var(--color-text-sub)] text-sm mb-3">{company.tagline}</p>
-              <div className="flex items-center gap-2">
-                <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill={i < Math.floor(company.rating) ? "var(--color-secondary)" : "var(--color-border)"} aria-hidden="true">
-                      <path d="M8 0L9.8 5.6H15.6L10.9 9L12.7 14.6L8 11.2L3.3 14.6L5.1 9L0.4 5.6H6.2L8 0Z"/>
-                    </svg>
-                  ))}
+              {rb && (
+                <div>
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} width="16" height="16" viewBox="0 0 16 16" fill={i < Math.floor(rb.rating) ? "var(--color-secondary)" : "var(--color-border)"} aria-hidden="true">
+                          <path d="M8 0L9.8 5.6H15.6L10.9 9L12.7 14.6L8 11.2L3.3 14.6L5.1 9L0.4 5.6H6.2L8 0Z"/>
+                        </svg>
+                      ))}
+                    </div>
+                    <span className="font-bold text-[var(--color-text)]">{rb.rating}</span>
+                    <span className="text-xs text-[var(--color-text-muted)]">({rb.reviewCount.toLocaleString()}件の評価)</span>
+                  </div>
+                  <p className="text-[11px] text-[var(--color-text-muted)] mt-1">出典：{rb.sourceLabel}（{rb.fetchedAt}取得）</p>
                 </div>
-                <span className="font-bold text-[var(--color-text)]">{company.rating}</span>
-                <span className="text-xs text-[var(--color-text-muted)]">({company.reviewCount.toLocaleString()}件の評価)</span>
-              </div>
+              )}
             </div>
           </div>
 
@@ -184,7 +191,12 @@ export default async function CompanyPage({ params }: Props) {
                   className="p-3 bg-white border border-[var(--color-border)] rounded-lg hover:border-[var(--color-primary)] transition-colors text-sm"
                 >
                   <div className="font-medium text-[var(--color-text)] mb-1">{c.name}</div>
-                  <div className="text-xs text-[var(--color-text-muted)]">評価: {c.rating}</div>
+                  {(() => {
+                    const crb = getVerifiedRating(c.slug);
+                    return crb ? (
+                      <div className="text-xs text-[var(--color-text-muted)]">Googleマップ評価: {crb.rating}（{crb.fetchedAt}取得）</div>
+                    ) : null;
+                  })()}
                 </Link>
               ))}
           </div>
