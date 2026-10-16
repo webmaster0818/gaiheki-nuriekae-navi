@@ -95,6 +95,7 @@ export default function RankingPage() {
               </div>
 
               <div className="mt-4 flex flex-col sm:flex-row gap-2">
+                {company.officialUrl ? (
                 <a
                   href={company.officialUrl}
                   target="_blank"
@@ -103,6 +104,7 @@ export default function RankingPage() {
                 >
                   公式サイトで無料見積もり
                 </a>
+                ) : null}
                 <Link
                   href={`/company/${company.slug}/`}
                   className="sm:w-32 py-3 text-center border border-[var(--color-border)] text-[var(--color-text-sub)] font-medium rounded-xl hover:bg-[var(--color-bg)] transition-colors text-sm"

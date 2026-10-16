@@ -91,6 +91,7 @@ export default async function CompanyPage({ params }: Props) {
           </div>
 
           <div className="mt-4 flex gap-3">
+            {company.officialUrl ? (
             <a
               href={company.officialUrl}
               target="_blank"
@@ -99,6 +100,9 @@ export default async function CompanyPage({ params }: Props) {
             >
               公式サイトで無料見積もり
             </a>
+            ) : (
+            <p className="flex-1 py-3 text-center text-xs text-[var(--color-text-muted)]">公式サイトを確認できないため、リンクを掲載していません</p>
+            )}
             <Link
               href="/ranking/"
               className="px-4 py-3 border border-[var(--color-border)] text-[var(--color-text-sub)] font-medium rounded-xl hover:bg-[var(--color-bg)] transition-colors text-sm"
@@ -127,6 +131,18 @@ export default async function CompanyPage({ params }: Props) {
           <div className="mt-4 p-3 bg-[var(--color-bg)] rounded-lg text-sm text-[var(--color-text-sub)]">
             <span className="font-medium text-[var(--color-text)]">対応エリア：</span>{company.coverage}
           </div>
+          {company.sources && company.sources.length > 0 && (
+            <div className="mt-3 text-xs text-[var(--color-text-muted)]">
+              <p>出典（2026年10月16日に公式サイトで確認）：</p>
+              <ul className="mt-1 space-y-1">
+                {company.sources.map((s, i) => (
+                  <li key={i}>
+                    <a href={s.url} target="_blank" rel="noopener noreferrer nofollow" className="underline">{s.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
 
         {/* Pros/Cons */}
@@ -139,6 +155,9 @@ export default async function CompanyPage({ params }: Props) {
               </svg>
               メリット・強み
             </h3>
+            {company.pros.length === 0 && (
+              <p className="text-sm text-[var(--color-text-muted)]">公式情報で確認できたメリットはありません。</p>
+            )}
             <ul className="space-y-2">
               {company.pros.map((pro, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-[var(--color-text-sub)]">
@@ -174,6 +193,7 @@ export default async function CompanyPage({ params }: Props) {
         </div>
 
         {/* CTA */}
+        {company.officialUrl && (
         <div className="mt-10 p-6 bg-gradient-to-br from-[var(--color-primary-light)] to-white rounded-2xl border border-[var(--color-primary)] text-center">
           <h3 className="font-bold text-xl text-[var(--color-text)] mb-2">{company.name}で無料見積もりを依頼する</h3>
           <p className="text-sm text-[var(--color-text-sub)] mb-4">しつこい営業なし。見積もり後のキャンセルも無料</p>
@@ -187,6 +207,7 @@ export default async function CompanyPage({ params }: Props) {
           </a>
           <p className="mt-2 text-xs text-[var(--color-text-muted)]">PR・外部サイトへ移動します</p>
         </div>
+        )}
 
         {/* Other companies */}
         <section className="mt-10">

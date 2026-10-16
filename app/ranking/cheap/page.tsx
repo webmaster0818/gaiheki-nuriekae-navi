@@ -112,6 +112,7 @@ export default function CheapRankingPage() {
                 </div>
               </div>
               <div className="mt-3 flex gap-2">
+                {company.officialUrl ? (
                 <a
                   href={company.officialUrl}
                   target="_blank"
@@ -120,6 +121,7 @@ export default function CheapRankingPage() {
                 >
                   無料で見積もり依頼
                 </a>
+                ) : null}
                 <Link
                   href={`/company/${company.slug}/`}
                   className="px-4 py-2.5 border border-[var(--color-border)] text-[var(--color-text-sub)] rounded-lg hover:bg-[var(--color-bg)] transition-colors text-sm"
