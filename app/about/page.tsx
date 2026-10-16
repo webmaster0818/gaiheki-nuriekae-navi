@@ -27,10 +27,10 @@ export default function AboutPage() {
         <section className="mb-10 prose prose-gray max-w-none text-sm leading-relaxed space-y-4">
           <h2 className="text-xl font-bold mt-2 mb-3">{SITE_NAME} について</h2>
           <p>
-            {SITE_NAME} は、株式会社MediaXが運営する比較・情報サイトです。利用者が業者選び・サービス選定で失敗しないよう、独自調査・公式情報・業界データに基づく信頼できるコンテンツを提供することを目的としています。
+            {SITE_NAME} は、株式会社MediaXが運営する比較・情報サイトです。利用者が業者選び・サービス選定を適切に行えるよう、独自調査・公式情報・業界データにもとづく信頼性の高い情報を提供することを目的としています。
           </p>
           <p>
-            当サイトのコンテンツは、最新の業界動向・公式発表・公的データを参照し、編集部による事実確認(ファクトチェック)を経て公開しています。執筆プロセスにAIツールを活用する場合がありますが、すべての記事は人間の編集者による監督・編集を経た上で公開されます。
+            当サイトのコンテンツは、最新の業界動向・公式発表・公的データを参照し、編集部による事実確認(ファクトチェック)を経て公開しています。執筆プロセスにAIツールを活用する場合がありますが、すべての記事は、編集者による監督・編集を経たうえで公開しています。
           </p>
         </section>
 
@@ -55,7 +55,7 @@ export default function AboutPage() {
         <section className="mb-10 prose prose-gray max-w-none text-sm leading-relaxed space-y-4">
           <h2 className="text-xl font-bold mt-2 mb-3">編集方針</h2>
           <ul className="list-disc pl-6 space-y-1">
-            <li><strong>独自性</strong>：他サイトの転載ではなく、独自の調査・分析・比較に基づき作成しています</li>
+            <li><strong>独自性</strong>：他サイトの転載ではなく、独自の調査・分析・比較にもとづき作成しています</li>
             <li><strong>正確性</strong>：公式サイト・公的データを参照し、事実確認を経て公開しています</li>
             <li><strong>中立性</strong>：特定の事業者を不当に優遇することなく、客観的な比較情報を提供します</li>
             <li><strong>透明性</strong>：アフィリエイトリンクの存在を明示し、収益構造を開示しています</li>
@@ -66,7 +66,7 @@ export default function AboutPage() {
         <section className="mb-10 prose prose-gray max-w-none text-sm leading-relaxed space-y-4">
           <h2 className="text-xl font-bold mt-2 mb-3">AI利用方針</h2>
           <p>
-            当サイトでは、編集効率化のためにAIツール（大規模言語モデル等）を活用する場合があります。ただし、すべてのAI生成コンテンツは人間の編集者による事実確認・編集・改善を経た上で公開されています。Googleの「Scaled Content Abuse」ポリシーに準拠し、ユーザーに価値を提供しない大量生成コンテンツの公開は行いません。
+            当サイトでは、編集効率化のためにAIツール（大規模言語モデル等）を活用する場合があります。ただし、AIを用いて作成したコンテンツは、すべて編集者による事実確認・編集を経たうえで公開しています。Googleの「Scaled Content Abuse」ポリシーに準拠し、利用者にとって価値のない大量生成コンテンツの公開は行いません。
           </p>
         </section>
 

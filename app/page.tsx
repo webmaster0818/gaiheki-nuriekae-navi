@@ -8,7 +8,7 @@ import { getVerifiedRating } from "@/lib/verifiedRating";
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   title: "外壁ぬりかえナビ｜外壁塗装業者比較ランキング【2026年最新】",
-  description: "外壁の塗り替えで失敗しないための総合情報サイト。業者ランキング・塗料の種類・費用相場・助成金情報をわかりやすく解説。一括見積もりサービス10社を徹底比較。",
+  description: "外壁の塗り替えに役立つ情報を提供する総合情報サイトです。業者ランキング・塗料の種類・費用相場・助成金情報をご説明し、一括見積もりサービス10社を比較・掲載しています。",
 };
 
 const paintTypes = [
@@ -38,23 +38,23 @@ const costTable = [
 const faqs = [
   {
     q: "外壁塗装の費用は平均いくらですか？",
-    a: "一般的な30坪2階建ての場合、足場代・下地処理込みで80〜120万円程度が相場です。塗料のグレード（ウレタン・シリコン・フッ素）や建物の状態によって大きく異なります。複数社の見積もりを比較することを強くおすすめします。",
+    a: "一般的な30坪2階建ての場合、足場代・下地処理込みで80〜120万円程度が相場です。塗料のグレード（ウレタン・シリコン・フッ素）や建物の状態によって大きく異なります。複数社の見積もりを比較することをおすすめします。",
   },
   {
-    q: "外壁塗装の業者選びで失敗しないコツは？",
-    a: "1）必ず複数社（最低3社）から見積もりを取る、2）極端に安い・高い見積もりに注意、3）施工実績・保証内容を確認する、4）訪問販売・急かす業者は避ける、の4点が重要です。",
+    q: "外壁塗装の業者選びでは、どのような点に注意すべきですか？",
+    a: "1）複数社（最低3社）から見積もりを取る、2）極端に安い・高い見積もりに注意する、3）施工実績・保証内容を確認する、4）訪問販売や契約を急がせる業者を避ける、の4点が重要です。",
   },
   {
     q: "外壁塗装に補助金・助成金はありますか？",
-    a: "国や自治体によって省エネ・断熱改修への補助金が用意されている場合があります。国土交通省の「先進的窓リノベ事業」や各自治体の独自補助金を確認しましょう。条件によっては数万〜数十万円の補助が受けられます。",
+    a: "国や自治体によって省エネ・断熱改修への補助金が用意されている場合があります。国土交通省の「先進的窓リノベ事業」や各自治体の独自補助金をご確認ください。条件によっては数万〜数十万円の補助を受けられます。",
   },
   {
     q: "外壁塗装は何年ごとに塗り替えが必要ですか？",
-    a: "使用する塗料によって異なります。ウレタン塗料：7〜10年、シリコン塗料：10〜15年、フッ素塗料：15〜20年が目安です。チョーキング・ひび割れ・色あせが見られたらサインです。",
+    a: "使用する塗料によって異なります。ウレタン塗料：7〜10年、シリコン塗料：10〜15年、フッ素塗料：15〜20年が目安です。チョーキング・ひび割れ・色あせが見られる場合は、塗り替えを検討する時期です。",
   },
   {
-    q: "一括見積もりサービスを使うメリットは？",
-    a: "複数の業者に一度で見積もり依頼ができるため、相場感がつかめて価格交渉もしやすくなります。業者を個別に探す手間が省けることも大きなメリットです。ただし、紹介された業者の評判・実績は自分でも確認しましょう。",
+    q: "一括見積もりサービスを利用するメリットは何ですか？",
+    a: "複数の業者に一度で見積もりを依頼できるため、費用の相場を把握しやすく、価格交渉もしやすくなります。業者を個別に探す手間を省ける点もメリットです。ただし、紹介された業者の評判・実績は、ご自身でもご確認ください。",
   },
 ];
 
@@ -72,13 +72,13 @@ export default function HomePage() {
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
                 <path d="M7 0L8.56 4.67H13.5L9.47 7.56L11.03 12.23L7 9.34L2.97 12.23L4.53 7.56L0.5 4.67H5.44L7 0Z"/>
               </svg>
-              2026年最新版・10社徹底比較
+              2026年最新版・10社を比較
             </div>
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-              外壁の塗り替え、<br/>失敗しない業者選び。
+              外壁塗装の業者選びを<br/>比較情報で支援します
             </h1>
             <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto leading-relaxed">
-              一括見積もりサービス10社を費用・保証・対応エリアで徹底比較。塗料の選び方から助成金まで、外壁塗装のすべてがわかります。
+              一括見積もりサービス10社を、費用・保証・対応エリアの観点で比較しています。塗料の選び方から助成金まで、外壁塗装に関する情報を掲載しています。
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
@@ -122,7 +122,7 @@ export default function HomePage() {
             </div>
             <div className="text-center mt-4">
               <Link href="/paint/comparison/" className="text-sm text-[var(--color-primary)] hover:underline font-medium">
-                4種類を一覧比較する &rarr;
+                4種類の比較一覧 &rarr;
               </Link>
             </div>
           </div>
@@ -261,11 +261,11 @@ export default function HomePage() {
               </table>
             </div>
             <p className="mt-3 text-xs text-[var(--color-text-muted)]">
-              ※上記はあくまで目安です。建物の劣化状況・地域・業者によって変動します。正確な費用は見積もりをご依頼ください。
+              ※上記は目安です。建物の劣化状況・地域・業者によって変動します。正確な費用は、見積もりにてご確認ください。
             </p>
             <div className="text-center mt-4">
               <Link href="/cost/price/" className="text-sm text-[var(--color-primary)] hover:underline font-medium">
-                詳細な費用解説を見る &rarr;
+                費用の詳細 &rarr;
               </Link>
             </div>
           </div>
@@ -279,9 +279,9 @@ export default function HomePage() {
                 劣化診断チェックリスト
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">
-                あなたの外壁は大丈夫？
+                外壁の劣化状況の確認項目
               </h2>
-              <p className="mt-2 text-[var(--color-text-sub)] text-sm">1つでも当てはまれば、早めの診断・見積もりをおすすめします</p>
+              <p className="mt-2 text-[var(--color-text-sub)] text-sm">1つでも当てはまる場合は、早めの診断・見積もりをおすすめします</p>
             </div>
             <div className="bg-white rounded-2xl border border-[var(--color-border)] p-6 space-y-3">
               {checklist.map((item, index) => (
@@ -292,7 +292,7 @@ export default function HomePage() {
               ))}
             </div>
             <div className="mt-6 p-4 bg-[var(--color-accent-light)] rounded-xl text-center border border-[var(--color-accent)]">
-              <p className="text-[var(--color-accent-dark)] font-bold mb-3">1つでも当てはまった方は無料見積もりを</p>
+              <p className="text-[var(--color-accent-dark)] font-bold mb-3">1つでも当てはまる場合は、無料見積もりのご利用をおすすめします</p>
               <Link
                 href="/ranking/"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white font-bold rounded-xl transition-colors"
@@ -340,11 +340,11 @@ export default function HomePage() {
             <h2 className="text-2xl font-bold text-[var(--color-text)] mb-6 text-center">外壁トラブル・劣化症状から調べる</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
-                { slug: "crack", title: "ひび割れ", icon: "C", desc: "構造クラックは放置厳禁" },
-                { slug: "peeling", title: "剥がれ・膨れ", icon: "P", desc: "チョーキングは塗り替えサイン" },
-                { slug: "discoloration", title: "色あせ・変色", icon: "D", desc: "紫外線劣化が原因のことが多い" },
-                { slug: "mold", title: "カビ・コケ", icon: "M", desc: "北面・日陰に多発する" },
-                { slug: "rain-leak", title: "雨漏り", icon: "R", desc: "発見次第すぐに対処を" },
+                { slug: "crack", title: "ひび割れ", icon: "C", desc: "構造クラックは早期の補修が必要です" },
+                { slug: "peeling", title: "剥がれ・膨れ", icon: "P", desc: "チョーキングは塗り替え時期の目安です" },
+                { slug: "discoloration", title: "色あせ・変色", icon: "D", desc: "紫外線による劣化が主な原因です" },
+                { slug: "mold", title: "カビ・コケ", icon: "M", desc: "北面・日陰で多く発生します" },
+                { slug: "rain-leak", title: "雨漏り", icon: "R", desc: "発見した時点で早急な対処が必要です" },
               ].map((trouble) => (
                 <Link
                   key={trouble.slug}

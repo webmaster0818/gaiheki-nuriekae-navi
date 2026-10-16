@@ -205,8 +205,8 @@ export default async function TroublePage({ params }: Props) {
 
         {/* CTA */}
         <div className="mt-10 p-6 bg-gradient-to-br from-[var(--color-danger)] to-red-700 text-white rounded-2xl text-center">
-          <h3 className="font-bold text-xl mb-2">外壁のトラブルは早期発見・早期対処が重要</h3>
-          <p className="text-white/80 text-sm mb-4">放置すると修繕費が大幅に増加します。今すぐ無料で業者に診断を依頼しましょう。</p>
+          <h3 className="font-bold text-xl mb-2">外壁のトラブルは早期の発見と対処が重要です</h3>
+          <p className="text-white/80 text-sm mb-4">放置すると修繕費が大幅に増加します。無料の業者診断のご利用をおすすめします。</p>
           <Link
             href="/ranking/"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-dark)] text-white font-bold rounded-xl transition-colors"
@@ -217,7 +217,7 @@ export default async function TroublePage({ params }: Props) {
 
         {/* Other troubles */}
         <section className="mt-10">
-          <h3 className="text-lg font-bold text-[var(--color-text)] mb-4">他のトラブル・劣化症状を調べる</h3>
+          <h3 className="text-lg font-bold text-[var(--color-text)] mb-4">他のトラブル・劣化症状</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {troubles
               .filter((t) => t.slug !== slug)

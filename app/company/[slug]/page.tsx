@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!company) return {};
   return {
     title: `${company.name}の特徴・メリット・デメリット｜外壁塗装業者比較【2026年最新】`,
-    description: `${company.name}の特徴・対応エリア・メリット・デメリットを解説。評判・口コミは公式の利用者の声と公開情報をもとに検証した別ページにまとめています。`,
+    description: `${company.name}の特徴・対応エリア・メリット・デメリットをご説明します。評判・口コミは、公式の利用者の声と公開情報をもとに検証した別ページに掲載しています。`,
     alternates: { canonical: `/company/${company.slug}/` },
   };
 }
@@ -119,14 +119,14 @@ export default async function CompanyPage({ params }: Props) {
             href={`/review/${company.slug}/`}
             className="mt-4 block rounded-2xl border-2 border-[var(--color-primary)] bg-white p-4 hover:bg-[var(--color-bg)] transition-colors"
           >
-            <span className="block text-sm font-bold text-[var(--color-primary)]">{company.name}の評判・口コミを詳しく見る →</span>
+            <span className="block text-sm font-bold text-[var(--color-primary)]">{company.name}の評判・口コミの詳細 →</span>
             <span className="mt-1 block text-xs text-[var(--color-text-sub)]">公式サイトの利用者の声と公開情報（運営会社・審査・注意点）をもとに検証したページです。</span>
           </Link>
         )}
 
         {/* Description */}
         <section className="mt-8">
-          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">{company.name}とは？</h2>
+          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">{company.name}の概要</h2>
           <p className="text-[var(--color-text-sub)] leading-relaxed">{company.description}</p>
           <div className="mt-4 p-3 bg-[var(--color-bg)] rounded-lg text-sm text-[var(--color-text-sub)]">
             <span className="font-medium text-[var(--color-text)]">対応エリア：</span>{company.coverage}
@@ -196,7 +196,7 @@ export default async function CompanyPage({ params }: Props) {
         {company.officialUrl && (
         <div className="mt-10 p-6 bg-gradient-to-br from-[var(--color-primary-light)] to-white rounded-2xl border border-[var(--color-primary)] text-center">
           <h3 className="font-bold text-xl text-[var(--color-text)] mb-2">{company.name}で無料見積もりを依頼する</h3>
-          <p className="text-sm text-[var(--color-text-sub)] mb-4">しつこい営業なし。見積もり後のキャンセルも無料</p>
+          <p className="text-sm text-[var(--color-text-sub)] mb-4">過度な営業連絡はありません。見積もり後のキャンセルも無料です</p>
           <a
             href={company.officialUrl}
             target="_blank"
@@ -211,7 +211,7 @@ export default async function CompanyPage({ params }: Props) {
 
         {/* Other companies */}
         <section className="mt-10">
-          <h3 className="text-lg font-bold text-[var(--color-text)] mb-4">他の業者と比較する</h3>
+          <h3 className="text-lg font-bold text-[var(--color-text)] mb-4">他の業者との比較</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {companies
               .filter((c) => c.slug !== slug)

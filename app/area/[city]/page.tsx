@@ -93,14 +93,14 @@ export default async function AreaPage({ params }: Props) {
   const otherAreas = areas.filter((a) => a.slug !== area.slug);
 
   const toc = [
-    { id: "premise", label: `${area.city}で外壁塗装を考えるときの前提` },
+    { id: "premise", label: `${area.city}で外壁塗装を検討する際の前提` },
     { id: "focus", label: area.focusHeading },
-    { id: "services", label: `${area.city}で使える見積もり比較サービス一覧` },
-    { id: "picks", label: "この視点で参照しやすいサービス" },
+    { id: "services", label: `${area.city}で利用できる見積もり比較サービス一覧` },
+    { id: "picks", label: "この観点で参考になるサービス" },
     { id: "checkpoints", label: area.checkpointsHeading },
-    { id: "cost", label: "費用の考え方と確認できていないこと" },
+    { id: "cost", label: "費用の考え方と未確認の事項" },
     { id: "faq", label: "よくある質問" },
-    { id: "other-areas", label: "他のエリアから探す" },
+    { id: "other-areas", label: "他のエリアの情報" },
   ];
 
   return (
@@ -141,7 +141,7 @@ export default async function AreaPage({ params }: Props) {
         {/* 前提 */}
         <section id="premise" className="mt-10 scroll-mt-20">
           <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">
-            {area.city}で外壁塗装を考えるときの前提
+            {area.city}で外壁塗装を検討する際の前提
           </h2>
           <div className="space-y-4">
             {area.premise.map((p) => (
@@ -173,10 +173,10 @@ export default async function AreaPage({ params }: Props) {
         {/* サービス一覧 */}
         <section id="services" className="mt-10 scroll-mt-20">
           <h2 className="text-xl font-bold text-[var(--color-text)] mb-3">
-            {area.city}で使える見積もり比較サービス一覧
+            {area.city}で利用できる見積もり比較サービス一覧
           </h2>
           <p className="text-sm text-[var(--color-text-sub)] leading-relaxed mb-4">
-            当サイトが掲載している見積もり比較サービスのうち、公式サイトの稼働を確認できたものを一覧にしました。いずれも全国対応と公表しているため、{area.cityFormal}も対象に含まれる想定ですが、市区町村単位の加盟状況は公表されていません。表の内容は各社の公表情報にもとづく記載です。
+            当サイトが掲載している見積もり比較サービスのうち、公式サイトの稼働を確認できたものを一覧にしています。いずれも全国対応と公表しているため、{area.cityFormal}も対象に含まれると考えられますが、市区町村単位の加盟状況は公表されていません。表の内容は、各社の公表情報にもとづいて記載しています。
           </p>
           <div className="table-wrapper rounded-xl border border-[var(--color-border)] overflow-hidden">
             <table className="comparison-table w-full">
@@ -196,7 +196,7 @@ export default async function AreaPage({ params }: Props) {
                     <td className="text-sm">{pickLabel(s, ["対応エリア"])}</td>
                     <td className="text-sm">
                       <Link href={`/review/${s.slug}/`} className="text-[var(--color-primary)] hover:underline">
-                        口コミを見る
+                        口コミ・評判
                       </Link>
                     </td>
                   </tr>
@@ -212,10 +212,10 @@ export default async function AreaPage({ params }: Props) {
         {/* ピックアップ */}
         <section id="picks" className="mt-10 scroll-mt-20">
           <h2 className="text-xl font-bold text-[var(--color-text)] mb-3">
-            この視点で参照しやすいサービス
+            この観点で参考になるサービス
           </h2>
           <p className="text-sm text-[var(--color-text-sub)] leading-relaxed mb-4">
-            「{area.angleLabel}」という観点から見たときに、公表されている仕組みが参考になるサービスを挙げます。優劣の評価ではなく、公表内容と観点の対応を示したものです。
+            「{area.angleLabel}」という観点から、公表されている仕組みが参考になるサービスを掲載しています。優劣の評価ではなく、公表内容と観点の対応を示したものです。
           </p>
           <div className="space-y-4">
             {area.picks.map((slug) => {
@@ -259,17 +259,17 @@ export default async function AreaPage({ params }: Props) {
 
         {/* 費用と未確認事項 */}
         <section id="cost" className="mt-10 scroll-mt-20">
-          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">費用の考え方と確認できていないこと</h2>
+          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">費用の考え方と未確認の事項</h2>
           <div className="p-5 bg-white border border-[var(--color-border)] rounded-xl">
             <p className="text-sm text-[var(--color-text-sub)] leading-relaxed">
               当サイトでは{area.cityFormal}に限定した塗装単価や相場を独自に調査していないため、地域別の金額は掲載していません。塗料別・面積別の一般的な目安と費用の内訳は
               <Link href="/cost/price/" className="text-[var(--color-primary)] hover:underline mx-1">費用・相場のページ</Link>
-              にまとめています。実際の金額は、現地調査を受けたうえで各社の見積もりで確認してください。
+              に掲載しています。実際の金額は、現地調査を受けたうえで、各社の見積もりにてご確認ください。
             </p>
             <p className="mt-3 text-sm text-[var(--color-text-sub)] leading-relaxed">
               助成金・補助金は自治体ごとに内容が異なり、随時変更されます。制度の一般的な仕組みと申請の流れは
               <Link href="/cost/subsidy/" className="text-[var(--color-primary)] hover:underline mx-1">助成金・補助金ガイド</Link>
-              で解説していますが、{area.cityFormal}の個別の制度については当サイトで確認していません。最新の内容は自治体の公式サイトでご確認ください。
+              でご説明していますが、{area.cityFormal}の個別の制度については当サイトでは確認していません。最新の内容は自治体の公式サイトでご確認ください。
             </p>
             <p className="mt-3 text-sm text-[var(--color-text-sub)] leading-relaxed">{area.unknownNote}</p>
           </div>
@@ -301,7 +301,7 @@ export default async function AreaPage({ params }: Props) {
 
         {/* 他のエリア */}
         <section id="other-areas" className="mt-10 scroll-mt-20">
-          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">他のエリアから探す</h2>
+          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">他のエリアの情報</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {otherAreas.map((a) => (
               <Link
@@ -318,10 +318,10 @@ export default async function AreaPage({ params }: Props) {
 
         {/* 関連リンク */}
         <div className="mt-8">
-          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">あわせて読みたいガイド</h2>
+          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">関連ガイド</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/guide/scaffold/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
-              <span className="block font-bold text-[var(--color-text)]">外壁塗装の足場は必要か</span>
+              <span className="block font-bold text-[var(--color-text)]">外壁塗装における足場の必要性</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">見積書での確認点と法令上の位置づけ</span>
             </Link>
             <Link href="/guide/construction-flow/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
@@ -329,7 +329,7 @@ export default async function AreaPage({ params }: Props) {
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">着工前の準備から引き渡しまで</span>
             </Link>
             <Link href="/guide/door-to-door/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
-              <span className="block font-bold text-[var(--color-text)]">訪問営業への対処法</span>
+              <span className="block font-bold text-[var(--color-text)]">訪問営業への対応方法</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">契約前の確認とクーリング・オフ</span>
             </Link>
             <Link href="/ranking/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">

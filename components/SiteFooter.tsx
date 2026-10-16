@@ -20,7 +20,7 @@ export default function SiteFooter() {
               <span className="font-bold text-white">外壁ぬりかえナビ</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              外壁塗装の業者選びで失敗しないための総合情報サイト。塗料の種類・費用・助成金・優良業者を徹底解説。
+              外壁塗装の業者選びに役立つ情報を、公式情報にもとづいて提供する総合情報サイトです。塗料の種類・費用・助成金・業者の情報を掲載しています。
             </p>
           </div>
 
@@ -54,8 +54,8 @@ export default function SiteFooter() {
                 { href: "/area/nagoya/", label: "名古屋の業者比較" },
                 { href: "/area/yokohama/", label: "横浜の業者比較" },
                 { href: "/area/fukuoka/", label: "福岡の業者比較" },
-                { href: "/guide/scaffold/", label: "足場は必要か" },
-                { href: "/guide/door-to-door/", label: "訪問営業への対処" },
+                { href: "/guide/scaffold/", label: "足場の必要性" },
+                { href: "/guide/door-to-door/", label: "訪問営業への対応" },
                 { href: "/guide/construction-flow/", label: "工事の流れ" },
               ].map((link) => (
                 <li key={link.href}>
@@ -88,7 +88,7 @@ export default function SiteFooter() {
               <p className="font-medium text-gray-300 mb-1">運営会社</p>
               <p>株式会社MediaX</p>
               <p className="mt-1 text-xs">
-                ※当サイトは広告収益（アフィリエイト）により運営されています。掲載内容はコンテンツポリシーに基づき公正に作成しています。
+                ※当サイトは広告収益（アフィリエイト）により運営しています。掲載内容は、コンテンツポリシーにもとづき公正に作成しています。
               </p>
             </div>
           </div>

@@ -36,8 +36,8 @@ export default async function ReviewPage({ params }: Props) {
     { id: "basic", label: `${r.companyName}とは（運営会社・基本情報）` },
     { id: "reviews", label: r.reviewsHeading },
     { id: "strengths", label: "口コミからわかる強み・特徴" },
-    { id: "cautions", label: "利用前に知っておきたい注意点" },
-    { id: "recommended", label: "どんな人におすすめか" },
+    { id: "cautions", label: "利用前の注意点" },
+    { id: "recommended", label: "おすすめできる方" },
     { id: "faq", label: "よくある質問" },
     { id: "summary", label: "まとめ" },
   ];
@@ -73,7 +73,7 @@ export default async function ReviewPage({ params }: Props) {
       <Breadcrumb items={[{ label: "口コミ・評判", href: "/review/" }, { label: r.companyName }]} />
 
       <header className="mt-2">
-        <span className="label inline-block mb-3 text-primary">業者レビュー</span>
+        <span className="label inline-block mb-3 text-primary">業者の口コミ・評判</span>
         <h1 className="text-2xl sm:text-3xl font-bold leading-snug text-text-primary mb-4">{r.title}</h1>
         <div className="flex items-center gap-3 text-sm text-text-muted mb-6">
           <time dateTime="2026-06-16">最終更新：{r.updatedAt}</time>
@@ -97,7 +97,7 @@ export default async function ReviewPage({ params }: Props) {
           <div className="flex-1 min-w-[200px]">
             <p className="text-sm text-text-secondary leading-6">
               <a href={rating.mapsUri} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2">{rating.sourceLabel}</a>
-              での評価です。口コミ {rating.reviewCount} 件の平均（{rating.fetchedAt}時点）。本記事の口コミはGoogleマップに実際に投稿されたレビューの抜粋です。
+              での評価です。口コミ {rating.reviewCount} 件の平均です（{rating.fetchedAt}時点）。本記事の口コミは、Googleマップに実際に投稿された口コミの抜粋です。
             </p>
           </div>
         </div>
@@ -187,7 +187,7 @@ export default async function ReviewPage({ params }: Props) {
 
       {/* Cautions */}
       <section id="cautions" className="scroll-mt-20 mb-12">
-        <h2 className="text-xl font-bold text-text-primary border-l-4 border-primary pl-3 mb-5">利用前に知っておきたい注意点</h2>
+        <h2 className="text-xl font-bold text-text-primary border-l-4 border-primary pl-3 mb-5">利用前の注意点</h2>
         <div className="space-y-4">
           {r.cautions.map((c: any, i: number) => (
             <div key={i} className="rounded-2xl border border-border bg-surface-alt p-5">
@@ -200,7 +200,7 @@ export default async function ReviewPage({ params }: Props) {
 
       {/* Recommended */}
       <section id="recommended" className="scroll-mt-20 mb-12">
-        <h2 className="text-xl font-bold text-text-primary border-l-4 border-primary pl-3 mb-5">どんな人におすすめか</h2>
+        <h2 className="text-xl font-bold text-text-primary border-l-4 border-primary pl-3 mb-5">おすすめできる方</h2>
         <ul className="space-y-3">
           {r.recommended.map((x: string, i: number) => (
             <li key={i} className="flex items-start gap-3 text-[15px] leading-8 text-text-secondary">
@@ -242,14 +242,14 @@ export default async function ReviewPage({ params }: Props) {
         </div>
       ) : (
         <div className="rounded-2xl border border-border bg-surface-alt p-6 text-center">
-          <p className="text-sm text-text-secondary">現在、公式サイトの稼働が確認できないため、リンクは掲載していません。最新の提供状況はご自身でもご確認ください。</p>
+          <p className="text-sm text-text-secondary">現在、公式サイトの稼働を確認できないため、リンクは掲載していません。最新の提供状況は、ご自身でもご確認ください。</p>
           <p className="mt-3 text-xs text-text-muted">掲載情報は{r.updatedAt}時点のものです。</p>
         </div>
       )}
 
       <div className="mt-8 flex flex-wrap gap-4 text-sm">
-        <Link href="/review/" className="text-primary hover:underline">他の業者の口コミ・評判を見る</Link>
-        <Link href="/ranking/" className="text-primary hover:underline">外壁塗装業者ランキングを見る</Link>
+        <Link href="/review/" className="text-primary hover:underline">他の業者の口コミ・評判</Link>
+        <Link href="/ranking/" className="text-primary hover:underline">外壁塗装業者ランキング</Link>
       </div>
       <p className="text-center text-xs text-gray-500 py-4">本サイトはプロモーション(PR)を含みます。</p>
     </article>

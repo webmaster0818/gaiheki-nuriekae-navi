@@ -74,7 +74,7 @@ export default async function PaintPage({ params }: Props) {
                     <th>耐用年数</th>
                     <th>塗装単価</th>
                     <th>特徴</th>
-                    <th>向いている方</th>
+                    <th>適している用途</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -125,7 +125,7 @@ export default async function PaintPage({ params }: Props) {
 
         {/* Recommended for */}
         <div className="mt-6 p-4 bg-[var(--color-accent-light)] rounded-xl border border-[var(--color-accent)]">
-          <h3 className="font-bold text-[var(--color-accent-dark)] mb-2">こんな方におすすめ</h3>
+          <h3 className="font-bold text-[var(--color-accent-dark)] mb-2">おすすめできる方</h3>
           <p className="text-sm text-[var(--color-text-sub)]">{paint.recommendedFor}</p>
         </div>
 
@@ -155,8 +155,8 @@ export default async function PaintPage({ params }: Props) {
 
         {/* CTA */}
         <div className="mt-10 p-6 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] text-white rounded-2xl text-center">
-          <h3 className="font-bold text-xl mb-2">どの塗料がいいか業者に相談する</h3>
-          <p className="text-white/80 text-sm mb-4">複数社に無料見積もりを依頼して、塗料の最適な選択を確認しましょう</p>
+          <h3 className="font-bold text-xl mb-2">塗料の選定に関する業者への相談</h3>
+          <p className="text-white/80 text-sm mb-4">複数社に無料見積もりを依頼し、適した塗料をご確認ください</p>
           <Link
             href="/ranking/"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-dark)] text-white font-bold rounded-xl transition-colors"
@@ -167,7 +167,7 @@ export default async function PaintPage({ params }: Props) {
 
         {/* Other paints */}
         <section className="mt-10">
-          <h3 className="text-lg font-bold text-[var(--color-text)] mb-4">他の塗料を比較する</h3>
+          <h3 className="text-lg font-bold text-[var(--color-text)] mb-4">他の塗料との比較</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {otherPaints.map((p) => (
               <Link

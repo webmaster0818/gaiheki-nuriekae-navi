@@ -4,8 +4,8 @@ import reviewsData from "@/data/reviews.json";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "外壁塗装業者の口コミ・評判まとめ｜実際のGoogleレビューで検証",
-  description: "外壁塗装の見積もり比較サービス・業者を、実際のGoogle口コミと運営会社の公開情報で中立的に検証します。",
+  title: "外壁塗装業者の口コミ・評判まとめ｜Googleの口コミと公開情報で検証",
+  description: "外壁塗装の見積もり比較サービス・業者を、Googleマップに投稿された口コミと運営会社の公開情報にもとづき、中立的な立場で検証しています。",
   alternates: { canonical: "https://gaiheki-nuriekae-navi.com/review/" },
 };
 
@@ -15,7 +15,7 @@ export default function ReviewIndex() {
       <Breadcrumb items={[{ label: "口コミ・評判" }]} />
       <h1 className="text-2xl sm:text-3xl font-bold text-text-primary mt-2 mb-4">外壁塗装業者の口コミ・評判まとめ</h1>
       <p className="text-[15px] leading-8 text-text-secondary mb-8">
-        実際にGoogleマップへ投稿された口コミと、各社の公開情報をもとに、外壁塗装の比較サービス・業者を中立的に検証します。掲載しているのはすべて実在のレビューまたは公式の利用者の声です。
+        当ページでは、Googleマップに投稿された口コミと各社の公開情報をもとに、外壁塗装の比較サービス・業者を中立的な立場で検証しています。掲載している口コミは、すべて実際に投稿された口コミ、または公式サイトに掲載された利用者の声です。
       </p>
       <div className="space-y-4">
         {reviewsData.map((r) => (

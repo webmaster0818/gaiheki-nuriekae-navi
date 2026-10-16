@@ -19,12 +19,12 @@ const principles = [
     desc: "当サイトはアフィリエイト広告を収益源としています。広告掲載の有無がコンテンツの評価・ランキングに影響を与えることはありません。PRの場合は明示的に表示しています。",
   },
   {
-    title: "ユーザーファースト",
-    desc: "読者にとって有益な情報提供を最優先とし、不正確な情報・誇大広告・誤解を招く表現は掲載しません。",
+    title: "利用者の利益を優先した情報提供",
+    desc: "読者にとって有益な情報の提供を最優先とし、不正確な情報・誇大な広告・誤解を招く表現は掲載しません。",
   },
   {
     title: "定期的な情報更新",
-    desc: "掲載情報は随時見直し・更新を行っています。情報に誤りや古い内容を発見した場合はお問い合わせよりご連絡ください。",
+    desc: "掲載情報は随時見直し・更新を行っています。情報の誤りや古い内容にお気づきの場合は、お問い合わせよりご連絡ください。",
   },
   {
     title: "専門家による監修",
@@ -50,7 +50,7 @@ export default function ContentPolicyPage() {
         <p className="mt-2 text-sm text-[var(--color-text-muted)]">最終更新日：2026年1月1日</p>
 
         <p className="mt-4 text-sm text-[var(--color-text-sub)] leading-relaxed">
-          外壁ぬりかえナビは、外壁塗装の業者選びで失敗する方を減らすため、正確・公正・有益な情報を提供することを使命としています。以下のポリシーに基づいてコンテンツを作成しています。
+          外壁ぬりかえナビは、外壁塗装の業者選びを適切に行えるよう、正確・公正・有益な情報の提供に努めます。以下のポリシーにもとづいてコンテンツを作成しています。
         </p>
 
         {/* Editorial principles */}
@@ -99,7 +99,7 @@ export default function ContentPolicyPage() {
             {[
               "業者の登録数・対応エリア",
               "審査・品質管理の厳格さ",
-              "ユーザーの口コミ・評判",
+              "利用者の口コミ・評判",
               "無料見積もり制度",
               "保証・アフターサービス",
               "サービスの使いやすさ",
@@ -115,7 +115,7 @@ export default function ContentPolicyPage() {
         <section className="mt-10">
           <h2 className="text-xl font-bold text-[var(--color-text)] mb-3">誤情報のご指摘・お問い合わせ</h2>
           <p className="text-sm text-[var(--color-text-sub)]">
-            コンテンツに誤りがある場合や、情報の更新が必要な場合は、下記の運営者情報よりお問い合わせください。指摘いただいた内容は編集部が確認し、必要に応じて修正します。
+            コンテンツに誤りがある場合や、情報の更新が必要な場合は、下記の運営者情報よりお問い合わせください。ご指摘いただいた内容は編集部で確認し、必要に応じて修正します。
           </p>
           <div className="mt-4 p-4 bg-[var(--color-bg)] rounded-xl border border-[var(--color-border)]">
             <p className="font-medium text-[var(--color-text)] mb-1">運営者</p>

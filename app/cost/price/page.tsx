@@ -6,15 +6,15 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/cost/price/" },
-  title: "外壁塗装の費用・相場【2026年】塗料別・面積別で徹底解説",
-  description: "外壁塗装の費用は塗料や面積によって大きく変わります。塗料別（ウレタン・シリコン・フッ素・セラミック）・面積別の詳細な費用相場と、費用を左右する要素を解説。",
+  title: "外壁塗装の費用・相場【2026年】塗料別・面積別に解説",
+  description: "外壁塗装の費用は塗料や面積によって大きく変わります。塗料別（ウレタン・シリコン・フッ素・セラミック）・面積別の費用相場と、費用を左右する要素をご説明します。",
 };
 
 const paintCostTable = [
-  { paint: "ウレタン塗料", durability: "7〜10年", perSqm: "1,800〜2,500円", total30tsubo: "55〜80万円", feature: "低コスト・弾力性あり" },
-  { paint: "シリコン塗料", durability: "10〜15年", perSqm: "2,500〜3,500円", total30tsubo: "80〜110万円", feature: "コスパ最高・人気No.1" },
-  { paint: "セラミック塗料", durability: "10〜25年", perSqm: "3,000〜5,500円", total30tsubo: "90〜160万円", feature: "断熱・光触媒機能あり" },
-  { paint: "フッ素塗料", durability: "15〜20年", perSqm: "3,500〜5,000円", total30tsubo: "100〜140万円", feature: "最高耐久・長寿命" },
+  { paint: "ウレタン塗料", durability: "7〜10年", perSqm: "1,800〜2,500円", total30tsubo: "55〜80万円", feature: "低価格・弾力性がある" },
+  { paint: "シリコン塗料", durability: "10〜15年", perSqm: "2,500〜3,500円", total30tsubo: "80〜110万円", feature: "費用対効果が高く、採用が多い" },
+  { paint: "セラミック塗料", durability: "10〜25年", perSqm: "3,000〜5,500円", total30tsubo: "90〜160万円", feature: "断熱・光触媒機能がある" },
+  { paint: "フッ素塗料", durability: "15〜20年", perSqm: "3,500〜5,000円", total30tsubo: "100〜140万円", feature: "耐久性が高く、長寿命" },
 ];
 
 const areaTable = [
@@ -28,7 +28,7 @@ const areaTable = [
 const costBreakdown = [
   { item: "足場設置・撤去費", percent: "20〜25%", example: "15〜25万円", note: "外壁面積・高さによる" },
   { item: "高圧洗浄費", percent: "3〜5%", example: "2〜5万円", note: "洗浄業者・面積による" },
-  { item: "下地処理・補修費", percent: "5〜15%", example: "5〜20万円", note: "劣化状況による変動大" },
+  { item: "下地処理・補修費", percent: "5〜15%", example: "5〜20万円", note: "劣化状況により大きく変動" },
   { item: "シーリング工事費", percent: "5〜10%", example: "5〜15万円", note: "サッシ・目地周りの処理" },
   { item: "塗料・塗装工事費", percent: "40〜55%", example: "35〜80万円", note: "塗料グレードによる" },
   { item: "諸経費・管理費", percent: "5〜10%", example: "5〜10万円", note: "業者の間接費用" },
@@ -40,16 +40,16 @@ const faqs = [
     a: "30坪（延べ床面積）の2階建て住宅の場合、外壁面積は約120m2前後が目安です。ウレタン塗料で65〜85万円、シリコン塗料で90〜115万円、フッ素塗料で115〜150万円程度が相場です。ただし建物の形状・劣化状況・地域によって変動します。",
   },
   {
-    q: "見積もりが極端に安い業者は大丈夫ですか？",
-    a: "相場より極端に安い見積もりには注意が必要です。塗料の品質が低い、施工回数を減らす（3回塗りを2回にする）、追加費用を後から請求するなどのケースがあります。相見積もりで相場感を確認しましょう。",
+    q: "見積もりが極端に安い業者に依頼しても問題ありませんか？",
+    a: "相場より極端に安い見積もりには注意が必要です。塗料の品質が低い、施工回数を減らす（3回塗りを2回にする）、追加費用を後から請求するなどのケースがあります。相見積もりにより、費用の相場をご確認ください。",
   },
   {
     q: "足場代の相場はいくらですか？",
-    a: "足場代は外壁面積・建物の高さによって異なりますが、一般的な2階建て住宅で15〜25万円程度が相場です。外壁塗装のみより屋根塗装も同時施工にすると、足場代を1回分節約できます。",
+    a: "足場代は外壁面積・建物の高さによって異なりますが、一般的な2階建て住宅で15〜25万円程度が相場です。外壁塗装と屋根塗装を同時に施工すると、足場代を1回分節約できます。",
   },
   {
-    q: "分割払い・ローンは使えますか？",
-    a: "多くの業者でリフォームローンや信販会社のクレジット払いに対応しています。また、省エネ改修の場合はグリーン住宅ポイントや省エネ補助金を活用することで実質負担を軽減できます。",
+    q: "分割払い・ローンは利用できますか？",
+    a: "多くの業者でリフォームローンや信販会社のクレジット払いに対応しています。また、省エネ改修の場合は、グリーン住宅ポイントや省エネ補助金を活用することで実質的な負担を軽減できます。",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function CostPricePage() {
           外壁塗装の費用・相場【2026年版】塗料別・面積別で解説
         </h1>
         <p className="mt-3 text-[var(--color-text-sub)] leading-relaxed">
-          外壁塗装の費用は塗料の種類・外壁面積・劣化状況によって大きく変わります。このページでは塗料別・面積別の詳細な費用相場と、費用に影響する要素を徹底解説します。
+          外壁塗装の費用は塗料の種類・外壁面積・劣化状況によって大きく変わります。当ページでは、塗料別・面積別の費用相場と、費用に影響する要素をご説明します。
         </p>
 
         {/* Paint cost table */}
@@ -100,7 +100,7 @@ export default function CostPricePage() {
             </table>
           </div>
           <p className="mt-2 text-xs text-[var(--color-text-muted)]">
-            ※足場代・高圧洗浄・下地処理・シーリング含む。劣化状況・地域・業者により変動します。
+            ※足場代・高圧洗浄・下地処理・シーリングを含みます。劣化状況・地域・業者により変動します。
           </p>
         </section>
 
@@ -178,11 +178,11 @@ export default function CostPricePage() {
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <Link href="/cost/subsidy/" className="flex-1 p-4 bg-[var(--color-accent-light)] border border-[var(--color-accent)] rounded-xl text-center hover:shadow-md transition-shadow">
             <div className="font-bold text-[var(--color-accent-dark)] mb-1">助成金・補助金ガイド</div>
-            <div className="text-xs text-[var(--color-text-sub)]">最大数十万円の補助が受けられる場合があります</div>
+            <div className="text-xs text-[var(--color-text-sub)]">最大数十万円の補助を受けられる場合があります</div>
           </Link>
           <Link href="/ranking/" className="flex-1 p-4 bg-[var(--color-primary-light)] border border-[var(--color-primary)] rounded-xl text-center hover:shadow-md transition-shadow">
             <div className="font-bold text-[var(--color-primary)] mb-1">無料見積もりを依頼する</div>
-            <div className="text-xs text-[var(--color-text-sub)]">複数社比較で適正価格を確認</div>
+            <div className="text-xs text-[var(--color-text-sub)]">複数社の比較により適正価格を確認できます</div>
           </Link>
         </div>
       </main>

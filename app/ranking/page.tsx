@@ -8,8 +8,8 @@ import { getVerifiedRating } from "@/lib/verifiedRating";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/" },
-  title: "外壁塗装業者ランキング【2026年最新】10社を徹底比較",
-  description: "外壁塗装の一括見積もりサービス10社を料金・対応エリア・保証・口コミで徹底比較。あなたに最適な業者が見つかります。",
+  title: "外壁塗装業者ランキング【2026年最新】10社を比較",
+  description: "外壁塗装の一括見積もりサービス10社を、料金・対応エリア・保証・口コミの観点で比較しています。業者選びの参考としてご活用ください。",
 };
 
 export default function RankingPage() {
@@ -24,7 +24,7 @@ export default function RankingPage() {
             外壁塗装業者ランキング【2026年最新】
           </h1>
           <p className="mt-2 text-[var(--color-text-sub)]">
-            一括見積もりサービス10社を対応エリア・業者数・保証・口コミで徹底比較しました。
+            当ページでは、一括見積もりサービス10社を、対応エリア・業者数・保証・口コミの観点で比較しています。
           </p>
           <div className="mt-3 p-3 bg-[var(--color-secondary-light)] border border-[var(--color-secondary)] rounded-lg text-xs text-[var(--color-text-sub)]">
             ※当ランキングはアフィリエイト広告を含みます（PR）。編集部による独自基準で評価しています。
@@ -79,7 +79,7 @@ export default function RankingPage() {
                         ) : (
                           <span className="text-xs text-[var(--color-text-muted)]">Googleマップ評価：未取得</span>
                         )}
-                        <span className="text-xs text-[var(--color-text-muted)] ml-2">対応: {company.coverage}</span>
+                        <span className="text-xs text-[var(--color-text-muted)] ml-2">対応エリア: {company.coverage}</span>
                       </div>
                     );
                   })()}
@@ -117,8 +117,8 @@ export default function RankingPage() {
         </div>
 
         <div className="mt-10 p-6 bg-[var(--color-primary-light)] rounded-2xl border border-[var(--color-primary)]">
-          <h3 className="font-bold text-lg text-[var(--color-text)] mb-2">費用を抑えたい方はこちら</h3>
-          <p className="text-sm text-[var(--color-text-sub)] mb-3">価格重視でランキング。安く外壁塗装できる業者を比較しています。</p>
+          <h3 className="font-bold text-lg text-[var(--color-text)] mb-2">費用を重視する場合のランキング</h3>
+          <p className="text-sm text-[var(--color-text-sub)] mb-3">価格を重視したランキングです。費用を抑えて外壁塗装を依頼できる業者を比較しています。</p>
           <Link href="/ranking/cheap/" className="inline-flex items-center gap-2 px-5 py-2 bg-[var(--color-primary)] text-white font-bold rounded-lg text-sm hover:bg-[var(--color-primary-dark)] transition-colors">
             安い業者ランキングを見る
           </Link>
