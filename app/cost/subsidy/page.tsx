@@ -12,22 +12,22 @@ export const metadata: Metadata = {
 
 const nationalSubsidies = [
   {
-    name: "省エネ住宅ポイント制度",
-    amount: "工事内容によって変動",
-    condition: "省エネ基準を満たす断熱・遮熱工事",
-    note: "遮熱塗料・断熱塗料が対象になる場合がある",
+    name: "みらいエコ住宅2026事業（国土交通省）",
+    amount: "40万〜100万円／戸",
+    condition: "平成28年以前に新築された住宅で、外皮に面する開口部を有する居室において、事業が定める組み合わせの断熱改修（要件化工事）を行うこと。リフォームはすべての世帯が対象です。補助額は住宅の新築時期と工事内容によって異なります。",
+    note: "外壁塗装は補助対象工事のメニュー（開口部・躯体の断熱改修、エコ住宅設備の設置など）に含まれていません。交付申請の予約は遅くとも2026年11月16日まで、交付申請は遅くとも2026年12月31日までです（予算上限に達した時点で受付終了）。",
   },
   {
-    name: "子育てエコホーム支援事業",
-    amount: "最大20〜60万円相当",
-    condition: "省エネリフォーム全般（一定の要件あり）",
-    note: "外壁塗装単独では対象外の場合が多い",
+    name: "先進的窓リノベ2026事業（環境省）",
+    amount: "最大100万円／戸",
+    condition: "ガラス交換・内窓設置・外窓交換のいずれかの工事（ドア交換のみは申請できません）",
+    note: "窓の断熱改修が対象です。外壁塗装と同じ時期に窓の工事を行う場合に検討できます。受付期間はみらいエコ住宅2026事業と同じです。",
   },
   {
     name: "長期優良住宅化リフォーム推進事業",
-    amount: "工事費の1/3（最大100万円）",
+    amount: "補助率・上限額は公募要領をご確認ください",
     condition: "耐震・省エネ等の複合的な性能向上リフォーム",
-    note: "外壁塗装を含む場合、対象になることがある",
+    note: "外壁塗装を含む場合、対象になることがあります。",
   },
 ];
 
@@ -138,6 +138,19 @@ export default function SubsidyPage() {
               </div>
             ))}
           </div>
+          <p className="mt-4 text-xs text-[var(--color-text-muted)] leading-relaxed">
+            子育てエコホーム支援事業は、2024年12月31日で交付申請（予約を含む）の受付を終了しています。住宅省エネ2025キャンペーンの各事業（先進的窓リノベ2025事業・給湯省エネ2025事業など）は、2026年3月で事業を終了しました。
+          </p>
+          <p className="mt-2 text-xs text-[var(--color-text-muted)] leading-relaxed">
+            出典（2026年10月17日に公式サイトで確認）：
+            <a href="https://jutaku-shoene2026.mlit.go.jp/about/reform.html" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">住宅省エネ2026キャンペーン「リフォームについて」</a>
+            ／
+            <a href="https://mirai-eco2026.mlit.go.jp/reform/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">みらいエコ住宅2026事業「リフォーム」</a>
+            ／
+            <a href="https://kosodate-ecohome.mlit.go.jp/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">子育てエコホーム支援事業</a>
+            ／
+            <a href="https://jutaku-shoene2025.mlit.go.jp/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">住宅省エネ2025キャンペーン</a>
+          </p>
         </section>
 
         {/* Local subsidies */}
