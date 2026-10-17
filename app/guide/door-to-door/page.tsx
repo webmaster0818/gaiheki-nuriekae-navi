@@ -274,6 +274,18 @@ export default function DoorToDoorGuidePage() {
               <span className="block font-bold text-[var(--color-text)]">業者の口コミ・評判まとめ</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">運営会社の公開情報にもとづく確認</span>
             </Link>
+            <Link href="/guide/fire-insurance/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">火災保険を使う勧誘への注意</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">国民生活センターの注意喚起と対応</span>
+            </Link>
+            <Link href="/guide/contractor-check/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">優良業者を見分ける公的な確認方法</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">建設業許可・登録団体・瑕疵保険の調べ方</span>
+            </Link>
+            <Link href="/guide/contract/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">契約前に確認する書類</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">見積書・契約書・約款と無料の見積チェック</span>
+            </Link>
           </div>
         </section>
       </main>

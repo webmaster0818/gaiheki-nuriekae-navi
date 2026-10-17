@@ -5,6 +5,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import troubles from "@/data/troubles.json";
+import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -202,6 +203,18 @@ export default async function TroublePage({ params }: Props) {
             ))}
           </div>
         </section>
+
+        <RelatedGuides
+          items={(
+            {
+              crack: [GUIDES.fireInsurance, GUIDES.contractorCheck, GUIDES.warranty],
+              "rain-leak": [GUIDES.fireInsurance, GUIDES.warranty, GUIDES.contractorCheck],
+              peeling: [GUIDES.warranty, GUIDES.season, GUIDES.asbestos],
+              discoloration: [GUIDES.color, GUIDES.season],
+              mold: [GUIDES.season, GUIDES.color],
+            } as Record<string, (typeof GUIDES)[keyof typeof GUIDES][]>
+          )[slug] ?? []}
+        />
 
         {/* CTA */}
         <div className="mt-10 p-6 bg-gradient-to-br from-[var(--color-danger)] to-red-700 text-white rounded-2xl text-center">

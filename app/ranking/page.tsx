@@ -5,6 +5,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 import { getVerifiedRating } from "@/lib/verifiedRating";
+import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/" },
@@ -123,6 +124,10 @@ export default function RankingPage() {
             安い業者ランキングを見る
           </Link>
         </div>
+        <RelatedGuides
+          title="業者を選ぶ際の関連ガイド"
+          items={[GUIDES.contractorCheck, GUIDES.warranty, GUIDES.contract, GUIDES.compare]}
+        />
       </main>
       <SiteFooter />
     </>

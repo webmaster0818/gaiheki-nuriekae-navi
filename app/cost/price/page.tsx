@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
+import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/cost/price/" },
@@ -185,6 +186,7 @@ export default function CostPricePage() {
             <div className="text-xs text-[var(--color-text-sub)]">複数社の比較により適正価格を確認できます</div>
           </Link>
         </div>
+        <RelatedGuides items={[GUIDES.contract, GUIDES.asbestos, GUIDES.season]} />
       </main>
       <SiteFooter />
     </>

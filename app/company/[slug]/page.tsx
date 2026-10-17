@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 import reviews from "@/data/reviews.json";
 import { getVerifiedRating } from "@/lib/verifiedRating";
+import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -211,6 +212,10 @@ export default async function CompanyPage({ params }: Props) {
             </ul>
           </div>
         </div>
+
+        {(slug === "gaiso" || slug === "protimes") && (
+          <RelatedGuides items={[GUIDES.compare, GUIDES.warranty, GUIDES.contractorCheck]} />
+        )}
 
         {/* CTA */}
         {company.officialUrl && (

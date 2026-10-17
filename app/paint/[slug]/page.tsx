@@ -5,6 +5,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import paints from "@/data/paints.json";
+import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -152,6 +153,8 @@ export default async function PaintPage({ params }: Props) {
             ))}
           </div>
         </section>
+
+        <RelatedGuides items={[GUIDES.color, GUIDES.season, GUIDES.warranty]} />
 
         {/* CTA */}
         <div className="mt-10 p-6 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] text-white rounded-2xl text-center">

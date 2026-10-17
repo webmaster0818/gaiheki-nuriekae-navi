@@ -336,6 +336,14 @@ export default async function AreaPage({ params }: Props) {
               <span className="block font-bold text-[var(--color-text)]">外壁塗装業者ランキング</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">掲載サービスの比較一覧</span>
             </Link>
+            <Link href="/guide/contract/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">契約前に確認する書類</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">見積書・契約書・約款と無料の見積チェック</span>
+            </Link>
+            <Link href="/guide/contractor-check/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">優良業者を見分ける公的な確認方法</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">建設業許可・登録団体・瑕疵保険の調べ方</span>
+            </Link>
           </div>
         </div>
       </main>

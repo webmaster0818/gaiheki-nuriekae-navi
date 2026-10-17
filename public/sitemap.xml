@@ -7,6 +7,7 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/ranking/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -17,6 +18,7 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/cost/price/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -38,11 +40,13 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/company/protimes/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/company/gaiso/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -78,51 +82,61 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/paint/silicon/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/paint/fluorine/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/paint/urethane/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/paint/ceramic/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/paint/comparison/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/trouble/crack/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/trouble/peeling/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/trouble/discoloration/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/trouble/mold/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/trouble/rain-leak/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -144,8 +158,10 @@
   <url><loc>https://gaiheki-nuriekae-navi.com/review/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gaiheki-nuriekae-navi.com/review/nurikae/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gaiheki-nuriekae-navi.com/review/gaiheki-madoguchi/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://gaiheki-nuriekae-navi.com/review/protimes/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://gaiheki-nuriekae-navi.com/review/gaiso/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gaiheki-nuriekae-navi.com/review/protimes/</loc>
+    <lastmod>2026-10-17</lastmod><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gaiheki-nuriekae-navi.com/review/gaiso/</loc>
+    <lastmod>2026-10-17</lastmod><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gaiheki-nuriekae-navi.com/review/reshop-navi/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gaiheki-nuriekae-navi.com/review/hotline/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gaiheki-nuriekae-navi.com/review/kurashi-market/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -154,49 +170,97 @@
   <url><loc>https://gaiheki-nuriekae-navi.com/review/annaijo/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/area/tokyo/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/area/osaka/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/area/nagoya/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/area/yokohama/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/area/fukuoka/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/guide/scaffold/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/guide/door-to-door/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/guide/construction-flow/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/compare/gaiso-vs-protimes/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/guide/contract/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/guide/warranty/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/guide/contractor-check/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/guide/fire-insurance/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/guide/asbestos/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/guide/season/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/guide/color/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

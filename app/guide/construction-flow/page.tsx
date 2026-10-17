@@ -260,6 +260,22 @@ export default function ConstructionFlowGuidePage() {
               <span className="block font-bold text-[var(--color-text)]">横浜の外壁塗装業者比較</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">敷地条件と現地調査の確認方法</span>
             </Link>
+            <Link href="/guide/season/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">外壁塗装に適した時期と気象条件</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">気温5℃・湿度85%の基準と季節ごとの確認事項</span>
+            </Link>
+            <Link href="/guide/color/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">外壁塗装の色の選び方</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">色見本の見方と景観計画の色彩基準</span>
+            </Link>
+            <Link href="/guide/asbestos/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">石綿（アスベスト）の事前調査</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">対象となる工事と発注者が確認すること</span>
+            </Link>
+            <Link href="/guide/contract/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">契約前に確認する書類</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">見積書・契約書・約款と無料の見積チェック</span>
+            </Link>
           </div>
         </section>
       </main>

@@ -230,6 +230,14 @@ export default async function ReviewPage({ params }: Props) {
         <p className="text-[15px] leading-8 text-text-secondary">{r.summary}</p>
       </section>
 
+      {(slug === "gaiso" || slug === "protimes") && (
+        <p className="mb-10 text-sm leading-7 text-text-secondary">
+          ガイソーとプロタイムズの運営形態・保証・診断・塗料の違いは、
+          <Link href="/compare/gaiso-vs-protimes/" className="text-primary hover:underline">ガイソーとプロタイムズの比較ページ</Link>
+          で公式サイトの記載をもとに整理しています。
+        </p>
+      )}
+
       {/* CTA */}
       {r.officialUrl ? (
         <div className="rounded-2xl border border-border bg-surface-alt p-6 text-center">
