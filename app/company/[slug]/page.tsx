@@ -196,7 +196,7 @@ export default async function CompanyPage({ params }: Props) {
         {company.officialUrl && (
         <div className="mt-10 p-6 bg-gradient-to-br from-[var(--color-primary-light)] to-white rounded-2xl border border-[var(--color-primary)] text-center">
           <h3 className="font-bold text-xl text-[var(--color-text)] mb-2">{company.name}で無料見積もりを依頼する</h3>
-          <p className="text-sm text-[var(--color-text-sub)] mb-4">過度な営業連絡はありません。見積もり後のキャンセルも無料です</p>
+          <p className="text-sm text-[var(--color-text-sub)] mb-4">サービスによっては、依頼後に複数の会社から連絡が来ます。連絡の方法やキャンセルの条件は、各社の公式サイトでご確認ください</p>
           <a
             href={company.officialUrl}
             target="_blank"
