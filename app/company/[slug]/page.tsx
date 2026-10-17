@@ -145,6 +145,26 @@ export default async function CompanyPage({ params }: Props) {
           )}
         </section>
 
+        {company.memberInfo && (
+          <section className="mt-8">
+            <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">{company.memberInfo.heading}</h2>
+            <p className="text-[var(--color-text-sub)] leading-relaxed">{company.memberInfo.lead}</p>
+            <dl className="mt-4 divide-y divide-[var(--color-border)] rounded-xl border border-[var(--color-border)] bg-white">
+              {company.memberInfo.items.map((item, i) => (
+                <div key={i} className="p-4 sm:flex sm:gap-4">
+                  <dt className="font-medium text-[var(--color-text)] text-sm sm:w-32 flex-shrink-0">{item.label}</dt>
+                  <dd className="mt-1 sm:mt-0 text-sm text-[var(--color-text-sub)] leading-relaxed">
+                    {item.text}
+                    <a href={item.url} target="_blank" rel="noopener noreferrer nofollow" className="ml-1 text-xs underline text-[var(--color-text-muted)]">出典</a>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-3 text-sm text-[var(--color-text-sub)]">{company.memberInfo.note}</p>
+            <p className="mt-1 text-xs text-[var(--color-text-muted)]">{company.memberInfo.checkedAt}に公式サイトで確認</p>
+          </section>
+        )}
+
         {/* Pros/Cons */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white rounded-xl border border-green-200 p-5">
