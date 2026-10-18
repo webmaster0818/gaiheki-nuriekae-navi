@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const company = companies.find((c) => c.slug === slug);
   if (!company) return {};
   return {
-    title: `${company.name}の特徴・メリット・デメリット｜外壁塗装業者比較【2026年最新】`,
-    description: `${company.name}の特徴・対応エリア・メリット・デメリットをご説明します。評判・口コミは、公式の利用者の声と公開情報をもとに検証した別ページに掲載しています。`,
+    title: company.seoTitle ?? `${company.name}の特徴・メリット・デメリット｜外壁塗装業者比較【2026年最新】`,
+    description: company.seoDescription ?? `${company.name}の特徴・対応エリア・メリット・デメリットをご説明します。評判・口コミは、公式の利用者の声と公開情報をもとに検証した別ページに掲載しています。`,
     alternates: { canonical: `/company/${company.slug}/` },
   };
 }
@@ -163,6 +163,31 @@ export default async function CompanyPage({ params }: Props) {
             </dl>
             <p className="mt-3 text-sm text-[var(--color-text-sub)]">{company.memberInfo.note}</p>
             <p className="mt-1 text-xs text-[var(--color-text-muted)]">{company.memberInfo.checkedAt}に公式サイトで確認</p>
+          </section>
+        )}
+
+        {company.reputation && (
+          <section className="mt-8" id="reputation">
+            <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">{company.reputation.heading}</h2>
+            <p className="text-[var(--color-text-sub)] leading-relaxed">{company.reputation.lead}</p>
+            {company.reputation.groups.map((g, gi) => (
+              <div key={gi} className="mt-6">
+                <h3 className="font-bold text-[var(--color-text)] mb-3">{g.title}</h3>
+                <dl className="divide-y divide-[var(--color-border)] rounded-xl border border-[var(--color-border)] bg-white">
+                  {g.items.map((item, i) => (
+                    <div key={i} className="p-4 sm:flex sm:gap-4">
+                      <dt className="font-medium text-[var(--color-text)] text-sm sm:w-32 flex-shrink-0">{item.label}</dt>
+                      <dd className="mt-1 sm:mt-0 text-sm text-[var(--color-text-sub)] leading-relaxed">
+                        {item.text}
+                        <a href={item.url} target="_blank" rel="noopener noreferrer nofollow" className="ml-1 text-xs underline text-[var(--color-text-muted)]">出典</a>
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            ))}
+            <p className="mt-4 text-sm text-[var(--color-text-sub)]">{company.reputation.note}</p>
+            <p className="mt-1 text-xs text-[var(--color-text-muted)]">{company.reputation.checkedAt}に公式サイト・運営会社の発表で確認</p>
           </section>
         )}
 
