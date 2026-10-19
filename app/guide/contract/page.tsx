@@ -169,6 +169,7 @@ export default function Page() {
       related={[
         { href: "/area/osaka/", title: "大阪の外壁塗装業者比較", desc: "相見積もりの取り方と見積書の項目" },
         { href: "/guide/warranty/", title: "外壁塗装の保証", desc: "保証書とリフォーム瑕疵保険" },
+        { href: "/guide/sealing/", title: "シーリングの打ち替えと増し打ち", desc: "見積書に記載される工法の違い" },
         { href: "/guide/contractor-check/", title: "業者の確認方法", desc: "建設業許可と登録団体の調べ方" },
         { href: "/guide/door-to-door/", title: "訪問営業への対応方法", desc: "契約前の確認とクーリング・オフ" },
         { href: "/cost/price/", title: "外壁塗装の費用・相場", desc: "塗料別・面積別の目安と費用内訳" },

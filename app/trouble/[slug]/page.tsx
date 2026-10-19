@@ -207,8 +207,8 @@ export default async function TroublePage({ params }: Props) {
         <RelatedGuides
           items={(
             {
-              crack: [GUIDES.fireInsurance, GUIDES.contractorCheck, GUIDES.warranty],
-              "rain-leak": [GUIDES.fireInsurance, GUIDES.warranty, GUIDES.contractorCheck],
+              crack: [GUIDES.sealing, GUIDES.fireInsurance, GUIDES.contractorCheck, GUIDES.warranty],
+              "rain-leak": [GUIDES.sealing, GUIDES.fireInsurance, GUIDES.warranty, GUIDES.contractorCheck],
               peeling: [GUIDES.warranty, GUIDES.season, GUIDES.asbestos],
               discoloration: [GUIDES.color, GUIDES.season],
               mold: [GUIDES.season, GUIDES.color],

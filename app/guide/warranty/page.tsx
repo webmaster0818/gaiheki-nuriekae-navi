@@ -161,6 +161,7 @@ export default function Page() {
       related={[
         { href: "/compare/gaiso-vs-protimes/", title: "ガイソーとプロタイムズの違い", desc: "保証・診断・塗料を公式情報で比較" },
         { href: "/guide/contract/", title: "契約前に確認する書類", desc: "見積書・契約書・約款の確認項目" },
+        { href: "/guide/sealing/", title: "シーリングの打ち替えと増し打ち", desc: "工法の違いとシーリングの確認事項" },
         { href: "/guide/contractor-check/", title: "業者の確認方法", desc: "建設業許可と登録団体の調べ方" },
         { href: "/trouble/peeling/", title: "塗装の剥がれ・膨れ", desc: "症状の原因と対策" },
         { href: "/ranking/", title: "外壁塗装業者ランキング", desc: "掲載サービスの比較一覧" },

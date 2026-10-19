@@ -29,4 +29,5 @@ export const GUIDES = {
   asbestos: { href: "/guide/asbestos/", title: "石綿（アスベスト）の事前調査", desc: "対象となる工事と発注者が確認すること" },
   season: { href: "/guide/season/", title: "外壁塗装に適した時期と気象条件", desc: "気温5℃・湿度85%の基準と季節ごとの確認事項" },
   color: { href: "/guide/color/", title: "外壁塗装の色の選び方", desc: "色見本の見方と景観計画の色彩基準" },
+  sealing: { href: "/guide/sealing/", title: "シーリングの打ち替えと増し打ちの違い", desc: "工法・費用の目安と見積書の確認事項" },
 } satisfies Record<string, RelatedGuide>;

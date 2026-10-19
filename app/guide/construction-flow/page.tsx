@@ -252,6 +252,10 @@ export default function ConstructionFlowGuidePage() {
               <span className="block font-bold text-[var(--color-text)]">訪問営業への対応方法</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">契約前の確認とクーリング・オフ</span>
             </Link>
+            <Link href="/guide/sealing/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">シーリングの打ち替えと増し打ちの違い</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">下地補修・シーリング工事の工法</span>
+            </Link>
             <Link href="/paint/comparison/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
               <span className="block font-bold text-[var(--color-text)]">塗料4種類の比較</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">耐用年数と特徴から選ぶ</span>
