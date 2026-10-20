@@ -103,6 +103,11 @@ export default function CostPricePage() {
           <p className="mt-2 text-xs text-[var(--color-text-muted)]">
             ※足場代・高圧洗浄・下地処理・シーリングを含みます。劣化状況・地域・業者により変動します。
           </p>
+          <p className="mt-1 text-xs text-[var(--color-text-muted)]">
+            出典：ウレタン塗料の総費用の目安（55〜80万円）は、外壁塗装の窓口「
+            <a href="https://gaiheki-madoguchi.com/articles/2693" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">2026年外壁塗装の価格表 坪数別・塗料別の費用相場と見積もりの見方</a>
+            」の「30坪の費用相場」（ウレタン系：55万〜80万円）によります（2026年10月20日確認）。
+          </p>
         </section>
 
         {/* Area table */}
@@ -149,6 +154,13 @@ export default function CostPricePage() {
               </div>
             ))}
           </div>
+          <p className="mt-3 text-xs text-[var(--color-text-muted)] leading-relaxed">
+            出典：足場設置・撤去費の金額（15〜25万円）は、外壁塗装の窓口「
+            <a href="https://gaiheki-madoguchi.com/articles/2693" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">2026年外壁塗装の価格表 坪数別・塗料別の費用相場と見積もりの見方</a>
+            」の「30坪程度なら15万〜25万円ほどが目安」によります。高圧洗浄費の金額（2〜5万円）は、リショップナビ「
+            <a href="https://pronuri.com/articles/2811" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">【30坪】外壁塗装の費用相場はいくら？</a>
+            」の30坪の場合の高圧洗浄（水道水）の総額（2〜5万円）によります（いずれも2026年10月20日確認）。
+          </p>
         </section>
 
         {/* FAQ */}
