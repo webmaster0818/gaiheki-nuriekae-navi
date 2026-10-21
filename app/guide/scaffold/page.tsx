@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: "屋根も塗装する場合、足場は二重に必要ですか？",
-    a: "外壁と屋根を同じ時期に施工する場合、同じ足場を使って両方の作業を行う形が一般的です。別々の時期に工事をすると、そのたびに設置と解体が必要になります。時期をそろえるかどうかは屋根の傷み具合にもよるため、現地を確認した業者に両方の場合の見積もりを依頼すると判断しやすくなります。",
+    a: "外壁と屋根を同じ時期に施工する場合、同じ足場を使って両方の作業を行う形が一般的です。別々の時期に工事をすると、そのたびに設置と解体が必要になります。時期をそろえるかどうかは屋根の傷み具合にもよるため、現地を確認した業者に両方の場合の見積もりを依頼すると判断しやすくなります。屋根材ごとの注意と確認事項は、外壁と屋根の塗装を同時に行う場合のページでご説明しています。",
   },
   {
     q: "足場が建っている間、窓は開けられますか？",
@@ -256,6 +256,10 @@ export default function ScaffoldGuidePage() {
             <Link href="/guide/warranty/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
               <span className="block font-bold text-[var(--color-text)]">外壁塗装の保証の確認方法</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">保証書の項目とリフォーム瑕疵保険</span>
+            </Link>
+            <Link href="/guide/roof-wall/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">外壁と屋根の塗装を同時に行う場合</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">足場の共用・工程・屋根材ごとの注意</span>
             </Link>
             <Link href="/guide/asbestos/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
               <span className="block font-bold text-[var(--color-text)]">石綿（アスベスト）の事前調査</span>

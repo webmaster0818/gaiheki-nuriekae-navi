@@ -157,6 +157,7 @@ export default function Page() {
       related={[
         { href: "/guide/contract/", title: "契約前に確認する書類", desc: "見積書・契約書・約款の確認項目" },
         { href: "/guide/construction-flow/", title: "工事の流れと生活への影響", desc: "高圧洗浄・下地補修の工程" },
+        { href: "/guide/roof-wall/", title: "外壁と屋根の塗装を同時に行う場合", desc: "化粧スレートと石綿・屋根材ごとの注意" },
         { href: "/cost/price/", title: "外壁塗装の費用・相場", desc: "費用の内訳の考え方" },
         { href: "/trouble/peeling/", title: "塗装の剥がれ・膨れ", desc: "症状の原因と対策" },
       ]}

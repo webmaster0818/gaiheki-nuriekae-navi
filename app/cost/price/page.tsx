@@ -198,7 +198,7 @@ export default function CostPricePage() {
             <div className="text-xs text-[var(--color-text-sub)]">複数社の比較により適正価格を確認できます</div>
           </Link>
         </div>
-        <RelatedGuides items={[GUIDES.contract, GUIDES.sealing, GUIDES.asbestos, GUIDES.season]} />
+        <RelatedGuides items={[GUIDES.contract, GUIDES.sealing, GUIDES.roofWall, GUIDES.asbestos, GUIDES.season]} />
       </main>
       <SiteFooter />
     </>
