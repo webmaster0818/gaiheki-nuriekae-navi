@@ -50,7 +50,7 @@ export default async function ReviewPage({ params }: Props) {
         headline: r.title,
         description: r.metaDescription,
         image: `https://gaiheki-nuriekae-navi.com${r.heroImage}`,
-        dateModified: "2026-06-16",
+        dateModified: r.dateModified ?? "2026-06-16",
         author: { "@type": "Organization", name: "外壁ぬりかえナビ" },
         publisher: { "@type": "Organization", name: "外壁ぬりかえナビ", url: "https://gaiheki-nuriekae-navi.com/" },
         mainEntityOfPage: `https://gaiheki-nuriekae-navi.com/review/${r.slug}/`,
@@ -76,7 +76,7 @@ export default async function ReviewPage({ params }: Props) {
         <span className="label inline-block mb-3 text-primary">業者の口コミ・評判</span>
         <h1 className="text-2xl sm:text-3xl font-bold leading-snug text-text-primary mb-4">{r.title}</h1>
         <div className="flex items-center gap-3 text-sm text-text-muted mb-6">
-          <time dateTime="2026-06-16">最終更新：{r.updatedAt}</time>
+          <time dateTime={r.dateModified ?? "2026-06-16"}>最終更新：{r.updatedAt}</time>
           <span className="w-px h-3 bg-border" />
           <span>外壁ぬりかえナビ編集部</span>
         </div>
