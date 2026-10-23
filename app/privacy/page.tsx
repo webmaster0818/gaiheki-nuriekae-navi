@@ -16,13 +16,13 @@ export default function PrivacyPage() {
       <main className="max-w-3xl mx-auto px-4 py-6">
         <Breadcrumb items={[{ label: "プライバシーポリシー" }]} />
         <h1 className="mt-4 text-2xl font-bold text-[var(--color-text)]">プライバシーポリシー</h1>
-        <p className="mt-2 text-sm text-[var(--color-text-muted)]">最終更新日：2026年1月1日</p>
+        <p className="mt-2 text-sm text-[var(--color-text-muted)]">最終更新日：2026年10月23日</p>
 
         <div className="mt-6 space-y-6 text-[var(--color-text-sub)] leading-relaxed">
           <section>
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">個人情報の収集について</h2>
             <p className="text-sm">
-              株式会社MediaX（以下「当社」）は、外壁ぬりかえナビ（以下「本サイト」）において、お問い合わせフォーム等を通じて個人情報を取得する場合があります。取得した個人情報はお問い合わせへの回答等、必要な範囲でのみ使用します。
+              株式会社MediaX（以下「当社」）は、外壁ぬりかえナビ（以下「本サイト」）において、メールでのお問い合わせにより個人情報を取得する場合があります。取得した個人情報はお問い合わせへの回答等、必要な範囲でのみ使用します。
             </p>
           </section>
 
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">個人情報の開示・訂正・削除</h2>
             <p className="text-sm">
-              ご自身の個人情報の開示・訂正・削除をご希望の場合は、お問い合わせフォームよりご連絡ください。
+              ご自身の個人情報の開示・訂正・削除をご希望の場合は、メール（<a href="mailto:webmaster@mediax.biz" className="underline">webmaster@mediax.biz</a>）でご連絡ください。
             </p>
           </section>
 

@@ -47,7 +47,7 @@ export default function ContentPolicyPage() {
       <main className="max-w-3xl mx-auto px-4 py-6">
         <Breadcrumb items={[{ label: "コンテンツポリシー" }]} />
         <h1 className="mt-4 text-2xl font-bold text-[var(--color-text)]">コンテンツポリシー</h1>
-        <p className="mt-2 text-sm text-[var(--color-text-muted)]">最終更新日：2026年1月1日</p>
+        <p className="mt-2 text-sm text-[var(--color-text-muted)]">最終更新日：2026年10月23日</p>
 
         <p className="mt-4 text-sm text-[var(--color-text-sub)] leading-relaxed">
           外壁ぬりかえナビは、外壁塗装の業者選びを適切に行えるよう、正確・公正・有益な情報の提供に努めます。以下のポリシーにもとづいてコンテンツを作成しています。
@@ -115,11 +115,12 @@ export default function ContentPolicyPage() {
         <section className="mt-10">
           <h2 className="text-xl font-bold text-[var(--color-text)] mb-3">誤情報のご指摘・お問い合わせ</h2>
           <p className="text-sm text-[var(--color-text-sub)]">
-            コンテンツに誤りがある場合や、情報の更新が必要な場合は、下記の運営者情報よりお問い合わせください。ご指摘いただいた内容は編集部で確認し、必要に応じて修正します。
+            コンテンツに誤りがある場合や、情報の更新が必要な場合は、下記のメールアドレスまでご連絡ください。ご指摘いただいた内容は編集部で確認し、必要に応じて修正します。
           </p>
           <div className="mt-4 p-4 bg-[var(--color-bg)] rounded-xl border border-[var(--color-border)]">
             <p className="font-medium text-[var(--color-text)] mb-1">運営者</p>
             <p className="text-sm text-[var(--color-text-sub)]">株式会社MediaX</p>
+            <p className="text-sm text-[var(--color-text-sub)]">メール：<a href="mailto:webmaster@mediax.biz" className="underline">webmaster@mediax.biz</a></p>
           </div>
         </section>
       </main>
