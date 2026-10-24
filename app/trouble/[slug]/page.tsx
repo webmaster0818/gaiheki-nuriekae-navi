@@ -7,6 +7,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import troubles from "@/data/troubles.json";
 import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
 
+type TroubleAnswer = { heading: string; lead: string; head: string[]; rows: string[][]; paragraphs: string[] };
+type TroubleSource = { label: string; url: string };
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -20,8 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const trouble = troubles.find((t) => t.slug === slug);
   if (!trouble) return {};
   return {
-    title: `${trouble.title}【2026年版】`,
-    description: trouble.description,
+    title: "seoTitle" in trouble ? (trouble.seoTitle as string) : `${trouble.title}【2026年版】`,
+    description: "seoDescription" in trouble ? (trouble.seoDescription as string) : trouble.description,
     alternates: { canonical: `/trouble/${trouble.slug}/` },
   };
 }
@@ -30,6 +33,21 @@ export default async function TroublePage({ params }: Props) {
   const { slug } = await params;
   const trouble = troubles.find((t) => t.slug === slug);
   if (!trouble) return notFound();
+
+  const answer = "answer" in trouble ? (trouble.answer as TroubleAnswer) : null;
+  const sources = "sources" in trouble ? (trouble.sources as TroubleSource[]) : [];
+  const checked = "checked" in trouble ? (trouble.checked as string) : "";
+  const faqJsonLd = answer
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: trouble.faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    : null;
 
   const severityColor = trouble.severity === "最高" ? "bg-red-100 text-red-700 border-red-300" :
     trouble.severity === "高" ? "bg-orange-100 text-orange-700 border-orange-300" :
@@ -51,6 +69,49 @@ export default async function TroublePage({ params }: Props) {
           {trouble.title}
         </h1>
         <p className="mt-3 text-[var(--color-text-sub)] leading-relaxed">{trouble.description}</p>
+        {checked && <p className="mt-2 text-xs text-[var(--color-text-muted)]">出典の確認日：{checked}</p>}
+
+        {answer && (
+          <section className="mt-6 bg-white rounded-2xl border border-[var(--color-border)] p-5">
+            <h2 className="text-xl font-bold text-[var(--color-text)] mb-3">{answer.heading}</h2>
+            <p className="text-sm text-[var(--color-text-sub)] leading-relaxed mb-4">{answer.lead}</p>
+            <div className="overflow-x-auto mb-4">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-[var(--color-bg)]">
+                    {answer.head.map((h, i) => (
+                      <th key={i} className="border border-[var(--color-border)] px-3 py-2 text-left text-[var(--color-text)]">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {answer.rows.map((row, i) => (
+                    <tr key={i}>
+                      {row.map((cell, j) => (
+                        <td key={j} className="border border-[var(--color-border)] px-3 py-2 align-top text-[var(--color-text-sub)]">{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {answer.paragraphs.map((t, i) => (
+              <p key={i} className="text-sm text-[var(--color-text-sub)] leading-relaxed mb-3">{t}</p>
+            ))}
+            {sources.length > 0 && (
+              <div className="mt-4 text-xs text-[var(--color-text-muted)]">
+                <p>出典（{checked}確認）：</p>
+                <ul className="mt-1 space-y-1">
+                  {sources.map((src, i) => (
+                    <li key={i}>
+                      <a href={src.url} target="_blank" rel="noopener noreferrer" className="underline">{src.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </section>
+        )}
 
         {/* Severity / Urgency */}
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -245,6 +306,9 @@ export default async function TroublePage({ params }: Props) {
               ))}
           </div>
         </section>
+        {faqJsonLd && (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        )}
       </main>
       <SiteFooter />
     </>
