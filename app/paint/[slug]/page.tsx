@@ -93,6 +93,11 @@ export default async function PaintPage({ params }: Props) {
             </div>
           </div>
         )}
+        <p className="mt-2 text-xs text-[var(--color-text-muted)]">
+          出典：塗装単価の目安は、外壁塗装の窓口「
+          <a href="https://gaiheki-madoguchi.com/articles/2693" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">2026年外壁塗装の価格表</a>
+          」の塗料別の平米単価によります（税込・税別の記載なし。2026年10月25日確認）。セラミック塗料の単価は、公式の情報で確認できないため記載していません。
+        </p>
 
         {/* Pros/Cons */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -236,8 +236,21 @@ export default async function TroublePage({ params }: Props) {
             ))}
           </ul>
           <div className="mt-3 p-3 bg-[var(--color-bg)] rounded-lg text-sm">
-            <span className="font-medium text-[var(--color-text)]">補修費用の目安：</span>
-            <span className="text-[var(--color-text-sub)]">{trouble.repairCost}</span>
+            {trouble.repairCost ? (
+              <>
+                <span className="font-medium text-[var(--color-text)]">費用の目安：</span>
+                <span className="text-[var(--color-text-sub)]">{trouble.repairCost}</span>
+                {"repairCostSource" in trouble && trouble.repairCostSource && (
+                  <span className="block mt-1 text-xs text-[var(--color-text-muted)]">
+                    出典：
+                    <a href={trouble.repairCostSource.url} target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">{trouble.repairCostSource.label}</a>
+                    （税込・税別の記載なし。{trouble.repairCostSource.checkedAt}確認）。金額は業者の見積もりで確認してください。
+                  </span>
+                )}
+              </>
+            ) : (
+              <span className="text-[var(--color-text-sub)]">補修の金額は原因・範囲によって変わるため、業者の見積もりで確認してください。</span>
+            )}
           </div>
         </section>
 

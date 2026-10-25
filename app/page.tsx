@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const paintTypes = [
-  { slug: "silicon", name: "シリコン塗料", durability: "10〜15年", cost: "2,500〜3,500円/m2", icon: "S", color: "bg-blue-100 text-blue-700" },
-  { slug: "fluorine", name: "フッ素塗料", durability: "15〜20年", cost: "3,500〜5,000円/m2", icon: "F", color: "bg-purple-100 text-purple-700" },
-  { slug: "urethane", name: "ウレタン塗料", durability: "7〜10年", cost: "1,800〜2,500円/m2", icon: "U", color: "bg-green-100 text-green-700" },
-  { slug: "ceramic", name: "セラミック塗料", durability: "10〜25年", cost: "3,000〜5,500円/m2", icon: "C", color: "bg-amber-100 text-amber-700" },
+  { slug: "silicon", name: "シリコン塗料", durability: "10〜15年", cost: "2,300〜3,000円/㎡", icon: "S", color: "bg-blue-100 text-blue-700" },
+  { slug: "fluorine", name: "フッ素塗料", durability: "15〜20年", cost: "3,500〜4,500円/㎡", icon: "F", color: "bg-purple-100 text-purple-700" },
+  { slug: "urethane", name: "ウレタン塗料", durability: "7〜10年", cost: "1,700〜2,200円/㎡", icon: "U", color: "bg-green-100 text-green-700" },
+  { slug: "ceramic", name: "セラミック塗料", durability: "10〜25年", cost: "", icon: "C", color: "bg-amber-100 text-amber-700" },
 ];
 
 const checklist = [
@@ -28,17 +28,10 @@ const checklist = [
   "前回の塗装から10年以上経過している",
 ];
 
-const costTable = [
-  { area: "100m2（約25坪）", urethane: "55〜65万円", silicon: "75〜90万円", fluorine: "90〜110万円" },
-  { area: "120m2（約30坪）", urethane: "65〜80万円", silicon: "90〜110万円", fluorine: "110〜135万円" },
-  { area: "150m2（約37坪）", urethane: "80〜100万円", silicon: "110〜135万円", fluorine: "135〜165万円" },
-  { area: "180m2（約45坪）", urethane: "95〜120万円", silicon: "130〜160万円", fluorine: "160〜195万円" },
-];
-
 const faqs = [
   {
     q: "外壁塗装の費用は平均いくらですか？",
-    a: "一般的な30坪2階建ての場合、足場代・下地処理込みで80〜120万円程度が相場です。塗料のグレード（ウレタン・シリコン・フッ素）や建物の状態によって大きく異なります。複数社の見積もりを比較することをおすすめします。",
+    a: "外壁塗装の窓口は、延床面積30坪前後（外壁面積120〜150㎡ほど）の戸建てをシリコン塗料で塗り替える場合の目安を60万〜100万円としています（足場の設置・高圧洗浄・下地処理・3回塗り・養生・清掃を含む。税込・税別の記載なし。2026年10月25日確認）。塗料のグレードや建物の状態によって変わるため、金額は業者の見積もりで確認してください。",
   },
   {
     q: "外壁塗装の業者選びでは、どのような点に注意すべきですか？",
@@ -46,7 +39,7 @@ const faqs = [
   },
   {
     q: "外壁塗装に補助金・助成金はありますか？",
-    a: "国や自治体によって省エネ・断熱改修への補助金が用意されている場合があります。環境省の「先進的窓リノベ2026事業」（窓の断熱改修が対象）や、国土交通省の「みらいエコ住宅2026事業」、各自治体の独自補助金をご確認ください。条件によっては数万〜数十万円の補助を受けられます。",
+    a: "国や自治体によって省エネ・断熱改修への補助金が用意されている場合があります。環境省の「先進的窓リノベ2026事業」（窓の断熱改修が対象）や、国土交通省の「みらいエコ住宅2026事業」、各自治体の独自補助金をご確認ください。",
   },
   {
     q: "外壁塗装は何年ごとに塗り替えが必要ですか？",
@@ -116,10 +109,15 @@ export default function HomePage() {
                   </div>
                   <h3 className="font-bold text-sm text-[var(--color-text)] mb-1 text-center">{paint.name}</h3>
                   <p className="text-xs text-[var(--color-text-muted)] text-center">耐用: {paint.durability}</p>
-                  <p className="text-xs text-[var(--color-text-muted)] text-center">{paint.cost}</p>
+                  {paint.cost && <p className="text-xs text-[var(--color-text-muted)] text-center">{paint.cost}</p>}
                 </Link>
               ))}
             </div>
+            <p className="mt-3 text-xs text-[var(--color-text-muted)] text-center">
+              平米単価の目安は、外壁塗装の窓口「
+              <a href="https://gaiheki-madoguchi.com/articles/2693" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">2026年外壁塗装の価格表</a>
+              」の塗料別の価格表によります（税込・税別の記載なし。2026年10月25日確認）。セラミック塗料の単価は、公式の情報で確認できないため記載していません。
+            </p>
             <div className="text-center mt-4">
               <Link href="/paint/comparison/" className="text-sm text-[var(--color-primary)] hover:underline font-medium">
                 4種類の比較一覧 &rarr;
@@ -229,41 +227,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Cost table */}
+        {/* Cost */}
         <section className="py-12 px-4 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">
-                外壁塗装の費用相場
-              </h2>
-              <p className="mt-2 text-[var(--color-text-sub)] text-sm">塗料の種類・外壁面積別の目安費用（足場代・下地処理込み）</p>
-            </div>
-            <div className="table-wrapper rounded-xl border border-[var(--color-border)] overflow-hidden">
-              <table className="comparison-table w-full">
-                <thead>
-                  <tr>
-                    <th>外壁面積（目安）</th>
-                    <th>ウレタン</th>
-                    <th>シリコン</th>
-                    <th>フッ素</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {costTable.map((row) => (
-                    <tr key={row.area}>
-                      <td className="font-medium">{row.area}</td>
-                      <td>{row.urethane}</td>
-                      <td className="font-medium text-[var(--color-primary)]">{row.silicon}</td>
-                      <td>{row.fluorine}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="mt-3 text-xs text-[var(--color-text-muted)]">
-              ※上記は目安です。建物の劣化状況・地域・業者によって変動します。正確な費用は、見積もりにてご確認ください。
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">
+              外壁塗装の費用相場
+            </h2>
+            <p className="mt-4 text-[var(--color-text-sub)] text-sm leading-relaxed">
+              外壁塗装の費用は、塗料の種類・外壁面積・劣化状況によって変わります。塗料別の目安と費用の内訳は、出典とともに費用ページにまとめています。金額は業者の見積もりで確認してください。
             </p>
-            <div className="text-center mt-4">
+            <div className="mt-4">
               <Link href="/cost/price/" className="text-sm text-[var(--color-primary)] hover:underline font-medium">
                 費用の詳細 &rarr;
               </Link>

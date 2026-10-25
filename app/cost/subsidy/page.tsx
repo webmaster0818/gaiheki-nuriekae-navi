@@ -34,7 +34,7 @@ const nationalSubsidies = [
 const localSubsidyInfo = [
   {
     pref: "東京都内各区市町村",
-    example: "遮熱・断熱改修で工事費の20〜30%助成（上限10〜30万円）",
+    example: "遮熱・断熱改修への助成（条件・金額は各区市町村による）",
   },
   {
     pref: "大阪府・市内各区",
@@ -104,7 +104,7 @@ export default function SubsidyPage() {
           外壁塗装の助成金・補助金ガイド【2026年版】
         </h1>
         <p className="mt-3 text-[var(--color-text-sub)] leading-relaxed">
-          当ページでは、外壁塗装に利用できる国・自治体の助成金・補助金をご説明します。条件を満たす場合、数万〜数十万円の補助を受けられることがあります。
+          当ページでは、外壁塗装に利用できる国・自治体の助成金・補助金をご説明します。条件を満たす場合、補助を受けられることがあります。
         </p>
 
         <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-xl">
