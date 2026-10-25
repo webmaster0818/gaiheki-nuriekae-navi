@@ -54,7 +54,7 @@ export default async function PaintPage({ params }: Props) {
           <div className="mt-6 grid grid-cols-2 gap-4">
             <div className="bg-[var(--color-primary-light)] rounded-xl p-4 text-center">
               <div className="text-xs text-[var(--color-primary)] font-medium mb-1">耐用年数の目安</div>
-              <div className="text-xl font-bold text-[var(--color-primary)]">{paint.durability}</div>
+              <div className="text-xl font-bold text-[var(--color-primary)]">{paint.durability || "製品の資料で確認"}</div>
             </div>
             <div className="bg-[var(--color-secondary-light)] rounded-xl p-4 text-center">
               <div className="text-xs text-[var(--color-secondary-dark)] font-medium mb-1">塗装単価の目安</div>
@@ -94,9 +94,9 @@ export default async function PaintPage({ params }: Props) {
           </div>
         )}
         <p className="mt-2 text-xs text-[var(--color-text-muted)]">
-          出典：塗装単価の目安は、外壁塗装の窓口「
+          出典：耐用年数と塗装単価の目安は、外壁塗装の窓口「
           <a href="https://gaiheki-madoguchi.com/articles/2693" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">2026年外壁塗装の価格表</a>
-          」の塗料別の平米単価によります（税込・税別の記載なし。2026年10月25日確認）。セラミック塗料の単価は、公式の情報で確認できないため記載していません。
+          」の塗料別の価格表によります（税込・税別の記載なし。2026年10月25日確認）。セラミック塗料の耐用年数と単価は、公式の情報で確認できないため記載していません。
         </p>
 
         {/* Pros/Cons */}

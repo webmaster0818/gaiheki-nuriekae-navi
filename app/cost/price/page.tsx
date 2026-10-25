@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const paintCostTable = [
-  { paint: "ウレタン塗料", durability: "7〜10年", perSqm: "1,700〜2,200円/㎡", total30tsubo: "55万〜80万円", feature: "低価格・弾力性がある" },
-  { paint: "シリコン塗料", durability: "10〜15年", perSqm: "2,300〜3,000円/㎡", total30tsubo: "60万〜100万円", feature: "費用対効果が高く、採用が多い" },
-  { paint: "フッ素塗料", durability: "15〜20年", perSqm: "3,500〜4,500円/㎡", total30tsubo: "80万〜130万円", feature: "耐久性が高く、長寿命" },
+  { paint: "ウレタン塗料", durability: "約8〜10年", perSqm: "1,700〜2,200円/㎡", total30tsubo: "55万〜80万円", feature: "低価格・弾力性がある" },
+  { paint: "シリコン塗料", durability: "約10〜15年", perSqm: "2,300〜3,000円/㎡", total30tsubo: "60万〜100万円", feature: "費用対効果が高く、採用が多い" },
+  { paint: "フッ素塗料", durability: "約15〜20年", perSqm: "3,500〜4,500円/㎡", total30tsubo: "80万〜130万円", feature: "耐久性が高く、長寿命" },
 ];
 
 const costBreakdown = [
@@ -92,10 +92,10 @@ export default function CostPricePage() {
             </table>
           </div>
           <p className="mt-2 text-xs text-[var(--color-text-muted)]">
-            ※総費用の目安は、足場や諸経費まで含めた総額です。劣化状況・地域・業者により変わります。耐用年数は当サイトの目安です。
+            ※総費用の目安は、足場や諸経費まで含めた総額です。劣化状況・地域・業者により変わります。
           </p>
           <p className="mt-1 text-xs text-[var(--color-text-muted)]">
-            出典：平米単価と総費用の目安は、外壁塗装の窓口「
+            出典：耐用年数・平米単価・総費用の目安は、外壁塗装の窓口「
             <a href="https://gaiheki-madoguchi.com/articles/2693" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">2026年外壁塗装の価格表 坪数別・塗料別の費用相場と見積もりの見方</a>
             」の「塗料の種類別の価格表」によります（税込・税別の記載なし。2026年10月25日確認）。セラミック塗料の金額は、公式の情報で確認できないため記載していません。
           </p>

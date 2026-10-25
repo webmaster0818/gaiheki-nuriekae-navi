@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const paintTypes = [
-  { slug: "silicon", name: "シリコン塗料", durability: "10〜15年", cost: "2,300〜3,000円/㎡", icon: "S", color: "bg-blue-100 text-blue-700" },
-  { slug: "fluorine", name: "フッ素塗料", durability: "15〜20年", cost: "3,500〜4,500円/㎡", icon: "F", color: "bg-purple-100 text-purple-700" },
-  { slug: "urethane", name: "ウレタン塗料", durability: "7〜10年", cost: "1,700〜2,200円/㎡", icon: "U", color: "bg-green-100 text-green-700" },
-  { slug: "ceramic", name: "セラミック塗料", durability: "10〜25年", cost: "", icon: "C", color: "bg-amber-100 text-amber-700" },
+  { slug: "silicon", name: "シリコン塗料", durability: "約10〜15年", cost: "2,300〜3,000円/㎡", icon: "S", color: "bg-blue-100 text-blue-700" },
+  { slug: "fluorine", name: "フッ素塗料", durability: "約15〜20年", cost: "3,500〜4,500円/㎡", icon: "F", color: "bg-purple-100 text-purple-700" },
+  { slug: "urethane", name: "ウレタン塗料", durability: "約8〜10年", cost: "1,700〜2,200円/㎡", icon: "U", color: "bg-green-100 text-green-700" },
+  { slug: "ceramic", name: "セラミック塗料", durability: "", cost: "", icon: "C", color: "bg-amber-100 text-amber-700" },
 ];
 
 const checklist = [
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "外壁塗装は何年ごとに塗り替えが必要ですか？",
-    a: "使用する塗料によって異なります。ウレタン塗料：7〜10年、シリコン塗料：10〜15年、フッ素塗料：15〜20年が目安です。チョーキング・ひび割れ・色あせが見られる場合は、塗り替えを検討する時期です。",
+    a: "使用する塗料によって異なります。外壁塗装の窓口は、耐用年数をウレタン系約8〜10年、シリコン系約10〜15年、フッ素系約15〜20年としています（2026年10月25日確認）。チョーキング・ひび割れ・色あせが見られる場合は、塗り替えを検討する時期です。",
   },
   {
     q: "一括見積もりサービスを利用するメリットは何ですか？",
@@ -108,15 +108,15 @@ export default function HomePage() {
                     {paint.icon}
                   </div>
                   <h3 className="font-bold text-sm text-[var(--color-text)] mb-1 text-center">{paint.name}</h3>
-                  <p className="text-xs text-[var(--color-text-muted)] text-center">耐用: {paint.durability}</p>
+                  {paint.durability && <p className="text-xs text-[var(--color-text-muted)] text-center">耐用: {paint.durability}</p>}
                   {paint.cost && <p className="text-xs text-[var(--color-text-muted)] text-center">{paint.cost}</p>}
                 </Link>
               ))}
             </div>
             <p className="mt-3 text-xs text-[var(--color-text-muted)] text-center">
-              平米単価の目安は、外壁塗装の窓口「
+              耐用年数と平米単価の目安は、外壁塗装の窓口「
               <a href="https://gaiheki-madoguchi.com/articles/2693" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">2026年外壁塗装の価格表</a>
-              」の塗料別の価格表によります（税込・税別の記載なし。2026年10月25日確認）。セラミック塗料の単価は、公式の情報で確認できないため記載していません。
+              」の塗料別の価格表によります（税込・税別の記載なし。2026年10月25日確認）。セラミック塗料の耐用年数と単価は、公式の情報で確認できないため記載していません。
             </p>
             <div className="text-center mt-4">
               <Link href="/paint/comparison/" className="text-sm text-[var(--color-primary)] hover:underline font-medium">
