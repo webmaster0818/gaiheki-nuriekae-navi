@@ -9,6 +9,9 @@ import reviews from "@/data/reviews.json";
 import { getVerifiedRating } from "@/lib/verifiedRating";
 import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
 
+type QuickAnswer = { heading: string; items: { label: string; text: string; url: string }[]; checkedAt: string };
+type CompanyFaq = { question: string; answer: string };
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -36,6 +39,19 @@ export default async function CompanyPage({ params }: Props) {
   const rankLabel = company.rank === 1 ? "第1位" : company.rank === 2 ? "第2位" : company.rank === 3 ? "第3位" : `第${company.rank}位`;
   const rb = getVerifiedRating(company.slug);
   const hasReview = reviews.some((r) => r.slug === company.slug);
+  const quickAnswer = "quickAnswer" in company ? (company.quickAnswer as QuickAnswer) : null;
+  const faqs = "faqs" in company ? (company.faqs as CompanyFaq[]) : [];
+  const faqJsonLd = faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      }
+    : null;
 
   return (
     <>
@@ -115,6 +131,23 @@ export default async function CompanyPage({ params }: Props) {
             ※当サイトはアフィリエイト広告を掲載しています（PR）
           </p>
         </div>
+        {quickAnswer && (
+          <section className="mt-6 bg-white rounded-2xl border border-[var(--color-border)] p-6">
+            <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">{quickAnswer.heading}</h2>
+            <dl className="divide-y divide-[var(--color-border)] rounded-xl border border-[var(--color-border)]">
+              {quickAnswer.items.map((item, i) => (
+                <div key={i} className="p-4 sm:flex sm:gap-4">
+                  <dt className="font-medium text-[var(--color-text)] text-sm sm:w-36 flex-shrink-0">{item.label}</dt>
+                  <dd className="mt-1 sm:mt-0 text-sm text-[var(--color-text-sub)] leading-relaxed">
+                    {item.text}
+                    <a href={item.url} target="_blank" rel="noopener noreferrer nofollow" className="ml-1 text-xs underline text-[var(--color-text-muted)]">出典</a>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-2 text-xs text-[var(--color-text-muted)]">{quickAnswer.checkedAt}に公式サイト・運営会社の発表で確認</p>
+          </section>
+        )}
         {hasReview && (
           <Link
             href={`/review/${company.slug}/`}
@@ -237,6 +270,23 @@ export default async function CompanyPage({ params }: Props) {
             </ul>
           </div>
         </div>
+
+        {faqs.length > 0 && (
+          <section className="mt-8">
+            <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">よくある質問</h2>
+            <div className="space-y-3">
+              {faqs.map((f, i) => (
+                <div key={i} className="bg-white rounded-xl border border-[var(--color-border)] p-4">
+                  <h3 className="font-bold text-[var(--color-text)] text-sm mb-2">Q. {f.question}</h3>
+                  <p className="text-sm text-[var(--color-text-sub)] leading-relaxed">{f.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+        {faqJsonLd && (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        )}
 
         {(slug === "gaiso" || slug === "protimes") && (
           <RelatedGuides items={[GUIDES.compare, GUIDES.warranty, GUIDES.contractorCheck]} />
