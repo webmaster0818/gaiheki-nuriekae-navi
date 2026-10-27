@@ -7,8 +7,8 @@ import { getVerifiedRating } from "@/lib/verifiedRating";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
-  title: "外壁ぬりかえナビ｜外壁塗装業者比較ランキング【2026年最新】",
-  description: "外壁の塗り替えに役立つ情報を提供する総合情報サイトです。業者ランキング・塗料の種類・費用相場・助成金情報をご説明し、一括見積もりサービス10社を比較・掲載しています。",
+  title: "外壁ぬりかえナビ｜外壁塗装の一括見積もりサービス10社比較ランキング【2026年】",
+  description: "外壁塗装の一括見積もりサービス10社（ヌリカエ・外壁塗装の窓口・プロタイムズほか）を費用・保証・対応エリアで比較しています。ヌリカエが2026年10月5日に発表した塗装店ランキングの集計方法、塗料別の耐用年数、助成金もまとめています。",
 };
 
 const paintTypes = [
@@ -73,6 +73,21 @@ export default function HomePage() {
             <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto leading-relaxed">
               一括見積もりサービス10社を、費用・保証・対応エリアの観点で比較しています。塗料の選び方から助成金まで、外壁塗装に関する情報を掲載しています。
             </p>
+            <div className="bg-white/10 border border-white/25 rounded-xl p-4 md:p-5 mb-8 max-w-2xl mx-auto text-left text-sm leading-relaxed">
+              <p className="font-bold mb-1">ヌリカエのランキングについて</p>
+              <p className="text-white/90">
+                ヌリカエを運営する株式会社Re:Factは、2026年10月5日に「みんなに選ばれた塗装店ランキング 2026年上半期」を発表しました。2026年4月1日〜9月30日にヌリカエを通じて契約に至った外壁・屋根塗装工事の件数だけで順位を決めており、対象は加盟4,637社です。全国は5位まで、エリア別・都道府県別は3位までが公開され、各社の工事品質・事業規模の優劣を示すものではないと注記されています。当サイトの
+                <Link href="/ranking/" className="underline">ランキング</Link>
+                は一括見積もりサービス10社の比較で、ヌリカエの評判・仕組みは
+                <Link href="/company/nurikae/" className="underline">ヌリカエの会社ページ</Link>
+                にまとめています。
+              </p>
+              <p className="text-xs text-white/70 mt-2">
+                出典：株式会社Re:Fact「
+                <a href="https://prtimes.jp/main/html/rd/p/000000004.000189102.html" target="_blank" rel="noopener noreferrer" className="underline">ヌリカエ みんなに選ばれた塗装店ランキング 2026年上半期＜全国版＞</a>
+                」（PR TIMES・2026年10月5日発表、2026年10月27日確認）
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/ranking/"
