@@ -78,8 +78,8 @@ export default function HomePage() {
               <p className="text-white/90">
                 ヌリカエを運営する株式会社Re:Factは、2026年10月5日に「みんなに選ばれた塗装店ランキング 2026年上半期」を発表しました。2026年4月1日〜9月30日にヌリカエを通じて契約に至った外壁・屋根塗装工事の件数だけで順位を決めており、対象は加盟4,637社です。全国は5位まで、エリア別・都道府県別は3位までが公開され、各社の工事品質・事業規模の優劣を示すものではないと注記されています。当サイトの
                 <Link href="/ranking/" className="underline">ランキング</Link>
-                は一括見積もりサービス10社の比較で、ヌリカエの評判・仕組みは
-                <Link href="/company/nurikae/" className="underline">ヌリカエの会社ページ</Link>
+                は一括見積もりサービス10社の比較です。ヌリカエのエリア別ランキング・業者一覧の見方と評判は
+                <Link href="/company/nurikae/" className="underline">ヌリカエのランキング・業者一覧・評判</Link>
                 にまとめています。
               </p>
               <p className="text-xs text-white/70 mt-2">

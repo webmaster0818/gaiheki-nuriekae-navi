@@ -85,6 +85,13 @@ export default async function ReviewPage({ params }: Props) {
             className="w-full rounded-2xl border border-border object-cover aspect-[1200/630]" />
         </figure>
         <p className="text-[15px] leading-8 text-text-secondary">{r.lead}</p>
+        {slug === "nurikae" && (
+          <p className="mt-3 text-sm leading-7 text-text-secondary">
+            このページでは公式サイトに掲載された利用者の声を紹介しています。ヌリカエの評判の要点（公式の満足度・連絡の流れ・デメリット）と、ヌリカエが公開している塗装店ランキング・地域別の業者一覧の見方は、
+            <Link href="/company/nurikae/" className="text-primary hover:underline">ヌリカエの評判・ランキング・業者一覧の見方</Link>
+            にまとめています。
+          </p>
+        )}
       </header>
 
       {/* Google rating callout (only when a Google rating exists) */}
