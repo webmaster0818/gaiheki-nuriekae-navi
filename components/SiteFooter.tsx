@@ -20,7 +20,7 @@ export default function SiteFooter() {
               <span className="font-bold text-white">外壁ぬりかえナビ</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              外壁塗装の業者選びに役立つ情報を、公式情報にもとづいて提供する総合情報サイトです。塗料の種類・費用・助成金・業者の情報を掲載しています。
+              外壁塗装の一括見積もりサービス10社（ヌリカエ・外壁塗装の窓口・プロタイムズほか）を費用・保証・対応エリアで比較しています。塗料別の耐用年数、助成金もまとめています。
             </p>
           </div>
 
