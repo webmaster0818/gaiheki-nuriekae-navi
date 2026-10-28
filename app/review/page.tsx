@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import reviewsData from "@/data/reviews.json";
 import Breadcrumb from "@/components/Breadcrumb";
+import { reviewHref } from "@/lib/reviewLinks";
 
 export const metadata: Metadata = {
   title: "外壁塗装業者の口コミ・評判まとめ｜Googleの口コミと公開情報で検証",
@@ -19,7 +20,7 @@ export default function ReviewIndex() {
       </p>
       <div className="space-y-4">
         {reviewsData.map((r) => (
-          <Link key={r.slug} href={`/review/${r.slug}/`}
+          <Link key={r.slug} href={reviewHref(r.slug)}
             className="block rounded-2xl border border-border bg-surface p-5 hover:border-primary transition-colors">
             <div className="flex items-center justify-between gap-3 mb-2">
               <h2 className="font-bold text-text-primary">{r.companyName}</h2>

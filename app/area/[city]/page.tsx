@@ -7,6 +7,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import areasData from "@/data/areas.json";
 import reviewsData from "@/data/reviews.json";
+import { reviewHref, MERGED_REVIEW_SLUGS } from "@/lib/reviewLinks";
 
 type AreaEntry = {
   slug: string;
@@ -195,7 +196,7 @@ export default async function AreaPage({ params }: Props) {
                     <td className="text-sm">{pickLabel(s, ["運営", "運営本部"])}</td>
                     <td className="text-sm">{pickLabel(s, ["対応エリア"])}</td>
                     <td className="text-sm">
-                      <Link href={`/review/${s.slug}/`} className="text-[var(--color-primary)] hover:underline">
+                      <Link href={reviewHref(s.slug)} className="text-[var(--color-primary)] hover:underline">
                         口コミ・評判
                       </Link>
                     </td>
@@ -228,12 +229,20 @@ export default async function AreaPage({ params }: Props) {
                     {area.pickReasons[slug] ?? ""}
                   </p>
                   <div className="mt-3 flex flex-wrap gap-4 text-sm">
-                    <Link href={`/review/${slug}/`} className="text-[var(--color-primary)] hover:underline">
-                      {entry.companyName}の口コミ・評判
-                    </Link>
-                    <Link href={`/company/${slug}/`} className="text-[var(--color-primary)] hover:underline">
-                      サービスの詳細
-                    </Link>
+                    {MERGED_REVIEW_SLUGS.has(slug) ? (
+                      <Link href={`/company/${slug}/`} className="text-[var(--color-primary)] hover:underline">
+                        {entry.companyName}の評判・サービスの詳細
+                      </Link>
+                    ) : (
+                      <>
+                        <Link href={`/review/${slug}/`} className="text-[var(--color-primary)] hover:underline">
+                          {entry.companyName}の口コミ・評判
+                        </Link>
+                        <Link href={`/company/${slug}/`} className="text-[var(--color-primary)] hover:underline">
+                          サービスの詳細
+                        </Link>
+                      </>
+                    )}
                   </div>
                 </div>
               );

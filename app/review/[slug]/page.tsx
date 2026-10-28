@@ -4,11 +4,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import reviewsData from "@/data/reviews.json";
 import Breadcrumb from "@/components/Breadcrumb";
+import { MERGED_REVIEW_SLUGS } from "@/lib/reviewLinks";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  return reviewsData.map((r) => ({ slug: r.slug }));
+  return reviewsData.filter((r) => !MERGED_REVIEW_SLUGS.has(r.slug)).map((r) => ({ slug: r.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ReviewPage({ params }: Props) {
   const { slug } = await params;
   const r = reviewsData.find((x) => x.slug === slug) as any;
-  if (!r) notFound();
+  if (!r || MERGED_REVIEW_SLUGS.has(slug)) notFound();
 
   const rating = r.ratingBlock; // optional (Google rating)
 
@@ -85,13 +86,6 @@ export default async function ReviewPage({ params }: Props) {
             className="w-full rounded-2xl border border-border object-cover aspect-[1200/630]" />
         </figure>
         <p className="text-[15px] leading-8 text-text-secondary">{r.lead}</p>
-        {slug === "nurikae" && (
-          <p className="mt-3 text-sm leading-7 text-text-secondary">
-            このページでは公式サイトに掲載された利用者の声を紹介しています。ヌリカエの評判の要点（公式の満足度・連絡の流れ・デメリット）と、ヌリカエが公開している塗装店ランキング・地域別の業者一覧の見方は、
-            <Link href="/company/nurikae/" className="text-primary hover:underline">ヌリカエの評判・ランキング・業者一覧の見方</Link>
-            にまとめています。
-          </p>
-        )}
       </header>
 
       {/* Google rating callout (only when a Google rating exists) */}

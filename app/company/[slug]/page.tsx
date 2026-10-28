@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 import reviews from "@/data/reviews.json";
 import { getVerifiedRating } from "@/lib/verifiedRating";
+import { MERGED_REVIEW_SLUGS } from "@/lib/reviewLinks";
 import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
 
 type QuickAnswer = { heading: string; items: { label: string; text: string; url: string }[]; checkedAt: string };
@@ -38,7 +39,10 @@ export default async function CompanyPage({ params }: Props) {
 
   const rankLabel = company.rank === 1 ? "第1位" : company.rank === 2 ? "第2位" : company.rank === 3 ? "第3位" : `第${company.rank}位`;
   const rb = getVerifiedRating(company.slug);
-  const hasReview = reviews.some((r) => r.slug === company.slug);
+  const merged = MERGED_REVIEW_SLUGS.has(company.slug);
+  const hasReview = !merged && reviews.some((r) => r.slug === company.slug);
+  const voices = merged ? (reviews.find((r) => r.slug === company.slug) as any) : null;
+  const voicesCheckedAt = "voicesCheckedAt" in company ? (company.voicesCheckedAt as string) : "";
   const quickAnswer = "quickAnswer" in company ? (company.quickAnswer as QuickAnswer) : null;
   const faqs = "faqs" in company ? (company.faqs as CompanyFaq[]) : [];
   const faqJsonLd = faqs.length > 0
@@ -221,6 +225,25 @@ export default async function CompanyPage({ params }: Props) {
             ))}
             <p className="mt-4 text-sm text-[var(--color-text-sub)]">{company.reputation.note}</p>
             <p className="mt-1 text-xs text-[var(--color-text-muted)]">{company.reputation.checkedAt}に公式サイト・運営会社の発表で確認</p>
+          </section>
+        )}
+
+        {voices && voices.reviews.length > 0 && (
+          <section className="mt-8" id="voices">
+            <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">{company.name}の口コミ（{voices.reviewsHeading}）</h2>
+            <p className="text-[var(--color-text-sub)] leading-relaxed">{voices.reviewsIntro}</p>
+            <div className="mt-4 space-y-3">
+              {voices.reviews.map((rv: { author: string; excerpt: string; sourceUrl?: string }, i: number) => (
+                <figure key={i} className="bg-white rounded-xl border border-[var(--color-border)] p-4">
+                  <figcaption className="text-sm font-medium text-[var(--color-text)] mb-1">{rv.author}</figcaption>
+                  <blockquote className="text-sm text-[var(--color-text-sub)] leading-relaxed">「{rv.excerpt}」</blockquote>
+                  {rv.sourceUrl && (
+                    <a href={rv.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-1 inline-block text-xs underline text-[var(--color-text-muted)]">出典（公式サイト）</a>
+                  )}
+                </figure>
+              ))}
+            </div>
+            <p className="mt-3 text-xs text-[var(--color-text-muted)]">出典：ヌリカエ公式サイト 各業者ページの口コミ（nuri-kae.jp/company/{"{ID}"}/review）。原文の一部を抜粋して掲載しています。{voicesCheckedAt && `${voicesCheckedAt}に公式サイトで掲載を確認`}</p>
           </section>
         )}
 
