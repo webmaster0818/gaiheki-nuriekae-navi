@@ -328,7 +328,7 @@ export default function HomePage() {
             <h2 className="text-2xl font-bold text-[var(--color-text)] mb-6 text-center">外壁トラブル・劣化症状から調べる</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
-                { slug: "crack", title: "ひび割れ", icon: "C", desc: "構造クラックは早期の補修が必要です" },
+                { slug: "crack", title: "ひび割れ", icon: "C", desc: "幅0.3mm・0.5mmが国交省の告示の目安です" },
                 { slug: "peeling", title: "剥がれ・膨れ", icon: "P", desc: "チョーキングは塗り替え時期の目安です" },
                 { slug: "discoloration", title: "色あせ・変色", icon: "D", desc: "紫外線による劣化が主な原因です" },
                 { slug: "mold", title: "カビ・コケ", icon: "M", desc: "北面・日陰で多く発生します" },

@@ -164,7 +164,7 @@ export default async function TroublePage({ params }: Props) {
           <section className="mt-8">
             <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">種類・レベル別の特徴</h2>
             <div className="space-y-3">
-              {trouble.types.map((type, i) => (
+              {(trouble.types as { name: string; width?: string; risk?: string; description: string; urgency?: string }[]).map((type, i) => (
                 <div key={i} className="p-4 bg-white border border-[var(--color-border)] rounded-xl">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="font-bold text-[var(--color-text)]">{type.name}</span>
