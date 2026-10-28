@@ -33,6 +33,24 @@ const types = [
   },
 ];
 
+const publicChecks = [
+  {
+    h: "建設業許可（塗装工事業）",
+    b: "工事1件の請負代金が500万円（消費税込み）以上の塗装工事を請け負うには、塗装工事業の建設業許可が必要です。500万円未満の工事は許可が不要なため、許可の有無は判断材料の一つとして、国土交通省の検索システムで業者名から確認できます。",
+    src: { label: "国土交通省「建設業の許可とは」", url: "https://www.mlit.go.jp/totikensangyo/const/1_6_bt_000080.html" },
+  },
+  {
+    h: "住宅リフォーム事業者団体への所属",
+    b: "国土交通省の告示による住宅リフォーム事業者団体登録制度で、国が登録した団体（16団体）が公表されています。業者がどの団体に所属しているかは、各団体の会員検索で確認できます。",
+    src: { label: "国土交通省「住宅リフォーム事業者団体登録制度」", url: "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk4_000090.html" },
+  },
+  {
+    h: "リフォーム瑕疵保険の登録事業者",
+    b: "リフォーム瑕疵保険を使えるのは、保険法人に事業者登録した業者です。住宅瑕疵担保責任保険協会の検索ページで、業者名・都道府県から登録の有無を確認できます。",
+    src: { label: "住宅瑕疵担保責任保険協会 登録事業者等の検索", url: "https://www.kashihoken.or.jp/individuals/reform/search.php" },
+  },
+];
+
 const faqs = [
   {
     q: "外壁塗装の業者ランキングで1位はどこですか？",
@@ -49,6 +67,10 @@ const faqs = [
   {
     q: "見積もりを取った後に断ってもよいですか？",
     a: "ヌリカエ、外壁塗装の窓口とも、見積もり後に契約しなくてもよいと公式サイトに記載しています。断りにくい場合は、両社とも塗装会社への断りの連絡を代行するサービスがあります。",
+  },
+  {
+    q: "紹介された外壁塗装業者が優良かどうかは、どう確認しますか？",
+    a: "ランキングや口コミに加えて、公的な検索で3点を確認できます。500万円（消費税込み）以上の工事では塗装工事業の建設業許可が必要なため、国土交通省の建設業者検索で許可の有無を調べます。あわせて、国に登録された住宅リフォーム事業者団体への所属と、リフォーム瑕疵保険の登録事業者かどうかを、それぞれの検索ページで確認します（2026年10月28日確認）。",
   },
 ];
 
@@ -196,6 +218,29 @@ export default function RankingPage() {
             </div>
           ))}
         </div>
+
+        <section className="mt-10" id="check">
+          <h2 className="text-xl font-bold text-[var(--color-text)] mb-2">紹介された業者を契約前に確認する3つの公的な方法</h2>
+          <p className="text-sm text-[var(--color-text-sub)] leading-relaxed mb-4">
+            上のランキングはサービスを比べたもので、実際に工事をするのは紹介された塗装会社です。会社ごとの許可・登録は、国や公的な団体の検索で確認できます（2026年10月28日確認）。
+          </p>
+          <div className="space-y-3">
+            {publicChecks.map((c) => (
+              <div key={c.h} className="bg-white rounded-xl border border-[var(--color-border)] p-5">
+                <h3 className="font-bold text-[var(--color-text)] text-sm mb-2">{c.h}</h3>
+                <p className="text-sm text-[var(--color-text-sub)] leading-relaxed">{c.b}</p>
+                <p className="mt-2 text-xs text-[var(--color-text-muted)]">
+                  出典：<a href={c.src.url} target="_blank" rel="noopener noreferrer nofollow" className="underline">{c.src.label}</a>
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-sm text-[var(--color-text-sub)]">
+            検索の手順は
+            <Link href="/guide/contractor-check/" className="text-[var(--color-primary)] hover:underline">優良業者を見分ける公的な確認方法</Link>
+            でご説明しています。
+          </p>
+        </section>
 
         <section className="mt-10">
           <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">よくある質問</h2>
