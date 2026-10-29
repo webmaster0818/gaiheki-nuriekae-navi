@@ -73,7 +73,20 @@ export default function HomePage() {
             <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto leading-relaxed">
               一括見積もりサービス10社を、費用・保証・対応エリアの観点で比較しています。塗料の選び方から助成金まで、外壁塗装に関する情報を掲載しています。
             </p>
-            <div className="bg-white/10 border border-white/25 rounded-xl p-4 md:p-5 mb-8 max-w-2xl mx-auto text-left text-sm leading-relaxed">
+            <div id="nurikae" className="bg-white/10 border border-white/25 rounded-xl p-4 md:p-5 mb-8 max-w-2xl mx-auto text-left text-sm leading-relaxed">
+              <p className="font-bold mb-1">ヌリカエ（ぬりかえ）の仕組み・加盟業者の審査・業者一覧</p>
+              <ul className="text-white/90 list-disc pl-5 space-y-1 mb-3">
+                <li>運営会社は株式会社Re:Factです。相談と会社紹介は無料で、専門アドバイザーに希望を伝えて紹介を受ける方法（最大4社）と、都道府県や条件で塗装会社を検索して直接問い合わせる方法があります。断りにくい場合は、アドバイザーが塗装会社への断りを代行します。</li>
+                <li>掲載会社は、財務状況・過去の施工実績・クレームの有無などの審査を通った会社としています。公開されている加盟基準は、建設工事保険への加入、会社・代表者に建築関連法規や消費者契約法などによる処罰実績がないこと、自社サイトがあり検索で見つかることで、「加盟基準は他にもございます」と記載されています。</li>
+                <li>業者一覧は、公式サイトの「エリアから探す」「ランキングから探す」から都道府県・市区町村ごとに見られます。エリアのランキングは、直近6か月にヌリカエを通じて契約に至った件数の多い順です。公式トップの掲載社数は5,718社（10月29日更新の表示）です。</li>
+              </ul>
+              <p className="text-xs text-white/70 mb-3">
+                出典：ヌリカエ公式
+                <a href="https://www.nuri-kae.jp/" target="_blank" rel="noopener noreferrer" className="underline">トップ</a>・
+                <a href="https://www.nuri-kae.jp/faq" target="_blank" rel="noopener noreferrer" className="underline">よくある質問</a>・
+                <a href="https://www.nuri-kae.jp/column/contractors/153/" target="_blank" rel="noopener noreferrer" className="underline">エリア別ランキングの案内</a>
+                （2026年10月29日確認）。当サイト「外壁ぬりかえナビ」はヌリカエの公式サイトではありません。
+              </p>
               <p className="font-bold mb-1">ヌリカエのランキングについて</p>
               <p className="text-white/90">
                 ヌリカエを運営する株式会社Re:Factは、2026年10月5日に「みんなに選ばれた塗装店ランキング 2026年上半期」を発表しました。2026年4月1日〜9月30日にヌリカエを通じて契約に至った外壁・屋根塗装工事の件数だけで順位を決めており、対象は加盟4,637社です。全国は5位まで、エリア別・都道府県別は3位までが公開され、各社の工事品質・事業規模の優劣を示すものではないと注記されています。当サイトの
