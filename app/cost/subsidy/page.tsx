@@ -169,6 +169,27 @@ export default function SubsidyPage() {
           </div>
         </section>
 
+        {/* Area pages (2026-11-01) */}
+        <section className="mt-10">
+          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">自治体別の塗装助成（公式サイトで確認済み）</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { href: "/cost/subsidy/tokyo-23ku/", title: "東京23区の外壁・屋根塗装の助成一覧", desc: "区ごとの対象・対象外と受付状況" },
+              { href: "/cost/subsidy/seirei-shi/", title: "政令指定都市20市の外壁塗装の助成一覧", desc: "塗装を対象外と明記している市など" },
+              { href: "/cost/subsidy/ota-ku/", title: "大田区の住宅リフォーム助成", desc: "外壁・屋根塗装が対象、上限20万円" },
+              { href: "/cost/subsidy/suginami-ku/", title: "杉並区の高日射反射率塗装の助成", desc: "屋根・外壁合わせて上限15万円" },
+              { href: "/cost/subsidy/shinagawa-ku/", title: "品川区の住宅改善工事助成", desc: "遮熱性塗装、区民は上限20万円" },
+              { href: "/cost/subsidy/adachi-ku/", title: "足立区の省エネリフォーム補助金", desc: "遮熱塗装は上限5万円（令和8年度は受付終了）" },
+              { href: "/cost/subsidy/setagaya-ku/", title: "世田谷区のエコ住宅補助金", desc: "令和8年度は外壁塗装が対象外" },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+                <span className="block font-bold text-sm text-[var(--color-text)]">{l.title}</span>
+                <span className="block mt-1 text-xs text-[var(--color-text-sub)]">{l.desc}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* Application steps */}
         <section className="mt-10">
           <h2 className="text-xl font-bold text-[var(--color-text)] mb-6">補助金申請の手順</h2>
