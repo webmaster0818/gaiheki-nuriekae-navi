@@ -8,6 +8,7 @@ import paints from "@/data/paints.json";
 import paintMakers from "@/data/paint-makers.json";
 import paintProducts from "@/data/paint-products.json";
 import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
+import { topicDocs } from "@/lib/topicDocs";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -174,6 +175,24 @@ export default async function PaintPage({ params }: Props) {
             無料で業者を比較する
           </Link>
         </div>
+
+        {/* Resin / function / wall material guides (data/topic-docs.json) */}
+        <section className="mt-10">
+          <h3 className="text-lg font-bold text-[var(--color-text)] mb-4">塗料の種類・機能別、外壁材別のガイド</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {topicDocs
+              .filter((d) => d.hub === "paint" || d.hub === "material")
+              .map((d) => (
+                <Link
+                  key={d.path}
+                  href={d.path}
+                  className="p-3 bg-white border border-[var(--color-border)] rounded-lg hover:border-[var(--color-primary)] transition-colors text-sm text-[var(--color-text)]"
+                >
+                  {d.shortTitle}
+                </Link>
+              ))}
+          </div>
+        </section>
 
         {/* Maker / product pages */}
         <section className="mt-10">

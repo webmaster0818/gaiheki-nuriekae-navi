@@ -6,6 +6,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import troubles from "@/data/troubles.json";
 import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
+import { topicDocs } from "@/lib/topicDocs";
 
 type TroubleAnswer = { heading: string; lead: string; head: string[]; rows: string[][]; paragraphs: string[] };
 type TroubleSource = { label: string; url: string };
@@ -315,6 +316,17 @@ export default async function TroublePage({ params }: Props) {
                   className="p-3 bg-white border border-[var(--color-border)] rounded-lg hover:border-[var(--color-danger)] transition-colors text-sm"
                 >
                   <div className="font-medium text-[var(--color-text)] text-xs leading-tight">{t.title.split("｜")[0]}</div>
+                </Link>
+              ))}
+            {topicDocs
+              .filter((d) => d.hub === "trouble")
+              .map((d) => (
+                <Link
+                  key={d.path}
+                  href={d.path}
+                  className="p-3 bg-white border border-[var(--color-border)] rounded-lg hover:border-[var(--color-danger)] transition-colors text-sm"
+                >
+                  <div className="font-medium text-[var(--color-text)] text-xs leading-tight">{d.shortTitle}</div>
                 </Link>
               ))}
           </div>

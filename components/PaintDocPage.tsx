@@ -12,10 +12,10 @@ export type DocBlock =
 export type DocSection = { id: string; title: string; intro?: string; blocks: DocBlock[]; source: DocSource[] };
 export type PaintDoc = {
   slug: string;
-  maker: string;
+  maker?: string;
   checked: string;
   updatedAt: string;
-  officialUrl: string;
+  officialUrl?: string;
   seoTitle: string;
   h1: string;
   description: string;
@@ -89,7 +89,14 @@ export default function PaintDocPage({ doc, crumbs }: { doc: PaintDoc; crumbs: {
         <>
           {doc.lead}
           <span className="block mt-2 text-xs text-[var(--color-text-muted)]">
-            出典の確認日：{doc.checked}（<Src href={doc.officialUrl}>{doc.maker}の公式ページ</Src>）
+            出典の確認日：{doc.checked}
+            {doc.officialUrl && doc.maker ? (
+              <>
+                （<Src href={doc.officialUrl}>{doc.maker}の公式ページ</Src>）
+              </>
+            ) : (
+              "（出典は各節の末尾に記載）"
+            )}
           </span>
         </>
       }
