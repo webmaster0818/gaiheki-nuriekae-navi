@@ -315,6 +315,14 @@ export default async function CompanyPage({ params }: Props) {
           <RelatedGuides items={[GUIDES.compare, GUIDES.warranty, GUIDES.contractorCheck]} />
         )}
 
+        {/* 都道府県別の店舗数・加盟店数ページ（2026-11-01） */}
+        {(slug === "gaiso" || slug === "protimes") && (
+          <RelatedGuides title="店舗数" items={[{ href: `/company/${slug}/shop/`, title: `${company.name}の店舗一覧`, desc: "都道府県別の店舗数と店舗のない県（公式の店舗検索で確認）" }]} />
+        )}
+        {slug === "gaiheki-madoguchi" && (
+          <RelatedGuides title="加盟店" items={[{ href: "/company/gaiheki-madoguchi/kameiten/", title: "外壁塗装の窓口の加盟店", desc: "都道府県別の掲載社数（公式の都道府県別ページで確認）" }]} />
+        )}
+
         {/* CTA */}
         {company.officialUrl && (
         <div className="mt-10 p-6 bg-gradient-to-br from-[var(--color-primary-light)] to-white rounded-2xl border border-[var(--color-primary)] text-center">

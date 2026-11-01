@@ -1,0 +1,944 @@
+[
+ {
+  "slug": "gaiheki-madoguchi",
+  "path": "kameiten",
+  "name": "外壁塗装の窓口",
+  "title": "外壁塗装の窓口の加盟店｜都道府県別の掲載社数と探し方【2026年】",
+  "description": "外壁塗装の窓口の加盟店数を都道府県別にまとめました。公式サイトの都道府県別ページに掲載された社数（2026年11月1日確認）は東京都550件・神奈川県476件・埼玉県489件など。公式は全国5,500社以上の加盟店と案内しています。",
+  "h1": "外壁塗装の窓口の加盟店｜都道府県別の掲載社数",
+  "answer": "外壁塗装の窓口は、公式サイトで「全国5,500社以上の加盟店」と案内しています。都道府県別のページに掲載されている社数は、2026年11月1日時点で東京都550件、埼玉県489件、神奈川県476件、大阪府355件、千葉県342件などで、47都道府県すべてに掲載があります。最も少ないのは鳥取県の13件です。",
+  "countLabel": "掲載社数",
+  "unit": "件",
+  "rows": [
+   {
+    "region": "北海道・東北",
+    "prefs": [
+     {
+      "name": "北海道",
+      "count": 67,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/1"
+     },
+     {
+      "name": "青森県",
+      "count": 25,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/2"
+     },
+     {
+      "name": "岩手県",
+      "count": 37,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/3"
+     },
+     {
+      "name": "宮城県",
+      "count": 64,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/4"
+     },
+     {
+      "name": "秋田県",
+      "count": 17,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/5"
+     },
+     {
+      "name": "山形県",
+      "count": 31,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/6"
+     },
+     {
+      "name": "福島県",
+      "count": 60,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/7"
+     }
+    ]
+   },
+   {
+    "region": "関東",
+    "prefs": [
+     {
+      "name": "茨城県",
+      "count": 177,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/8"
+     },
+     {
+      "name": "栃木県",
+      "count": 107,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/9"
+     },
+     {
+      "name": "群馬県",
+      "count": 108,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/10"
+     },
+     {
+      "name": "埼玉県",
+      "count": 489,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/11"
+     },
+     {
+      "name": "千葉県",
+      "count": 342,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/12"
+     },
+     {
+      "name": "東京都",
+      "count": 550,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/13"
+     },
+     {
+      "name": "神奈川県",
+      "count": 476,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/14"
+     }
+    ]
+   },
+   {
+    "region": "中部",
+    "prefs": [
+     {
+      "name": "新潟県",
+      "count": 54,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/15"
+     },
+     {
+      "name": "富山県",
+      "count": 29,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/16"
+     },
+     {
+      "name": "石川県",
+      "count": 40,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/17"
+     },
+     {
+      "name": "福井県",
+      "count": 18,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/18"
+     },
+     {
+      "name": "山梨県",
+      "count": 38,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/19"
+     },
+     {
+      "name": "長野県",
+      "count": 74,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/20"
+     },
+     {
+      "name": "岐阜県",
+      "count": 120,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/21"
+     },
+     {
+      "name": "静岡県",
+      "count": 154,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/22"
+     },
+     {
+      "name": "愛知県",
+      "count": 280,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/23"
+     }
+    ]
+   },
+   {
+    "region": "近畿",
+    "prefs": [
+     {
+      "name": "三重県",
+      "count": 107,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/24"
+     },
+     {
+      "name": "滋賀県",
+      "count": 74,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/25"
+     },
+     {
+      "name": "京都府",
+      "count": 116,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/26"
+     },
+     {
+      "name": "大阪府",
+      "count": 355,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/27"
+     },
+     {
+      "name": "兵庫県",
+      "count": 226,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/28"
+     },
+     {
+      "name": "奈良県",
+      "count": 106,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/29"
+     },
+     {
+      "name": "和歌山県",
+      "count": 65,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/30"
+     }
+    ]
+   },
+   {
+    "region": "中国",
+    "prefs": [
+     {
+      "name": "鳥取県",
+      "count": 13,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/31"
+     },
+     {
+      "name": "島根県",
+      "count": 22,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/32"
+     },
+     {
+      "name": "岡山県",
+      "count": 71,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/33"
+     },
+     {
+      "name": "広島県",
+      "count": 88,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/34"
+     },
+     {
+      "name": "山口県",
+      "count": 56,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/35"
+     }
+    ]
+   },
+   {
+    "region": "四国",
+    "prefs": [
+     {
+      "name": "徳島県",
+      "count": 34,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/36"
+     },
+     {
+      "name": "香川県",
+      "count": 44,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/37"
+     },
+     {
+      "name": "愛媛県",
+      "count": 50,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/38"
+     },
+     {
+      "name": "高知県",
+      "count": 16,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/39"
+     }
+    ]
+   },
+   {
+    "region": "九州・沖縄",
+    "prefs": [
+     {
+      "name": "福岡県",
+      "count": 167,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/40"
+     },
+     {
+      "name": "佐賀県",
+      "count": 55,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/41"
+     },
+     {
+      "name": "長崎県",
+      "count": 37,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/42"
+     },
+     {
+      "name": "熊本県",
+      "count": 64,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/43"
+     },
+     {
+      "name": "大分県",
+      "count": 41,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/44"
+     },
+     {
+      "name": "宮崎県",
+      "count": 29,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/45"
+     },
+     {
+      "name": "鹿児島県",
+      "count": 58,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/46"
+     },
+     {
+      "name": "沖縄県",
+      "count": 26,
+      "url": "https://gaiheki-madoguchi.com/clients/prefectures/47"
+     }
+    ]
+   }
+  ],
+  "totalNote": "47都道府県の掲載社数を単純に合計すると5,277件ですが、1社が複数の都道府県に掲載されている（対応エリアごとの掲載）ため、加盟店の実数ではありません。",
+  "method": [
+   "公式サイトの都道府県別ページ（gaiheki-madoguchi.com/clients/prefectures/1〜47）の「〇〇の外壁塗装業者を〇件掲載」の数値を、2026年11月1日に転記しました。",
+   "各ページは対応エリアごとの掲載で、例えば東京都のページには千葉県・神奈川県・埼玉県に所在する業者も含まれます。「その都道府県に事務所がある社数」ではありません。",
+   "全国の加盟店数は、公式トップページの「全国5,500社以上の加盟店」の記載によります。"
+  ],
+  "howto": [
+   "公式サイトの都道府県別ページを開くと、その都道府県に対応する業者が一覧で表示されます（初期表示は10件で、続きを読み込めます）。",
+   "外壁塗装の窓口は、専門スタッフが電話で要望を聞いたうえで、審査をクリアした施工店から最大4社を紹介する一括見積もりサイトです（サービスの詳細は特徴ページで解説しています）。",
+   "依頼前に、業者の所在地・建設業許可・保証内容を確認してください。確認方法は優良業者の見分け方のページで解説しています。"
+  ],
+  "sources": [
+   {
+    "name": "外壁塗装の窓口 公式トップ（全国5,500社以上の加盟店）",
+    "url": "https://gaiheki-madoguchi.com/"
+   },
+   {
+    "name": "外壁塗装の窓口 都道府県別ページ（例：東京都）",
+    "url": "https://gaiheki-madoguchi.com/clients/prefectures/13"
+   }
+  ],
+  "faqs": [
+   {
+    "q": "外壁塗装の窓口の加盟店は何社ですか？",
+    "a": "公式トップページでは「全国5,500社以上の加盟店」と案内しています（2026年11月1日確認）。"
+   },
+   {
+    "q": "東京都の加盟店は何社ですか？",
+    "a": "公式サイトの東京都のページには550件が掲載されています（2026年11月1日確認）。対応エリアごとの掲載のため、都外に所在する業者も含まれます。"
+   },
+   {
+    "q": "加盟店が少ない県はどこですか？",
+    "a": "掲載社数が少ないのは鳥取県（13件）、高知県（16件）、秋田県（17件）、福井県（18件）です。掲載がゼロの都道府県はありません。"
+   }
+  ],
+  "related": [
+   {
+    "href": "/company/gaiheki-madoguchi/",
+    "title": "外壁塗装の窓口の特徴",
+    "desc": "仕組み・メリット・注意点"
+   },
+   {
+    "href": "/guide/contractor-check/",
+    "title": "優良業者を見分ける公的な確認方法",
+    "desc": "建設業許可・登録団体・瑕疵保険の調べ方"
+   }
+  ],
+  "checkedAt": "2026-11-01"
+ },
+ {
+  "slug": "protimes",
+  "path": "shop",
+  "name": "プロタイムズ",
+  "title": "プロタイムズの店舗一覧｜都道府県別の店舗数と店舗のない県【2026年】",
+  "description": "プロタイムズの店舗数を都道府県別にまとめました。公式の店舗検索で数えた店舗は272店（2026年11月1日確認、公式表記は265店舗・2026年8月現在）。愛知県28店・埼玉県と大阪府21店など。秋田・鳥取・島根・高知の4県は店舗がありません。",
+  "h1": "プロタイムズの店舗一覧｜都道府県別の店舗数",
+  "answer": "プロタイムズは公式の店舗検索で「全国ネットワーク 265店舗 ※2026年8月現在」と案内しています。2026年11月1日に都道府県別の店舗検索ページを数えると272店で、最も多いのは愛知県の28店、次いで埼玉県・大阪府の21店です。秋田県・鳥取県・島根県・高知県の4県には店舗の掲載がありません。",
+  "countLabel": "店舗数",
+  "unit": "店",
+  "rows": [
+   {
+    "region": "北海道・東北",
+    "prefs": [
+     {
+      "name": "北海道",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/hokkaido"
+     },
+     {
+      "name": "青森県",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/aomori"
+     },
+     {
+      "name": "岩手県",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/iwate"
+     },
+     {
+      "name": "宮城県",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/miyagi"
+     },
+     {
+      "name": "秋田県",
+      "count": 0,
+      "url": "https://protimes.jp/shop_search/akita"
+     },
+     {
+      "name": "山形県",
+      "count": 1,
+      "url": "https://protimes.jp/shop_search/yamagata"
+     },
+     {
+      "name": "福島県",
+      "count": 6,
+      "url": "https://protimes.jp/shop_search/fukushima"
+     }
+    ]
+   },
+   {
+    "region": "関東",
+    "prefs": [
+     {
+      "name": "茨城県",
+      "count": 11,
+      "url": "https://protimes.jp/shop_search/ibaraki"
+     },
+     {
+      "name": "栃木県",
+      "count": 8,
+      "url": "https://protimes.jp/shop_search/tochigi"
+     },
+     {
+      "name": "群馬県",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/gunma"
+     },
+     {
+      "name": "埼玉県",
+      "count": 21,
+      "url": "https://protimes.jp/shop_search/saitama"
+     },
+     {
+      "name": "千葉県",
+      "count": 12,
+      "url": "https://protimes.jp/shop_search/chiba"
+     },
+     {
+      "name": "東京都",
+      "count": 17,
+      "url": "https://protimes.jp/shop_search/tokyo"
+     },
+     {
+      "name": "神奈川県",
+      "count": 16,
+      "url": "https://protimes.jp/shop_search/kanagawa"
+     }
+    ]
+   },
+   {
+    "region": "中部",
+    "prefs": [
+     {
+      "name": "新潟県",
+      "count": 3,
+      "url": "https://protimes.jp/shop_search/niigata"
+     },
+     {
+      "name": "富山県",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/toyama"
+     },
+     {
+      "name": "石川県",
+      "count": 1,
+      "url": "https://protimes.jp/shop_search/ishikawa"
+     },
+     {
+      "name": "福井県",
+      "count": 3,
+      "url": "https://protimes.jp/shop_search/fukui"
+     },
+     {
+      "name": "山梨県",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/yamanashi"
+     },
+     {
+      "name": "長野県",
+      "count": 11,
+      "url": "https://protimes.jp/shop_search/nagano"
+     },
+     {
+      "name": "岐阜県",
+      "count": 9,
+      "url": "https://protimes.jp/shop_search/gifu"
+     },
+     {
+      "name": "静岡県",
+      "count": 10,
+      "url": "https://protimes.jp/shop_search/shizuoka"
+     },
+     {
+      "name": "愛知県",
+      "count": 28,
+      "url": "https://protimes.jp/shop_search/aichi"
+     }
+    ]
+   },
+   {
+    "region": "近畿",
+    "prefs": [
+     {
+      "name": "三重県",
+      "count": 3,
+      "url": "https://protimes.jp/shop_search/mie"
+     },
+     {
+      "name": "滋賀県",
+      "count": 3,
+      "url": "https://protimes.jp/shop_search/shiga"
+     },
+     {
+      "name": "京都府",
+      "count": 8,
+      "url": "https://protimes.jp/shop_search/kyoto"
+     },
+     {
+      "name": "大阪府",
+      "count": 21,
+      "url": "https://protimes.jp/shop_search/osaka"
+     },
+     {
+      "name": "兵庫県",
+      "count": 16,
+      "url": "https://protimes.jp/shop_search/hyogo"
+     },
+     {
+      "name": "奈良県",
+      "count": 4,
+      "url": "https://protimes.jp/shop_search/nara"
+     },
+     {
+      "name": "和歌山県",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/wakayama"
+     }
+    ]
+   },
+   {
+    "region": "中国",
+    "prefs": [
+     {
+      "name": "鳥取県",
+      "count": 0,
+      "url": "https://protimes.jp/shop_search/tottori"
+     },
+     {
+      "name": "島根県",
+      "count": 0,
+      "url": "https://protimes.jp/shop_search/shimane"
+     },
+     {
+      "name": "岡山県",
+      "count": 7,
+      "url": "https://protimes.jp/shop_search/okayama"
+     },
+     {
+      "name": "広島県",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/hiroshima"
+     },
+     {
+      "name": "山口県",
+      "count": 4,
+      "url": "https://protimes.jp/shop_search/yamaguchi"
+     }
+    ]
+   },
+   {
+    "region": "四国",
+    "prefs": [
+     {
+      "name": "徳島県",
+      "count": 1,
+      "url": "https://protimes.jp/shop_search/tokushima"
+     },
+     {
+      "name": "香川県",
+      "count": 1,
+      "url": "https://protimes.jp/shop_search/kagawa"
+     },
+     {
+      "name": "愛媛県",
+      "count": 3,
+      "url": "https://protimes.jp/shop_search/ehime"
+     },
+     {
+      "name": "高知県",
+      "count": 0,
+      "url": "https://protimes.jp/shop_search/kochi"
+     }
+    ]
+   },
+   {
+    "region": "九州・沖縄",
+    "prefs": [
+     {
+      "name": "福岡県",
+      "count": 8,
+      "url": "https://protimes.jp/shop_search/fukuoka"
+     },
+     {
+      "name": "佐賀県",
+      "count": 5,
+      "url": "https://protimes.jp/shop_search/saga"
+     },
+     {
+      "name": "長崎県",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/nagasaki"
+     },
+     {
+      "name": "熊本県",
+      "count": 4,
+      "url": "https://protimes.jp/shop_search/kumamoto"
+     },
+     {
+      "name": "大分県",
+      "count": 2,
+      "url": "https://protimes.jp/shop_search/oita"
+     },
+     {
+      "name": "宮崎県",
+      "count": 3,
+      "url": "https://protimes.jp/shop_search/miyazaki"
+     },
+     {
+      "name": "鹿児島県",
+      "count": 1,
+      "url": "https://protimes.jp/shop_search/kagoshima"
+     },
+     {
+      "name": "沖縄県",
+      "count": 1,
+      "url": "https://protimes.jp/shop_search/okinawa"
+     }
+    ]
+   }
+  ],
+  "totalNote": "都道府県別ページの店舗を合計すると272店で、公式表記の265店舗（2026年8月現在）より7店多くなっています。表記の時点以降の増減などが考えられますが、理由は公式に記載がありません。",
+  "method": [
+   "公式の店舗検索（protimes.jp/shop_search）の都道府県別ページ47件を2026年11月1日に開き、掲載されている店舗を数えました。",
+   "店舗は所在地の都道府県ごとに1回ずつ掲載されており、複数の都道府県に重複している店舗はありませんでした。",
+   "店舗が0の県のページには、店舗一覧の代わりに問い合わせの案内が表示されます。"
+  ],
+  "howto": [
+   "公式の店舗検索で都道府県を選ぶと、店舗名・所在地・連絡先が表示されます。",
+   "店舗のない県にお住まいの場合は、公式サイトの問い合わせ窓口で対応可否をご確認ください。",
+   "プロタイムズはフランチャイズ型の外壁塗装専門チェーンで、地域のフランチャイズ店が対応します。"
+  ],
+  "sources": [
+   {
+    "name": "プロタイムズ 店舗検索（全国ネットワーク265店舗 ※2026年8月現在）",
+    "url": "https://protimes.jp/shop_search"
+   },
+   {
+    "name": "プロタイムズ 店舗検索 東京都",
+    "url": "https://protimes.jp/shop_search/tokyo"
+   }
+  ],
+  "faqs": [
+   {
+    "q": "プロタイムズは全国に何店舗ありますか？",
+    "a": "公式の店舗検索では「全国ネットワーク 265店舗 ※2026年8月現在」と記載されています。2026年11月1日に都道府県別ページを数えると272店でした。"
+   },
+   {
+    "q": "プロタイムズの店舗がない県はどこですか？",
+    "a": "2026年11月1日時点で、秋田県・鳥取県・島根県・高知県の4県には店舗の掲載がありません。"
+   },
+   {
+    "q": "東京都には何店舗ありますか？",
+    "a": "東京都のページには17店が掲載されています（2026年11月1日確認）。"
+   }
+  ],
+  "related": [
+   {
+    "href": "/company/protimes/",
+    "title": "プロタイムズの特徴",
+    "desc": "運営形態・保証・診断"
+   },
+   {
+    "href": "/compare/gaiso-vs-protimes/",
+    "title": "ガイソーとプロタイムズの違い",
+    "desc": "運営形態・保証・診断・塗料を公式情報で比較"
+   }
+  ],
+  "checkedAt": "2026-11-01"
+ },
+ {
+  "slug": "gaiso",
+  "path": "shop",
+  "name": "ガイソー",
+  "title": "ガイソーの店舗一覧｜都道府県別の店舗数【2026年】",
+  "description": "ガイソーの店舗数を都道府県別にまとめました。公式の店舗一覧に掲載された店舗は117店（2026年11月1日確認、公式表記は全国120店舗・2025年2月現在）。愛知県9店・神奈川県8店・兵庫県7店など。福井・長野・岡山の3県は所在地のある店舗がありません。",
+  "h1": "ガイソーの店舗一覧｜都道府県別の店舗数",
+  "answer": "ガイソーは公式の店舗一覧で「全国ネットワーク 120店舗 2025年2月現在」と案内しています。2026年11月1日に店舗一覧を所在地の都道府県別に数えると117店で、最も多いのは愛知県の9店、次いで神奈川県8店、兵庫県7店です。福井県・長野県・岡山県には所在地のある店舗がありません。",
+  "countLabel": "店舗数",
+  "unit": "店",
+  "rows": [
+   {
+    "region": "北海道・東北",
+    "prefs": [
+     {
+      "name": "北海道",
+      "count": 6
+     },
+     {
+      "name": "青森県",
+      "count": 2
+     },
+     {
+      "name": "岩手県",
+      "count": 3
+     },
+     {
+      "name": "宮城県",
+      "count": 2
+     },
+     {
+      "name": "秋田県",
+      "count": 1
+     },
+     {
+      "name": "山形県",
+      "count": 2
+     },
+     {
+      "name": "福島県",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "region": "関東",
+    "prefs": [
+     {
+      "name": "茨城県",
+      "count": 3
+     },
+     {
+      "name": "栃木県",
+      "count": 1
+     },
+     {
+      "name": "群馬県",
+      "count": 3
+     },
+     {
+      "name": "埼玉県",
+      "count": 4
+     },
+     {
+      "name": "千葉県",
+      "count": 3
+     },
+     {
+      "name": "東京都",
+      "count": 6
+     },
+     {
+      "name": "神奈川県",
+      "count": 8
+     }
+    ]
+   },
+   {
+    "region": "中部",
+    "prefs": [
+     {
+      "name": "新潟県",
+      "count": 1
+     },
+     {
+      "name": "富山県",
+      "count": 3
+     },
+     {
+      "name": "石川県",
+      "count": 2
+     },
+     {
+      "name": "福井県",
+      "count": 0
+     },
+     {
+      "name": "山梨県",
+      "count": 2
+     },
+     {
+      "name": "長野県",
+      "count": 0
+     },
+     {
+      "name": "岐阜県",
+      "count": 2
+     },
+     {
+      "name": "静岡県",
+      "count": 6
+     },
+     {
+      "name": "愛知県",
+      "count": 9
+     }
+    ]
+   },
+   {
+    "region": "近畿",
+    "prefs": [
+     {
+      "name": "三重県",
+      "count": 4
+     },
+     {
+      "name": "滋賀県",
+      "count": 1
+     },
+     {
+      "name": "京都府",
+      "count": 4
+     },
+     {
+      "name": "大阪府",
+      "count": 4
+     },
+     {
+      "name": "兵庫県",
+      "count": 7
+     },
+     {
+      "name": "奈良県",
+      "count": 1
+     },
+     {
+      "name": "和歌山県",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "region": "中国",
+    "prefs": [
+     {
+      "name": "鳥取県",
+      "count": 1
+     },
+     {
+      "name": "島根県",
+      "count": 1
+     },
+     {
+      "name": "岡山県",
+      "count": 0
+     },
+     {
+      "name": "広島県",
+      "count": 1
+     },
+     {
+      "name": "山口県",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "region": "四国",
+    "prefs": [
+     {
+      "name": "徳島県",
+      "count": 1
+     },
+     {
+      "name": "香川県",
+      "count": 1
+     },
+     {
+      "name": "愛媛県",
+      "count": 2
+     },
+     {
+      "name": "高知県",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "region": "九州・沖縄",
+    "prefs": [
+     {
+      "name": "福岡県",
+      "count": 4
+     },
+     {
+      "name": "佐賀県",
+      "count": 1
+     },
+     {
+      "name": "長崎県",
+      "count": 2
+     },
+     {
+      "name": "熊本県",
+      "count": 2
+     },
+     {
+      "name": "大分県",
+      "count": 2
+     },
+     {
+      "name": "宮崎県",
+      "count": 1
+     },
+     {
+      "name": "鹿児島県",
+      "count": 1
+     },
+     {
+      "name": "沖縄県",
+      "count": 2
+     }
+    ]
+   }
+  ],
+  "totalNote": "店舗一覧の掲載は117件で、公式表記の120店舗（2025年2月現在）より3件少なくなっています。一覧には、1件の掲載で複数の拠点名（例：札幌店／札幌南店、青森店／弘前出張所）をまとめているものがあります。",
+  "method": [
+   "公式の店舗一覧（www.gaiso.co/search/）を2026年11月1日に開き、掲載されている店舗を所在地の都道府県ごとに数えました。",
+   "各店舗には「対応地域」が記載されており、所在地のない県でも近隣店舗が対応している場合があります。",
+   "公式サイト内の別の一覧（/search/tosou/）は掲載店舗数が少なく、店舗一覧と内容が一致しないため、集計には使っていません。"
+  ],
+  "howto": [
+   "公式の店舗一覧で地域を選ぶと、店舗名・運営会社・所在地・対応地域が表示されます。",
+   "所在地のない県にお住まいの場合は、近隣店舗の対応地域に含まれているかを確認するか、公式の全国受付窓口に相談してください。",
+   "ガイソーは加盟店によるボランタリーチェーンで、店舗ごとに運営会社が異なります。"
+  ],
+  "sources": [
+   {
+    "name": "ガイソー 店舗一覧（全国ネットワーク120店舗 2025年2月現在）",
+    "url": "https://www.gaiso.co/search/"
+   }
+  ],
+  "faqs": [
+   {
+    "q": "ガイソーは全国に何店舗ありますか？",
+    "a": "公式の店舗一覧では「全国ネットワーク 120店舗 2025年2月現在」と記載されています。2026年11月1日に一覧の掲載を数えると117件でした。"
+   },
+   {
+    "q": "ガイソーの店舗がない県はどこですか？",
+    "a": "2026年11月1日時点で、福井県・長野県・岡山県には所在地のある店舗がありません。近隣県の店舗の対応地域に含まれている場合があります。"
+   },
+   {
+    "q": "東京都には何店舗ありますか？",
+    "a": "東京都に所在地のある店舗は6店です（2026年11月1日確認）。"
+   }
+  ],
+  "related": [
+   {
+    "href": "/company/gaiso/",
+    "title": "ガイソーの特徴",
+    "desc": "保証・運営形態・注意点"
+   },
+   {
+    "href": "/compare/gaiso-vs-protimes/",
+    "title": "ガイソーとプロタイムズの違い",
+    "desc": "運営形態・保証・診断・塗料を公式情報で比較"
+   }
+  ],
+  "checkedAt": "2026-11-01"
+ }
+]
