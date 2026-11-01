@@ -5,6 +5,8 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import paints from "@/data/paints.json";
+import paintMakers from "@/data/paint-makers.json";
+import paintProducts from "@/data/paint-products.json";
 import RelatedGuides, { GUIDES } from "@/components/RelatedGuides";
 
 type Props = {
@@ -172,6 +174,25 @@ export default async function PaintPage({ params }: Props) {
             無料で業者を比較する
           </Link>
         </div>
+
+        {/* Maker / product pages */}
+        <section className="mt-10">
+          <h3 className="text-lg font-bold text-[var(--color-text)] mb-4">メーカーの製品ページ</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              ...paintMakers.map((m) => ({ href: `/paint/maker/${m.slug}/`, label: m.crumb })),
+              ...paintProducts.map((p) => ({ href: `/paint/product/${p.slug}/`, label: `${p.name}（${p.maker}）` })),
+            ].map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="p-3 bg-white border border-[var(--color-border)] rounded-lg hover:border-[var(--color-primary)] transition-colors text-sm text-[var(--color-text)]"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
+        </section>
 
         {/* Other paints */}
         <section className="mt-10">
