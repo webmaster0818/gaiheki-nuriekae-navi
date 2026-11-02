@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import reviewsData from "@/data/reviews.json";
 import Breadcrumb from "@/components/Breadcrumb";
 import { MERGED_REVIEW_SLUGS } from "@/lib/reviewLinks";
+import vendorShops from "@/data/vendor-shops.json";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -238,6 +239,19 @@ export default async function ReviewPage({ params }: Props) {
           で公式サイトの記載をもとに整理しています。
         </p>
       )}
+
+      {/* 都道府県別の店舗数・加盟店数ページへの導線（2026-11-02） */}
+      {vendorShops
+        .filter((v) => v.slug === slug)
+        .map((v) => (
+          <p key={v.path} className="mb-10 text-sm leading-7 text-text-secondary">
+            {v.name}の都道府県別の{v.countLabel}は、
+            <Link href={`/company/${v.slug}/${v.path}/`} className="text-primary hover:underline">
+              {v.path === "kameiten" ? `${v.name}の加盟店` : `${v.name}の店舗一覧`}
+            </Link>
+            のページで、公式サイトの記載をもとに整理しています。
+          </p>
+        ))}
 
       {/* CTA */}
       {r.officialUrl ? (
