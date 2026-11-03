@@ -181,6 +181,13 @@ export default function SubsidyPage() {
               { href: "/cost/subsidy/shinagawa-ku/", title: "品川区の住宅改善工事助成", desc: "遮熱性塗装、区民は上限20万円" },
               { href: "/cost/subsidy/adachi-ku/", title: "足立区の省エネリフォーム補助金", desc: "遮熱塗装は上限5万円（令和8年度は受付終了）" },
               { href: "/cost/subsidy/setagaya-ku/", title: "世田谷区のエコ住宅補助金", desc: "令和8年度は外壁塗装が対象外" },
+              { href: "/cost/subsidy/chiyoda-ku/", title: "千代田区のヒートアイランド対策助成", desc: "屋上・壁面の高反射率塗料、上限50万円" },
+              { href: "/cost/subsidy/minato-ku/", title: "港区の高反射率塗料等の助成", desc: "外壁は対象外、屋上・屋根は区民上限30万円" },
+              { href: "/cost/subsidy/shinjuku-ku/", title: "新宿区の高反射率塗装の補助", desc: "屋根・屋上が対象、上限20万円" },
+              { href: "/cost/subsidy/bunkyo-ku/", title: "文京区の高日射反射率塗料の助成", desc: "外壁は対象外、屋根・屋上の全面塗装は上限40万円" },
+              { href: "/cost/subsidy/sumida-ku/", title: "墨田区の遮熱塗装の助成", desc: "屋根全体と壁全面、戸建て上限15万円" },
+              { href: "/cost/subsidy/koto-ku/", title: "江東区の高反射率塗装の助成", desc: "屋根・屋上・ベランダが対象、上限20万円" },
+              { href: "/cost/subsidy/katsushika-ku/", title: "葛飾区のかつしかエコ助成金", desc: "屋根等又は壁で一律5万円、両方で10万円" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
                 <span className="block font-bold text-sm text-[var(--color-text)]">{l.title}</span>

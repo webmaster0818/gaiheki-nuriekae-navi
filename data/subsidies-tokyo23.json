@@ -43,7 +43,8 @@
      "name": "千代田区 ヒートアイランド対策助成",
      "url": "https://www.city.chiyoda.lg.jp/koho/machizukuri/kankyo/hojo/heat-island.html"
     }
-   ]
+   ],
+   "detailHref": "/cost/subsidy/chiyoda-ku/"
   },
   {
    "name": "中央区",
@@ -70,7 +71,8 @@
      "name": "港区 高反射率塗料等",
      "url": "https://www.city.minato.tokyo.jp/chikyukankyou/kankyo-machi/kankyo/hojo/toryo.html"
     }
-   ]
+   ],
+   "detailHref": "/cost/subsidy/minato-ku/"
   },
   {
    "name": "新宿区",
@@ -84,7 +86,8 @@
      "name": "新宿区 省エネルギー及び創エネルギー機器等補助制度",
      "url": "https://www.city.shinjuku.lg.jp/seikatsu/shoenergy.html"
     }
-   ]
+   ],
+   "detailHref": "/cost/subsidy/shinjuku-ku/"
   },
   {
    "name": "文京区",
@@ -102,7 +105,8 @@
      "name": "同 パンフレット",
      "url": "https://www.city.bunkyo.lg.jp/documents/4790/2026_pamphlet03.pdf"
     }
-   ]
+   ],
+   "detailHref": "/cost/subsidy/bunkyo-ku/"
   },
   {
    "name": "台東区",
@@ -129,7 +133,8 @@
      "name": "墨田区 地球温暖化防止設備導入助成制度",
      "url": "https://www.city.sumida.lg.jp/kurashi/kankyou_hozen/jyoseikin/ecojyoseiseido.html"
     }
-   ]
+   ],
+   "detailHref": "/cost/subsidy/sumida-ku/"
   },
   {
    "name": "江東区",
@@ -142,7 +147,8 @@
      "name": "江東区 地球温暖化防止設備導入助成",
      "url": "https://www.city.koto.lg.jp/380201/machizukuri/kankyo/sedo/30jyosei.html"
     }
-   ]
+   ],
+   "detailHref": "/cost/subsidy/koto-ku/"
   },
   {
    "name": "品川区",
@@ -345,7 +351,8 @@
      "name": "同 ご案内（PDF）",
      "url": "https://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/030/818/r8goannaishugo.pdf"
     }
-   ]
+   ],
+   "detailHref": "/cost/subsidy/katsushika-ku/"
   },
   {
    "name": "江戸川区",

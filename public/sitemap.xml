@@ -26,13 +26,13 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/cost/subsidy/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/cost/subsidy/tokyo-23ku/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -69,6 +69,48 @@
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/cost/subsidy/setagaya-ku/</loc>
     <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/cost/subsidy/chiyoda-ku/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/cost/subsidy/minato-ku/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/cost/subsidy/shinjuku-ku/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/cost/subsidy/bunkyo-ku/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/cost/subsidy/sumida-ku/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/cost/subsidy/koto-ku/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/cost/subsidy/katsushika-ku/</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
