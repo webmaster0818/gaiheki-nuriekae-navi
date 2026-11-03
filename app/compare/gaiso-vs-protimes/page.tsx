@@ -226,6 +226,7 @@ export default function Page() {
         { href: "/company/protimes/", title: "プロタイムズの特徴", desc: "運営会社と公表情報の詳細" },
         { href: "/review/gaiso/", title: "ガイソーの評判", desc: "Googleの口コミと運営会社" },
         { href: "/review/protimes/", title: "プロタイムズの評判", desc: "公式サイト掲載のお客様の声" },
+        { href: "/compare/nurikae-vs-gaiheki-madoguchi/", title: "ヌリカエと外壁塗装の窓口の違い", desc: "紹介の仕組み・断り代行・加盟店数を公式情報で比較" },
         { href: "/guide/warranty/", title: "外壁塗装の保証", desc: "保証書とリフォーム瑕疵保険の確認事項" },
         { href: "/ranking/", title: "外壁塗装業者ランキング", desc: "掲載サービスの比較一覧" },
       ]}
