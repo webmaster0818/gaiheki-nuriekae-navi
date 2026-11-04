@@ -9,7 +9,7 @@ export type DocBlock =
   | { kind: "text"; paras: string[] }
   | { kind: "list"; items: { h: string; b: string }[] }
   | { kind: "table"; head: string[]; rows: string[][] };
-export type DocSection = { id: string; title: string; intro?: string; blocks: DocBlock[]; source: DocSource[] };
+export type DocSection = { id: string; title: string; intro?: string; blocks: DocBlock[]; source: DocSource[]; checked?: string };
 export type PaintDoc = {
   slug: string;
   maker?: string;
@@ -47,7 +47,7 @@ export default function PaintDocPage({ doc, crumbs }: { doc: PaintDoc; crumbs: {
     title: s.title,
     intro: s.intro,
     blocks: s.blocks as GuideBlock[],
-    source: <SourceLine sources={s.source} checked={doc.checked} />,
+    source: <SourceLine sources={s.source} checked={s.checked ?? doc.checked} />,
   }));
 
   if (doc.productLinks && doc.productLinks.length > 0) {
