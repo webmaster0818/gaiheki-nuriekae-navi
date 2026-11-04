@@ -188,6 +188,13 @@ export default function SubsidyPage() {
               { href: "/cost/subsidy/sumida-ku/", title: "墨田区の遮熱塗装の助成", desc: "屋根全体と壁全面、戸建て上限15万円" },
               { href: "/cost/subsidy/koto-ku/", title: "江東区の高反射率塗装の助成", desc: "屋根・屋上・ベランダが対象、上限20万円" },
               { href: "/cost/subsidy/katsushika-ku/", title: "葛飾区のかつしかエコ助成金", desc: "屋根等又は壁で一律5万円、両方で10万円" },
+              { href: "/cost/subsidy/kawaguchi-shi/", title: "川口市の住宅リフォーム補助金", desc: "外壁の塗装が対象、工事費の5%・上限10万円" },
+              { href: "/cost/subsidy/kawagoe-shi/", title: "川越市の住宅改修補助金", desc: "外壁の塗装が対象、工事費の5%・上限5万円" },
+              { href: "/cost/subsidy/koshigaya-shi/", title: "越谷市の住宅・店舗改修促進補助金", desc: "外壁の塗装が対象、第2期は11月16日まで" },
+              { href: "/cost/subsidy/hachioji-shi/", title: "八王子市の居住環境整備補助金", desc: "屋根・外壁の塗装は上限5万円（令和8年度は受付終了）" },
+              { href: "/cost/subsidy/maebashi-shi/", title: "前橋市の住宅リフォーム補助金", desc: "外壁・屋根の改修、上限10万円（令和8年度は受付終了）" },
+              { href: "/cost/subsidy/takasaki-shi/", title: "高崎市の住環境改善助成事業", desc: "外壁・屋根の塗装、上限20万円（令和8年度は受付終了）" },
+              { href: "/cost/subsidy/nagasaki-shi/", title: "長崎市の快適住まいづくり支援費補助金", desc: "遮熱・断熱塗装、上限10万円（令和8年度は受付終了）" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
                 <span className="block font-bold text-sm text-[var(--color-text)]">{l.title}</span>

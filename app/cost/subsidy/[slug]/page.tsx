@@ -6,7 +6,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Breadcrumb from "@/components/Breadcrumb";
 import wards from "@/data/subsidies-wards.json";
 
-// 区別の塗装助成ページ（2026-11-01 新設）。金額・条件はすべて区公式ページを確認日に開いて転記
+// 区別の塗装助成ページ（2026-11-01 新設）・市の塗装助成（2026-11-04 追加、kind: "city"）。金額・条件はすべて自治体公式ページを確認日に開いて転記
 type Ward = (typeof wards)[number];
 
 type Props = { params: Promise<{ slug: string }> };
@@ -36,7 +36,9 @@ export default async function WardSubsidyPage({ params }: Props) {
   const w: Ward | undefined = wards.find((x) => x.slug === slug);
   if (!w) return notFound();
 
-  const others = wards.filter((x) => x.slug !== w.slug);
+  const isCity = w.kind === "city";
+  const org = isCity ? "市" : "区";
+  const others = wards.filter((x) => x.slug !== w.slug && x.kind === w.kind);
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -55,14 +57,14 @@ export default async function WardSubsidyPage({ params }: Props) {
         <Breadcrumb
           items={[
             { label: "助成金・補助金ガイド", href: "/cost/subsidy/" },
-            { label: "東京23区の塗装助成", href: "/cost/subsidy/tokyo-23ku/" },
+            ...(isCity ? [] : [{ label: "東京23区の塗装助成", href: "/cost/subsidy/tokyo-23ku/" }]),
             { label: w.ward },
           ]}
         />
 
         <h1 className="mt-4 text-2xl md:text-3xl font-bold text-[var(--color-text)]">{w.h1}</h1>
         <p className="mt-2 text-xs text-[var(--color-text-muted)]">
-          {w.fiscalYear}・区公式サイトで{formatDate(w.checkedAt)}に確認
+          {w.fiscalYear}・{org}公式サイトで{formatDate(w.checkedAt)}に確認
         </p>
 
         <section className="mt-5 p-5 bg-white border-2 border-[var(--color-primary)] rounded-xl">
@@ -135,12 +137,12 @@ export default async function WardSubsidyPage({ params }: Props) {
             ))}
           </ul>
           <p className="mt-2 text-xs text-[var(--color-text-muted)]">
-            助成制度の内容・受付状況は年度途中でも変わることがあります。申請前に必ず区の公式サイトまたは担当窓口でご確認ください。
+            助成制度の内容・受付状況は年度途中でも変わることがあります。申請前に必ず{org}の公式サイトまたは担当窓口でご確認ください。
           </p>
         </section>
 
         <section className="mt-10">
-          <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">ほかの区・自治体の塗装助成</h2>
+          <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">{isCity ? "ほかの市・区の塗装助成" : "ほかの区・自治体の塗装助成"}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {others.map((o) => (
               <Link key={o.slug} href={`/cost/subsidy/${o.slug}/`} className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
@@ -161,7 +163,7 @@ export default async function WardSubsidyPage({ params }: Props) {
 
         <div className="mt-10 p-6 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] text-white rounded-2xl text-center">
           <h2 className="font-bold text-xl mb-2">助成の条件に合う業者を探す</h2>
-          <p className="text-white/80 text-sm mb-4">区の助成は施工業者の所在地や塗料の性能が条件になります。見積もりの段階で条件を伝えて比較してください。</p>
+          <p className="text-white/80 text-sm mb-4">{org}の助成は施工業者の所在地や塗料の性能が条件になります。見積もりの段階で条件を伝えて比較してください。</p>
           <Link href="/ranking/" className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--color-secondary)] hover:bg-[var(--color-secondary-dark)] text-white font-bold rounded-xl transition-colors">
             一括見積もりサービスを比較する
           </Link>
