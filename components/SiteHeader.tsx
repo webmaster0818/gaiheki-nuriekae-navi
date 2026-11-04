@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import LogoMark from "@/components/brand/LogoMark";
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,14 +20,7 @@ export default function SiteHeader() {
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-md bg-[var(--color-primary)] flex items-center justify-center">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-                <rect x="2" y="2" width="6" height="6" rx="1" fill="white" opacity="0.9"/>
-                <rect x="10" y="2" width="6" height="6" rx="1" fill="white" opacity="0.6"/>
-                <rect x="2" y="10" width="6" height="6" rx="1" fill="white" opacity="0.6"/>
-                <rect x="10" y="10" width="6" height="6" rx="1" fill="white" opacity="0.9"/>
-              </svg>
-            </div>
+            <LogoMark size={34} />
             <span className="font-bold text-[var(--color-text)] text-sm leading-tight">
               外壁ぬりかえ<br className="hidden sm:block"/>ナビ
             </span>

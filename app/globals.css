@@ -75,3 +75,78 @@ html {
 
 .label { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
 .mono { font-family: var(--font-mono); font-feature-settings: "tnum" 1; }
+
+/* ======================================================================
+ * TOP 刷新（2026-11-04・redesign-20261104 ブランチ）
+ * 外壁の塗り替えを主題に、深い紺（--gw-navy）と塗料の青（--gw-paint）を基調にする。
+ * 背景は塗りたての壁のような明るい灰白色。操作ボタンはすべて同じ紺。
+ * グラデーション（FV の写真の重ねを除く）・大きな角丸・影の多用はしない。
+ * ====================================================================== */
+:root {
+  --gw-ink: #16212E;
+  --gw-navy: #1F3D5C;
+  --gw-navy-dark: #142B42;
+  --gw-paint: #6FA4D2;
+  --gw-paint-dark: #3E73A3;
+  --gw-wash: #EAF1F7;
+  --gw-paper: #F5F6F4;
+  --gw-border: #C9D3DC;
+  --gw-border-strong: #8EA0B2;
+  --gw-muted: #4D5B69;
+}
+
+@layer components {
+.gw-page { background: var(--gw-paper); color: var(--gw-ink); font-feature-settings: "palt" 1; }
+.gw-page a { -webkit-tap-highlight-color: transparent; }
+.gw-page :focus-visible { outline: 3px solid var(--gw-paint); outline-offset: 2px; }
+
+.gw-container { max-width: 1160px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+@media (min-width: 768px) { .gw-container { padding-left: 24px; padding-right: 24px; } }
+
+.gw-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+  min-height: 52px; padding: 0.8rem 1.5rem; border-radius: 3px;
+  background: var(--gw-navy); color: #fff; border: 1px solid var(--gw-navy);
+  font-weight: 700; letter-spacing: 0.04em; line-height: 1.35; text-align: center;
+  transition: background-color .2s ease;
+}
+.gw-btn:hover { background: var(--gw-navy-dark); }
+.gw-btn--lg { min-height: 64px; font-size: 18px; padding: 0.9rem 1.5rem; }
+@media (min-width: 768px) { .gw-btn--lg { min-height: 72px; font-size: 19px; } }
+.gw-btn--ghost { background: #fff; color: var(--gw-navy); border-color: var(--gw-navy); }
+.gw-btn--ghost:hover { background: var(--gw-wash); }
+
+.gw-card { background: #fff; border: 1px solid var(--gw-border); border-radius: 3px; }
+.gw-card-link { transition: border-color .2s ease, background-color .2s ease; }
+.gw-card-link:hover { border-color: var(--gw-navy); background: #FAFCFD; }
+
+/* 見出し：左寄せ＋下罫線 */
+.gw-h2 {
+  display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  font-size: 22px; font-weight: 700; letter-spacing: 0.03em; line-height: 1.4;
+  padding-bottom: 12px; border-bottom: 2px solid var(--gw-ink); margin-bottom: 24px;
+}
+@media (min-width: 768px) { .gw-h2 { font-size: 30px; margin-bottom: 32px; } }
+.gw-h2 small { font-size: 13px; font-weight: 500; color: var(--gw-muted); letter-spacing: 0.02em; }
+
+.gw-section { padding: 56px 0; }
+@media (min-width: 768px) { .gw-section { padding: 88px 0; } }
+.gw-band { background: #fff; border-top: 1px solid var(--gw-border); border-bottom: 1px solid var(--gw-border); }
+
+.gw-dot { position: relative; padding-left: 14px; }
+.gw-dot::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; background: var(--gw-paint-dark); }
+
+.gw-acc > summary { list-style: none; cursor: pointer; }
+.gw-acc > summary::-webkit-details-marker { display: none; }
+.gw-acc[open] > summary .gw-chev { transform: rotate(180deg); }
+.gw-chev { transition: transform .25s ease; }
+}
+
+/* スクロールで順に表示（JS 実行後に html.gw-js を付ける。JS 無効・印刷・reduced-motion では常に表示） */
+.gw-js .gw-reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.gw-js .gw-reveal.gw-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .gw-js .gw-reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+@media print { .gw-js .gw-reveal { opacity: 1 !important; transform: none !important; } }
