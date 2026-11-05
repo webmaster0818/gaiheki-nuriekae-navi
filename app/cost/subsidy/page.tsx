@@ -188,13 +188,22 @@ export default function SubsidyPage() {
               { href: "/cost/subsidy/sumida-ku/", title: "墨田区の遮熱塗装の助成", desc: "屋根全体と壁全面、戸建て上限15万円" },
               { href: "/cost/subsidy/koto-ku/", title: "江東区の高反射率塗装の助成", desc: "屋根・屋上・ベランダが対象、上限20万円" },
               { href: "/cost/subsidy/katsushika-ku/", title: "葛飾区のかつしかエコ助成金", desc: "屋根等又は壁で一律5万円、両方で10万円" },
-              { href: "/cost/subsidy/kawaguchi-shi/", title: "川口市の住宅リフォーム補助金", desc: "外壁の塗装が対象、工事費の5%・上限10万円" },
+              { href: "/cost/subsidy/kawaguchi-shi/", title: "川口市の住宅リフォーム補助金", desc: "外壁の塗装が対象、工事費の5%・上限10万円（令和8年度は終了）" },
               { href: "/cost/subsidy/kawagoe-shi/", title: "川越市の住宅改修補助金", desc: "外壁の塗装が対象、工事費の5%・上限5万円" },
               { href: "/cost/subsidy/koshigaya-shi/", title: "越谷市の住宅・店舗改修促進補助金", desc: "外壁の塗装が対象、第2期は11月16日まで" },
               { href: "/cost/subsidy/hachioji-shi/", title: "八王子市の居住環境整備補助金", desc: "屋根・外壁の塗装は上限5万円（令和8年度は受付終了）" },
               { href: "/cost/subsidy/maebashi-shi/", title: "前橋市の住宅リフォーム補助金", desc: "外壁・屋根の改修、上限10万円（令和8年度は受付終了）" },
               { href: "/cost/subsidy/takasaki-shi/", title: "高崎市の住環境改善助成事業", desc: "外壁・屋根の塗装、上限20万円（令和8年度は受付終了）" },
               { href: "/cost/subsidy/nagasaki-shi/", title: "長崎市の快適住まいづくり支援費補助金", desc: "遮熱・断熱塗装、上限10万円（令和8年度は受付終了）" },
+              { href: "/cost/subsidy/sasebo-shi/", title: "佐世保市の住宅性能向上リフォーム支援事業", desc: "断熱・遮熱塗料の塗装、最大20万円（先着順・受付中）" },
+              { href: "/cost/subsidy/mito-shi/", title: "水戸市の安心住宅リフォーム支援補助金", desc: "屋根・外壁の塗装・防水、上限10万円（後期の申請期間は終了）" },
+              { href: "/cost/subsidy/nishinomiya-shi/", title: "西宮市の住宅リフォーム助成事業", desc: "屋根や外壁の塗装・防水、最高15万円（令和8年度は募集終了）" },
+              { href: "/cost/subsidy/matsuyama-shi/", title: "松山市のわが家のリフォーム応援事業", desc: "屋根・外壁の塗装、上限20万円＋加算（令和8年度は受付終了）" },
+              { href: "/cost/subsidy/yamagata-shi/", title: "山形市の住宅リフォーム総合支援事業", desc: "市補助タイプは塗装が対象、20万円限度（募集期間は終了）" },
+              { href: "/cost/subsidy/akita-shi/", title: "秋田市の住宅リフォーム支援事業", desc: "外装の塗装が対象、5万円（令和8年度は受付終了）" },
+              { href: "/cost/subsidy/asahikawa-shi/", title: "旭川市の住宅改修補助金", desc: "維持保全型で屋根・外壁の塗装、一律5万円（受付終了）" },
+              { href: "/cost/subsidy/morioka-shi/", title: "盛岡市のリフォーム支援事業2026", desc: "外壁の塗替え等、6万円分の電子商品券（受付終了）" },
+              { href: "/cost/subsidy/yokosuka-shi/", title: "横須賀市の高齢者住宅リフォーム補助金", desc: "65歳以上と同居、一律10万円（令和8年度は受付終了）" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
                 <span className="block font-bold text-sm text-[var(--color-text)]">{l.title}</span>
