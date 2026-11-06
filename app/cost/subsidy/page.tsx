@@ -204,6 +204,8 @@ export default function SubsidyPage() {
               { href: "/cost/subsidy/asahikawa-shi/", title: "旭川市の住宅改修補助金", desc: "維持保全型で屋根・外壁の塗装、一律5万円（受付終了）" },
               { href: "/cost/subsidy/morioka-shi/", title: "盛岡市のリフォーム支援事業2026", desc: "外壁の塗替え等、6万円分の電子商品券（受付終了）" },
               { href: "/cost/subsidy/yokosuka-shi/", title: "横須賀市の高齢者住宅リフォーム補助金", desc: "65歳以上と同居、一律10万円（令和8年度は受付終了）" },
+              { href: "/cost/subsidy/tokushima-shi/", title: "徳島市の住宅リフォーム支援事業", desc: "外壁の張替え・塗装・補修、上限12万円（令和8年度は受付終了）" },
+              { href: "/cost/subsidy/yamaguchi-shi/", title: "山口市の安心快適住まいる助成事業", desc: "屋根・外壁の塗装、10%を商品券で（令和8年度は受付終了）" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
                 <span className="block font-bold text-sm text-[var(--color-text)]">{l.title}</span>
