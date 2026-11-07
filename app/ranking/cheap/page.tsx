@@ -7,8 +7,31 @@ import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/cheap/" },
-  title: "安い外壁塗装業者ランキング【2026年版】費用を抑える方法も解説",
-  description: "外壁塗装の費用を抑えたい方に向けたランキングです。費用相場・値引き交渉の方法・注意点もあわせてご説明します。",
+  title: "外壁塗装を安く頼む方法と安い業者ランキング【2026年版】格安見積もりの確認先",
+  description: "外壁塗装を安く頼むには、同じ条件で複数社の見積もりを比べ、屋根と同時に施工して足場を1回にし、自治体の助成を確認します。格安の見積もりは住まいるダイヤルの無料の見積チェックで確認でき、訪問販売の契約は8日以内ならクーリング・オフができます（2026年11月7日確認）。",
+};
+
+const CHECKED = "2026年11月7日";
+
+const faqs = [
+  {
+    q: "外壁塗装を安く頼むには、どうすればよいですか？",
+    a: "同じ工事内容（塗る範囲・塗料・塗り回数）で複数社から見積もりを取って比べ、屋根も塗る予定があれば同時に依頼して足場を1回にします。お住まいの自治体に塗装を対象とする助成制度があるかも確認します。安さだけで選ぶと工程や塗料の内容が見積もりから分からないことがあるため、内訳を確認してから契約します。",
+  },
+  {
+    q: "格安の見積もりが妥当かどうか、どこで確認できますか？",
+    a: "住まいるダイヤル（公益財団法人 住宅リフォーム・紛争処理支援センター）の「リフォーム見積チェックサービス」は無料で、これから契約を予定している方が契約前の見積書を送ると、建築士の相談員が内容を確認して電話で回答します（2026年11月7日確認）。",
+  },
+  {
+    q: "訪問販売で安いと言われて契約した場合、取り消せますか？",
+    a: "特定商取引法により、訪問販売で契約した場合は、法律で決められた書面を受け取った日から数えて8日以内であれば、書面または電磁的記録でクーリング・オフ（申込みの撤回・契約の解除）ができます（消費者庁 特定商取引法ガイド、2026年11月7日確認）。",
+  },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
 const cheapRanking = [9, 8, 7, 6, 5, 1, 2, 3, 4, 10];
@@ -17,10 +40,6 @@ const tips = [
   {
     title: "複数社に見積もりを依頼する",
     desc: "最低3社から見積もりを取ることで、費用の相場を把握でき、価格交渉もしやすくなります。",
-  },
-  {
-    title: "閑散期（冬・梅雨）に工事をする",
-    desc: "業者の繁忙期（春・秋）を避け、冬季や梅雨の時期に依頼すると値引き交渉に応じてもらえる場合があります。",
   },
   {
     title: "塗料のグレードを一段下げる",
@@ -38,7 +57,7 @@ const tips = [
 
 const warnings = [
   "極端に安い見積もりは、工程の省略や塗料の品質に問題がある可能性がある",
-  "訪問販売・飛び込み営業の見積もりは、相場より高い場合が多い",
+  "訪問販売で契約した場合は、書面を受け取った日から8日以内ならクーリング・オフができる（特定商取引法）",
   "保証書を発行しない業者は避ける",
   "材料費のみを提示し、人件費・足場代を後から追加請求する業者に注意する",
 ];
@@ -50,6 +69,7 @@ export default function CheapRankingPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <SiteHeader />
       <main className="max-w-4xl mx-auto px-4 py-6">
         <Breadcrumb
@@ -63,7 +83,21 @@ export default function CheapRankingPage() {
           <h1 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">
             安い外壁塗装業者ランキング【2026年版】
           </h1>
-          <p className="mt-2 text-[var(--color-text-sub)]">
+          <div className="mt-3 p-4 bg-white border border-[var(--color-border)] rounded-xl">
+            <p className="text-[var(--color-text)] leading-relaxed">
+              外壁塗装を安く頼むには、<strong>同じ工事内容で複数社の見積もりを比べる、屋根と同時に施工して足場を1回にする、自治体の助成制度を確認する</strong>の3点が基本です。格安の見積もりが妥当かどうかは、住まいるダイヤルの無料の「リフォーム見積チェックサービス」に契約前の見積書を送って確認できます（回答は電話・建築士の相談員）。訪問販売で契約した場合は、書面を受け取った日から8日以内ならクーリング・オフができます。
+            </p>
+            <p className="mt-2 text-xs text-[var(--color-text-sub)] leading-relaxed">
+              出典：住宅リフォーム・紛争処理支援センター「
+              <a href="https://www.chord.or.jp/reform/index.html" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">リフォームの見積書に関する相談｜住まいるダイヤル</a>
+              」、消費者庁「
+              <a href="https://www.no-trouble.caa.go.jp/what/doortodoorsales/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">訪問販売｜特定商取引法ガイド</a>
+              」（{CHECKED}確認）。自治体の助成は
+              <Link href="/cost/subsidy/" className="text-[var(--color-primary)] hover:underline">外壁塗装の助成金・補助金</Link>
+              で地域ごとにまとめています。
+            </p>
+          </div>
+          <p className="mt-3 text-[var(--color-text-sub)]">
             費用対効果と価格を重視したランキングです。費用を抑えながら品質を確保するための方法もご説明します。
           </p>
           <div className="mt-3 p-3 bg-[var(--color-secondary-light)] border border-[var(--color-secondary)] rounded-lg text-xs text-[var(--color-text-sub)]">
@@ -152,6 +186,18 @@ export default function CheapRankingPage() {
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="mt-10">
+          <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">よくある質問</h2>
+          <div className="space-y-3">
+            {faqs.map((f) => (
+              <div key={f.q} className="bg-white rounded-xl border border-[var(--color-border)] p-4">
+                <h3 className="font-bold text-sm text-[var(--color-text)]">{f.q}</h3>
+                <p className="mt-2 text-sm text-[var(--color-text-sub)] leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-6 text-center">
