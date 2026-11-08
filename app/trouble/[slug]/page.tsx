@@ -38,6 +38,10 @@ export default async function TroublePage({ params }: Props) {
   const answer = "answer" in trouble ? (trouble.answer as TroubleAnswer) : null;
   const sources = "sources" in trouble ? (trouble.sources as TroubleSource[]) : [];
   const checked = "checked" in trouble ? (trouble.checked as string) : "";
+  const causesHeading = "causesHeading" in trouble ? (trouble.causesHeading as string) : undefined;
+  const causesLead = "causesLead" in trouble ? (trouble.causesLead as string) : undefined;
+  const causesSource =
+    "causesSource" in trouble ? (trouble.causesSource as { label: string; url: string; checkedAt: string }) : undefined;
   const faqJsonLd = answer
     ? {
         "@context": "https://schema.org",
@@ -147,7 +151,8 @@ export default async function TroublePage({ params }: Props) {
 
         {/* Causes */}
         <section className="mt-8">
-          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">主な原因</h2>
+          <h2 className="text-xl font-bold text-[var(--color-text)] mb-4">{causesHeading ?? "主な原因"}</h2>
+          {causesLead && <p className="text-sm text-[var(--color-text-sub)] leading-relaxed mb-3">{causesLead}</p>}
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {trouble.causes.map((cause, i) => (
               <li key={i} className="flex items-start gap-2 p-3 bg-white border border-[var(--color-border)] rounded-lg text-sm text-[var(--color-text-sub)]">
@@ -158,6 +163,13 @@ export default async function TroublePage({ params }: Props) {
               </li>
             ))}
           </ul>
+          {causesSource && (
+            <p className="mt-3 text-xs text-[var(--color-text-muted)] leading-relaxed">
+              出典：
+              <a href={causesSource.url} target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] hover:underline">{causesSource.label}</a>
+              （{causesSource.checkedAt}確認）
+            </p>
+          )}
         </section>
 
         {/* Types (if available) */}
