@@ -24,7 +24,7 @@ export default function SiteFooter() {
             <ul className="space-y-2">
               {[
                 { href: "/ranking/", label: "業者ランキング" },
-                { href: "/ranking/cheap/", label: "安い業者ランキング" },
+                { href: "/ranking/cheap/", label: "外壁塗装を安く頼む方法" },
                 { href: "/cost/price/", label: "費用・相場" },
                 { href: "/cost/subsidy/", label: "助成金・補助金" },
                 { href: "/paint/comparison/", label: "塗料を比較する" },

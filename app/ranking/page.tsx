@@ -54,7 +54,7 @@ const publicChecks = [
 const faqs = [
   {
     q: "外壁塗装の業者ランキングで1位はどこですか？",
-    a: "当サイトの順位は、1位ヌリカエ、2位外壁塗装の窓口、3位プロタイムズです。対応エリア、紹介できる会社の数、保証、口コミの公開状況を編集部が比べて付けた順位で、料金の安さの順ではありません。費用を重視する場合は、安い業者ランキングもあわせてご覧ください。",
+    a: "当サイトの順位は、1位ヌリカエ、2位外壁塗装の窓口、3位プロタイムズです。対応エリア、紹介できる会社の数、保証、口コミの公開状況を編集部が比べて付けた順位で、料金の安さの順ではありません。費用を重視する場合は、外壁塗装を安く頼む方法と掲載10社の公式情報（五十音順）のページもあわせてご覧ください。",
   },
   {
     q: "紹介サービスと塗装会社のチェーンは、何が違いますか？",
@@ -266,10 +266,10 @@ export default function RankingPage() {
         </section>
 
         <div className="mt-10 p-6 bg-[var(--color-primary-light)] rounded-2xl border border-[var(--color-primary)]">
-          <h3 className="font-bold text-lg text-[var(--color-text)] mb-2">費用を重視する場合のランキング</h3>
-          <p className="text-sm text-[var(--color-text-sub)] mb-3">価格を重視したランキングです。費用を抑えて外壁塗装を依頼できる業者を比較しています。</p>
+          <h3 className="font-bold text-lg text-[var(--color-text)] mb-2">費用を重視する場合</h3>
+          <p className="text-sm text-[var(--color-text-sub)] mb-3">費用を抑える方法、格安の見積もりの確認先、掲載10社の公式情報（五十音順・順位なし）をまとめています。</p>
           <Link href="/ranking/cheap/" className="inline-flex items-center gap-2 px-5 py-2 bg-[var(--color-primary)] text-white font-bold rounded-lg text-sm hover:bg-[var(--color-primary-dark)] transition-colors">
-            安い業者ランキングを見る
+            外壁塗装を安く頼む方法を見る
           </Link>
         </div>
         <RelatedGuides

@@ -7,8 +7,8 @@ import companies from "@/data/companies.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/cheap/" },
-  title: "外壁塗装を安く頼む方法と安い業者ランキング【2026年版】格安見積もりの確認先",
-  description: "外壁塗装を安く頼むには、同じ条件で複数社の見積もりを比べ、屋根と同時に施工して足場を1回にし、自治体の助成を確認します。格安の見積もりは住まいるダイヤルの無料の見積チェックで確認でき、訪問販売の契約は8日以内ならクーリング・オフができます（2026年11月7日確認）。",
+  title: "外壁塗装を安く頼む方法と格安見積もりの確認先｜掲載10社の公式情報（五十音順）",
+  description: "外壁塗装を安く頼むには、同じ条件で複数社の見積もりを比べ、屋根と同時に施工して足場を1回にし、自治体の助成を確認します。格安の見積もりは住まいるダイヤルの無料の見積チェックで確認でき、訪問販売の契約は8日以内ならクーリング・オフができます（2026年11月7日確認）。掲載10社は五十音順に並べています。",
 };
 
 const CHECKED = "2026年11月7日";
@@ -34,7 +34,19 @@ const faqLd = {
   mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
-const cheapRanking = [9, 8, 7, 6, 5, 1, 2, 3, 4, 10];
+/** 並べる基準：サービス名の読みの五十音順（料金の安さ・評価による順位ではない） */
+const KANA_ORDER = [
+  "gaiso", // がいそー
+  "annaijo", // がいへきとそうのあんないしょ
+  "gaiheki-madoguchi", // がいへきとそうのまどぐち
+  "hotline", // がいへきとそうほっとらいん
+  "kurashi-market", // くらしのまーけっと
+  "nurikae", // ぬりかえ
+  "protimes", // ぷろたいむず
+  "mitsumoa", // みつもあ
+  "reshop-navi", // りしょっぷなび
+  "ribilo", // りびろぺいんと
+];
 
 const tips = [
   {
@@ -63,8 +75,8 @@ const warnings = [
 ];
 
 export default function CheapRankingPage() {
-  const rankedCompanies = cheapRanking
-    .map((rank) => companies.find((c) => c.rank === rank))
+  const listedCompanies = KANA_ORDER
+    .map((slug) => companies.find((c) => c.slug === slug))
     .filter(Boolean) as typeof companies;
 
   return (
@@ -74,14 +86,14 @@ export default function CheapRankingPage() {
       <main className="max-w-4xl mx-auto px-4 py-6">
         <Breadcrumb
           items={[
-            { label: "業者ランキング", href: "/ranking/" },
-            { label: "安い業者ランキング" },
+            { label: "外壁塗装業者の比較", href: "/ranking/" },
+            { label: "外壁塗装を安く頼む方法" },
           ]}
         />
 
         <div className="mt-4 mb-6">
           <h1 className="text-2xl md:text-3xl font-bold text-[var(--color-text)]">
-            安い外壁塗装業者ランキング【2026年版】
+            外壁塗装を安く頼む方法と掲載10社の公式情報
           </h1>
           <div className="mt-3 p-4 bg-white border border-[var(--color-border)] rounded-xl">
             <p className="text-[var(--color-text)] leading-relaxed">
@@ -98,10 +110,10 @@ export default function CheapRankingPage() {
             </p>
           </div>
           <p className="mt-3 text-[var(--color-text-sub)]">
-            費用対効果と価格を重視したランキングです。費用を抑えながら品質を確保するための方法もご説明します。
+            費用を抑える方法と、当サイトに掲載している10社の概要・公式サイトをまとめています。10社はサービス名の五十音順に並べており、料金の安さや評価による順位ではありません。費用は工事内容で変わるため、各社の見積もりで確認してください。
           </p>
           <div className="mt-3 p-3 bg-[var(--color-secondary-light)] border border-[var(--color-secondary)] rounded-lg text-xs text-[var(--color-text-sub)]">
-            ※当ランキングはアフィリエイト広告を含みます（PR）。編集部による独自基準で評価しています。
+            ※本ページはアフィリエイト広告を含みます（PR）。掲載順はサービス名の五十音順です。
           </div>
         </div>
 
@@ -123,24 +135,16 @@ export default function CheapRankingPage() {
           </div>
         </div>
 
-        {/* Ranking */}
+        {/* 掲載10社（五十音順） */}
+        <h2 className="text-lg font-bold text-[var(--color-text)] mb-2">掲載{listedCompanies.length}社の公式情報（五十音順）</h2>
+        <p className="mb-4 text-xs text-[var(--color-text-sub)]">並べる基準：サービス名の読みの五十音順です。料金の安さ・評価による順位は付けていません。</p>
         <div className="space-y-5">
-          {rankedCompanies.map((company, idx) => (
+          {listedCompanies.map((company) => (
             <div key={company.slug} className="bg-white rounded-2xl border border-[var(--color-border)] p-5 shadow-sm">
               <div className="flex items-start gap-4">
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl font-black text-white flex-shrink-0 ${
-                  idx === 0 ? "bg-[var(--color-accent)]" : "bg-[var(--color-primary)]"
-                }`}>
-                  {idx + 1}
-                </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
-                    <h2 className="text-lg font-bold text-[var(--color-text)]">{company.name}</h2>
-                    {idx === 0 && (
-                      <span className="px-2 py-0.5 bg-[var(--color-accent-light)] text-[var(--color-accent-dark)] text-xs font-bold rounded-md border border-[var(--color-accent)]">
-                        費用対効果1位
-                      </span>
-                    )}
+                    <h3 className="text-lg font-bold text-[var(--color-text)]">{company.name}</h3>
                   </div>
                   <p className="text-xs text-[var(--color-text-sub)] mb-2">{company.tagline}</p>
                 </div>
@@ -202,7 +206,7 @@ export default function CheapRankingPage() {
 
         <div className="mt-6 text-center">
           <Link href="/ranking/" className="text-sm text-[var(--color-primary)] hover:underline font-medium">
-            総合ランキングを見る &rarr;
+            外壁塗装業者の比較を見る &rarr;
           </Link>
         </div>
       </main>
