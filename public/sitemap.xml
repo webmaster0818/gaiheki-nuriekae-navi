@@ -310,7 +310,7 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/paint/maker/nipponpaint/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -627,6 +627,12 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/paint/product/astec-revo1000/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/paint/product/applaud-shelastar2/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
