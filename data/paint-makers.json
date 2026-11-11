@@ -25,6 +25,21 @@
         "href": "/paint/product/applaud-shelastar2/",
         "title": "アプラウドシェラスターⅡ",
         "desc": "水性2液形の無機系。製品ページの仕様と用途の評価"
+      },
+      {
+        "href": "/paint/product/silicon-cera-uv/",
+        "title": "水性シリコンセラUV・1液ファインシリコンセラUV",
+        "desc": "シリコン系。水性と弱溶剤の違いと適用部位"
+      },
+      {
+        "href": "/paint/product/fine-df-ceramic/",
+        "title": "ファインDFセラミック",
+        "desc": "弱溶剤2液のフッ素系。規格と製品ページの仕様"
+      },
+      {
+        "href": "/paint/product/power-ode-fresh-f/",
+        "title": "パワーオーデフレッシュF",
+        "desc": "水性2液のフッ素系。共通中塗の指定と仕様"
       }
     ],
     "sections": [
@@ -648,6 +663,16 @@
         "href": "/paint/product/sk-premium-muki/",
         "title": "エスケープレミアム無機",
         "desc": "水性・一液の無機系と、弱溶剤・二液の無機マイルドの違い"
+      },
+      {
+        "href": "/paint/product/super-ceratight-f/",
+        "title": "スーパーセラタイトF",
+        "desc": "水性・一液のふっ素系。弾性スーパーセラタイトFとの違い"
+      },
+      {
+        "href": "/paint/product/sk-biomass-muki-gr/",
+        "title": "エスケーバイオマス無機GR",
+        "desc": "水性・一液の無機系。バイオマス原料とマルチレイヤー構造"
       }
     ],
     "sections": [
