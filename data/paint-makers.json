@@ -40,6 +40,11 @@
         "href": "/paint/product/power-ode-fresh-f/",
         "title": "パワーオーデフレッシュF",
         "desc": "水性2液のフッ素系。共通中塗の指定と仕様"
+      },
+      {
+        "href": "/paint/product/fine-urethane-u100/",
+        "title": "ファインウレタンU100",
+        "desc": "ウレタン・弱溶剤2液。製品詳細情報と乾燥時間"
       }
     ],
     "sections": [
@@ -673,6 +678,16 @@
         "href": "/paint/product/sk-biomass-muki-gr/",
         "title": "エスケーバイオマス無機GR",
         "desc": "水性・一液の無機系。バイオマス原料とマルチレイヤー構造"
+      },
+      {
+        "href": "/paint/product/sk-ceratight-w/",
+        "title": "水性セラタイトSi・水性セラタイトF",
+        "desc": "水性・二液のシリコン系とふっ素系の違い"
+      },
+      {
+        "href": "/paint/product/sk-cleanmild/",
+        "title": "クリーンマイルドシリコン・フッソ・ウレタン",
+        "desc": "弱溶剤・二液の3製品の違いと期待耐用年数"
       }
     ],
     "sections": [

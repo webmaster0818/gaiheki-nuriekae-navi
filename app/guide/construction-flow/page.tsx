@@ -280,6 +280,10 @@ export default function ConstructionFlowGuidePage() {
               <span className="block font-bold text-[var(--color-text)]">石綿（アスベスト）の事前調査</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">対象となる工事と発注者が確認すること</span>
             </Link>
+            <Link href="/guide/futaibu/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">付帯部の点検と塗装</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">破風板・鼻隠し・軒天井・雨戸のチェック項目</span>
+            </Link>
             <Link href="/guide/contract/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
               <span className="block font-bold text-[var(--color-text)]">契約前に確認する書類</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">見積書・契約書・約款と無料の見積チェック</span>
