@@ -284,6 +284,10 @@ export default function ConstructionFlowGuidePage() {
               <span className="block font-bold text-[var(--color-text)]">付帯部の点検と塗装</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">破風板・鼻隠し・軒天井・雨戸のチェック項目</span>
             </Link>
+            <Link href="/guide/kouatsu-senjou/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
+              <span className="block font-bold text-[var(--color-text)]">高圧洗浄と下地調整</span>
+              <span className="block mt-1 text-xs text-[var(--color-text-sub)]">既存塗膜の除去4工法とRA・RB・RC種</span>
+            </Link>
             <Link href="/guide/contract/" className="block p-4 bg-white border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
               <span className="block font-bold text-[var(--color-text)]">契約前に確認する書類</span>
               <span className="block mt-1 text-xs text-[var(--color-text-sub)]">見積書・契約書・約款と無料の見積チェック</span>

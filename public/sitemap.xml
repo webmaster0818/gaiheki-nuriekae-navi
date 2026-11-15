@@ -388,7 +388,7 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/trouble/chalking/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -477,7 +477,7 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/guide/construction-flow/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -730,6 +730,12 @@
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/material/rc/</loc>
     <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/guide/kouatsu-senjou/</loc>
+    <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
