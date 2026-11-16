@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/ranking/cheap/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -393,6 +393,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://gaiheki-nuriekae-navi.com/trouble/siding-warp/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gaiheki-nuriekae-navi.com/trouble/frost/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://gaiheki-nuriekae-navi.com/material/siding/</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -584,6 +596,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://gaiheki-nuriekae-navi.com/paint/product/luxe-muki-top/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://gaiheki-nuriekae-navi.com/paint/product/refine-1000si-ir/</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -609,7 +627,7 @@
   </url>
   <url>
     <loc>https://gaiheki-nuriekae-navi.com/paint/maker/kansai-paint/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
