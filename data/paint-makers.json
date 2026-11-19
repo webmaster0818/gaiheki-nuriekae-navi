@@ -1388,6 +1388,31 @@
         "href": "/paint/product/rock-sunfron-aqua/",
         "title": "サンフロンアクア",
         "desc": "水性1液のラジカル制御フッ素樹脂。専用中塗りと上塗りの製品要綱"
+      },
+      {
+        "href": "/paint/product/rock-hyper-reactor-coat-muki/",
+        "title": "ロック ハイパーリアクターコート無機",
+        "desc": "弱溶剤2液のリアルハイブリッド無機系。配合比・可使時間・金属面への適用"
+      },
+      {
+        "href": "/paint/product/rock-hyper-bill-rock-cera/",
+        "title": "ハイパービルロックセラ",
+        "desc": "水性1液のリアルハイブリッドシリコン。弾性タイプと製品要綱"
+      },
+      {
+        "href": "/paint/product/rock-hyper-yume-rock/",
+        "title": "ハイパーユメロック",
+        "desc": "弱溶剤2液のリアルハイブリッドシリコン。温度別の可使時間・塗り重ね時間"
+      },
+      {
+        "href": "/paint/product/rock-yume-rock/",
+        "title": "ユメロック",
+        "desc": "弱溶剤2液のNADシリコンウレタン。鉄部・雨樋の仕様"
+      },
+      {
+        "href": "/paint/product/rock-1eki-yume-rock-dx/",
+        "title": "１液ユメロック DX",
+        "desc": "弱溶剤1液のリアルハイブリッドシリコン。塗り重ねの間隔と注意事項"
       }
     ],
     "sections": [
